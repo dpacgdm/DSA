@@ -1715,5 +1715,374 @@ Conservative worst case: **O(v + n)** (since k ≤ n)
 
 > **Note:** Block 5 is the bottleneck due to the string concatenation trap. Replacing it with `"\n".join(f"{uid}: {totals[uid]}" for uid in qualified)` would eliminate the O(q²) term, making the overall time **O(v + n + q log q)** — dominated by the sort — which is a massive improvement.
 
+# Problem 9: While Loop Analysis
 
+```python
+def compress(arr):
+    n = len(arr)
+    result = []
+    i = 0
+    while i < n:
+        j = i
+        while j < n and arr[j] == arr[i]:
+            j += 1
+        result.append((arr[i], j - i))
+        i = j
+    return result
+```
+
+---
+
+## STEP 1: Identify Inputs
+
+- `arr` → **n = len(arr)**
+- Single input, single variable.
+
+---
+
+## STEP 2: Break Into Blocks
+
+- Block 1: `n = len(arr)`, `result = []`, `i = 0` → single operations
+- Block 2: The outer while loop (contains everything important)
+- Block 3: `return result`
+
+---
+
+## STEP 3: Analyze Each Block
+
+**Block 1:** Three assignments → **O(1)**
+
+**Block 2:** This is where it gets interesting. There's a nested while loop, so the instinct is to multiply. **But that instinct is WRONG here.** Let me prove why.
+
+First, let me trace this with a concrete example to understand what the code does:
+
+```
+arr = [a, a, a, b, b, c, c, c, c]
+       0  1  2  3  4  5  6  7  8      n = 9
+```
+
+```
+Outer iteration 1:
+  i = 0, j starts at 0
+  Inner: j=0 arr[0]==arr[0]? a==a yes → j=1
+         j=1 arr[1]==arr[0]? a==a yes → j=2
+         j=2 arr[2]==arr[0]? a==a yes → j=3
+         j=3 arr[3]==arr[0]? b==a NO  → stop
+  append('a', 3)
+  i = j = 3
+
+Outer iteration 2:
+  i = 3, j starts at 3
+  Inner: j=3 arr[3]==arr[3]? b==b yes → j=4
+         j=4 arr[4]==arr[3]? b==b yes → j=5
+         j=5 arr[5]==arr[3]? c==b NO  → stop
+  append('b', 2)
+  i = j = 5
+
+Outer iteration 3:
+  i = 5, j starts at 5
+  Inner: j=5 arr[5]==arr[5]? c==c yes → j=6
+         j=6 arr[6]==arr[5]? c==c yes → j=7
+         j=7 arr[7]==arr[5]? c==c yes → j=8
+         j=8 arr[8]==arr[5]? c==c yes → j=9
+         j=9 → j < n fails → stop
+  append('c', 4)
+  i = j = 9
+
+Outer: i = 9, 9 < 9 false → stop
+```
+
+**The critical observation:** `j` scans forward through the array and **never goes backward.** After the inner loop finishes, `i` jumps to `j`. The inner loop then picks up from that new position. Every element of the array is visited by `j` **exactly once** across ALL iterations of the outer loop combined.
+
+Let me count the total number of inner loop iterations across the entire execution:
+- Outer iteration 1: j visits indices 0, 1, 2, 3 → 4 checks
+- Outer iteration 2: j visits indices 3, 4, 5 → 3 checks
+- Outer iteration 3: j visits indices 5, 6, 7, 8, 9 → 5 checks
+
+Wait — there's slight overlap at boundaries (j checks the failing condition). Let me count more carefully. Each `j += 1` happens once per element that matches plus one final failing check per outer iteration. But the total `j += 1` executions across all inner loop runs = n (because j goes from 0 to n total). The number of failing checks equals the number of outer iterations, which is at most n.
+
+**Total inner loop iterations across all outer iterations: at most 2n** → O(n).
+
+This is a **pointer-chasing pattern.** Two pointers (`i` and `j`) both march left-to-right through the array without resetting. Even though the loops are nested in the code structure, **the total combined work is linear.**
+
+Inside the inner loop:
+- `j < n` → O(1) comparison
+- `arr[j] == arr[i]` → O(1) comparison (assuming element comparison is O(1))
+- `j += 1` → O(1)
+- Cost per inner iteration: **O(1)**
+
+Inside the outer loop (outside the inner loop):
+- `j = i` → O(1)
+- `result.append((arr[i], j - i))` → O(1) amortized
+- `i = j` → O(1)
+
+Block 2 total: **O(n)**
+
+**Block 3:** `return result` → O(1)
+
+---
+
+## STEP 4: Combine
+
+O(1) + O(n) + O(1) = **O(n)**
+
+---
+
+## STEP 5: Space
+
+- `n`, `i`, `j` → single variables → O(1)
+- `result` → list of tuples. How large can it get?
+  - Worst case: every element is different → `[a, b, c, d, ...]` → n tuples
+  - Best case: all elements the same → `[a, a, a, ...]` → 1 tuple
+  - Worst case: **O(n)**
+
+Total extra space: **O(n)**
+
+---
+
+## STEP 6: Answer
+
+> **Time: O(n), Space: O(n)**
+
+### The Lesson Here
+
+**Nested loops do NOT automatically mean multiply.** The rule is multiply when the inner loop runs its full count **independently for each outer iteration.** Here, the inner loop's work is **shared** across outer iterations — the pointer `j` never resets to 0. The total work of the inner loop across ALL outer iterations is n, not n per outer iteration.
+
+**How to spot this pattern:**
+- A pointer advances forward and **never resets**
+- After the inner loop, the outer variable **jumps to where the inner left off** (`i = j`)
+- The inner loop picks up from the new position, not from 0
+
+This is the **two-pointer / sliding window** pattern. You'll see it constantly in interview problems. It always looks like O(n²) but is actually **O(n).**
+
+---
+
+---
+
+# Problem 10: Preprocess + Query Pattern
+
+```python
+def build_index(products):
+    index = {}
+    for product in products:
+        category = product["category"]
+        if category not in index:
+            index[category] = []
+        index[category].append(product["name"])
+
+    for category in index:
+        index[category].sort()
+
+    return index
+
+def search(index, category, prefix):
+    if category not in index:
+        return []
+    result = []
+    for name in index[category]:
+        if name.startswith(prefix):
+            result.append(name)
+    return result
+```
+
+---
+
+# Part A: Complexity of `build_index`
+
+## STEP 1: Identify Inputs
+
+- `products` → **n = len(products)**
+- Each product has a `"category"` and a `"name"` (strings)
+- Let **c = number of unique categories** that appear in products
+- Let **L = average length of a product name** (needed for string comparisons during sort)
+
+## STEP 2: Break Into Blocks
+
+- Block 1: `index = {}` → single operation
+- Block 2: First for loop (building the lists)
+- Block 3: Second for loop (sorting each category's list)
+- Block 4: `return index`
+
+## STEP 3: Analyze Each Block
+
+**Block 1:** O(1)
+
+**Block 2:**
+- Loop runs **n** times (once per product)
+- Inside:
+  - `product["category"]` → dict access → O(1)
+  - `category not in index` → dict lookup → O(1)
+  - `index[category] = []` → dict assignment → O(1)
+  - `index[category].append(product["name"])` → dict access O(1), append O(1) amortized
+- Cost per iteration: **O(1)**
+- Block 2 total: **O(n)**
+
+**Block 3:** This requires careful thinking.
+- Loop runs **c** times (once per unique category)
+- Inside: `index[category].sort()` → sorts the list for that category
+
+Now, how large is each category's list? Let's say category `i` has `nᵢ` products. We know:
+
+$$n_1 + n_2 + n_3 + \ldots + n_c = n$$
+
+All products are distributed across the c categories. The total work for sorting all categories is:
+
+$$\sum_{i=1}^{c} n_i \log(n_i)$$
+
+Since each $n_i \log(n_i) \leq n_i \log(n)$ (because $n_i \leq n$):
+
+$$\sum_{i=1}^{c} n_i \log(n_i) \leq \sum_{i=1}^{c} n_i \log(n) = n \log(n)$$
+
+Block 3 total: **O(n log n)**
+
+*(Note: If we account for string comparison cost during sort, each comparison is O(L), making it O(L · n log n). I'll note this but keep L out of the main answer for clarity since the lesson focuses on structural complexity.)*
+
+**Block 4:** O(1)
+
+## STEP 4: Combine
+
+O(1) + O(n) + O(n log n) + O(1)
+
+O(n) is dominated by O(n log n). Drop it.
+
+**Time for `build_index`: O(n log n)**
+
+## STEP 5: Space
+
+- `index` → dictionary with c keys. The values are lists containing ALL n product names distributed across the categories. Total elements stored across all lists: **n**
+- `category` → O(1) single variable
+- No recursion
+
+Total extra space: **O(n + c)**
+
+But since c ≤ n (can't have more categories than products): **O(n)**
+
+## STEP 6: Answer for `build_index`
+
+> **Time: O(n log n), Space: O(n)**
+
+---
+
+# Part B: Complexity of a Single Call to `search`
+
+```python
+def search(index, category, prefix):
+    if category not in index:
+        return []
+    result = []
+    for name in index[category]:
+        if name.startswith(prefix):
+            result.append(name)
+    return result
+```
+
+## STEP 1: Identify Inputs
+
+This is subtle. The inputs to `search` are:
+- `index` → the pre-built dictionary (we treat this as already existing, not a cost to build)
+- `category` → a single string
+- `prefix` → a single string, let **p = len(prefix)**
+
+The relevant size for this function: **m = number of products in the given category** = len(index[category])
+
+## STEP 2: Break Into Blocks
+
+- Block 1: `category not in index` check + possible early return
+- Block 2: `result = []`
+- Block 3: The for loop
+- Block 4: `return result`
+
+## STEP 3: Analyze Each Block
+
+**Block 1:** Dict lookup → O(1). Early return → O(1). → **O(1)**
+
+**Block 2:** O(1)
+
+**Block 3:**
+- Loop runs **m** times (once per name in that category)
+- Inside:
+  - `name.startswith(prefix)` → ⚠️ What does this cost? It compares the first `p` characters of `name` against `prefix`. Cost: **O(p)**
+  - `result.append(name)` → O(1) amortized
+- Cost per iteration: **O(p)**
+- Block 3 total: **O(m × p)**
+
+**Block 4:** O(1)
+
+## STEP 4: Combine
+
+O(1) + O(1) + O(m × p) + O(1) = **O(m × p)**
+
+If we treat prefix length as a small constant (which is common in practice): **O(m)**
+
+## STEP 5: Space
+
+- `result` → worst case, every name matches the prefix → m elements → **O(m)**
+- `name` → single variable → O(1)
+
+Total extra space: **O(m)**
+
+## STEP 6: Answer for single `search` call
+
+> **Time: O(m × p)** where m = number of products in queried category, p = len(prefix)
+> Simplified (if p treated as constant): **O(m)**
+> **Space: O(m)**
+
+---
+
+# Part C: Total Complexity — Build Once, Search q Times
+
+## Setup
+
+- `build_index` is called **once**: O(n log n) time, O(n) space
+- `search` is called **q times**
+
+For each search call `i`, let:
+- $m_i$ = number of products in the queried category
+- $p_i$ = length of the prefix
+
+## Time Analysis
+
+$$T_{total} = \underbrace{O(n \log n)}_{\text{build}} + \underbrace{\sum_{i=1}^{q} O(m_i \cdot p_i)}_{\text{all searches}}$$
+
+**Worst case for each search:** The queried category contains all n products (one giant category), and prefix is long.
+
+$$T_{worst} = O(n \log n) + O(q \cdot n \cdot p)$$
+
+If prefix length is bounded/constant:
+
+$$T_{worst} = O(n \log n + q \cdot n)$$
+
+**But in practice**, the whole point of building the index is that $m_i \ll n$ for most queries. If products are spread across c roughly equal categories, each $m_i ≈ n/c$:
+
+$$T_{practical} = O\left(n \log n + q \cdot \frac{n}{c} \cdot p\right)$$
+
+## Space Analysis
+
+- The `index` persists in memory throughout all queries: **O(n)**
+- Each `search` call creates a `result` list: **O(m_i)** per call, but it's returned and (presumably) doesn't accumulate — only one search's `result` exists at a time
+- Total persistent space: **O(n)** for the index
+
+## Final Answer
+
+> **Build: O(n log n) time, O(n) space**
+> **Per search: O(m · p) time, O(m) space** — where m = category size, p = prefix length
+> **Total (build once + q searches): O(n log n + q · m · p) time, O(n) space**
+> **Conservative worst case: O(n log n + q · n · p) time**
+
+---
+
+## The Real-World Lesson
+
+This is the **precomputation pattern.** You see it everywhere:
+
+| System | Build Phase | Query Phase |
+|---|---|---|
+| Search engine | Crawl + index web pages | User types query |
+| Database index | Build B-tree on column | Run SELECT queries |
+| This problem | Sort products by category | Look up by category + prefix |
+| Spell checker | Build dictionary hash set | Check each typed word |
+
+The idea: **spend more time upfront (build) so that every subsequent query is fast.** If you skip the build phase and do a naive search every time, you pay O(n) per query × q queries = O(qn). With the index, each query drops to O(m) where m ≪ n.
+
+The break-even question: Is O(n log n) build + O(q · m) queries cheaper than O(q · n) brute force? **Yes, whenever q is large and m is much smaller than n** — which is almost always the real-world scenario.
 
