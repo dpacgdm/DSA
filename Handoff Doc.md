@@ -4,7 +4,7 @@
 
 ## DOCUMENT VERSION
 - **Created:** Session 1
-- **Last Updated:** After Big O completion
+- **Last Updated:** Week 2 completion (2026-04-24)
 - **Status:** Active
 
 ---
@@ -114,16 +114,16 @@ Answer these questions honestly before saying "complete":
 | Day | Topic | Status |
 |---|---|---|
 | Day 1-2 | Big O & Complexity Analysis | ✅ Covered for current scope |
-| Day 3-4 | Arrays & Strings — Deep | 🔲 Not started |
-| Day 5-6 | Array Patterns: Two Pointers, Sliding Window | 🔲 Not started |
-| Day 7 | Retention Grill: Big O + Arrays combined | 🔲 Not started |
+| Day 3-4 | Arrays & Strings — Deep | ✅ Complete |
+| Day 5-6 | Array Patterns: Two Pointers, Sliding Window | ✅ Complete |
+| Day 7 | Retention Grill: Big O + Arrays combined | ✅ Complete |
 
 ### Week 2: Hashing + Recursion
 | Day | Topic | Status |
 |---|---|---|
-| Day 1-2 | Hash Maps & Hash Sets — Deep | 🔲 Not started |
-| Day 3-4 | Recursion — Deep (includes recursive complexity analysis, call stack space, Master Theorem introduction) | 🔲 Not started |
-| Day 5-6 | Recursion Problem Drilling | 🔲 Not started |
+| Day 1-2 | Hash Maps & Hash Sets — Deep | ✅ Complete |
+| Day 3-4 | Recursion — Deep (includes recursive complexity analysis, call stack space, Master Theorem introduction) | ✅ Complete |
+| Day 5-6 | Integration Problem Drilling (12 problems, no pattern labels) | ✅ Complete |
 | Day 7 | Retention Grill: All previous + Hashing + Recursion | 🔲 Not started |
 
 ### Week 3: Searching & Sorting
@@ -270,61 +270,103 @@ Answer these questions honestly before saying "complete":
 | NP-completeness / P vs NP (deep) | Will mention briefly at backtracking. Full treatment not needed for our goals. |
 | Formal amortized analysis methods (aggregate, accounting, potential) | Intuitive understanding sufficient. Formal methods are graduate-level. |
 
-**Outstanding Items:**
-- Problems 9 and 10 (while loop analysis and preprocess + query pattern) were presented but not yet completed by student. These test the final gaps taught. **Should be completed before or during Day 2.**
+**Outstanding Items:** None — all problems completed.
 
 ---
 
-# SECTION 5: PENDING TEST PROBLEMS
+# SECTION 5: COMPLETED TOPICS — CONTINUED
 
-The following problems were assigned but not yet answered:
+## Topic 2: Arrays & Strings — Deep
 
-### Problem 9: While Loop Analysis
+**Status:** Complete
 
-```python
-def compress(arr):
-    n = len(arr)
-    result = []
-    i = 0
-    while i < n:
-        j = i
-        while j < n and arr[j] == arr[i]:
-            j += 1
-        result.append((arr[i], j - i))
-        i = j
-    return result
-```
+**Date Completed:** Week 1, Day 3-4
 
-### Problem 10: Preprocess + Query Pattern
+**What Was Taught:**
+- Full arrays deep dive: dynamic arrays, memory layout, contiguous allocation
+- Strings as immutable arrays, string immutability traps
+- Two Pointers pattern (opposite direction, same direction)
+- Sliding Window pattern (fixed size, variable size)
+- Prefix sums and running computations
+- In-place array manipulation techniques
+- Common array/string patterns for FAANG interviews
 
-```python
-def build_index(products):
-    index = {}
-    for product in products:
-        category = product["category"]
-        if category not in index:
-            index[category] = []
-        index[category].append(product["name"])
+**Materials:** `Arrays/Arrays.md`, `Arrays/Arrays&Strings.md`
 
-    for category in index:
-        index[category].sort()
+**What Was Tested:**
+- Week 1 Retention Grill (see `Retention Questions/Week 1.md`)
+- Sections: Rapid Fire complexity analysis (A1-A5), Conceptual questions (B1-B5), Problem solving (C1-C4)
+- C1: Sliding window trap — positive vs negative arrays
+- C2: QuickSelect — k-th smallest with full partition trace
+- C3: Three Sum — sort + two pointers + duplicate skipping
+- C4: Group Anagrams — hash map with canonical key
+- All problems passed with full reasoning, traces, and edge cases
 
-    return index
+---
 
-def search(index, category, prefix):
-    if category not in index:
-        return []
-    result = []
-    for name in index[category]:
-        if name.startswith(prefix):
-            result.append(name)
-    return result
-```
+## Topic 3: Hash Maps & Hash Sets — Deep
 
-**Required analysis for Problem 10:**
-- Complexity of `build_index` (time and space)
-- Complexity of a single call to `search` (time and space)
-- Total complexity if `build_index` called once, `search` called q times
+**Status:** Complete
+
+**Date Completed:** Week 2, Day 1-2
+
+**What Was Taught:**
+- Hash function internals, collision handling (chaining, open addressing)
+- Python dict and set implementation details
+- Hash map patterns: frequency counting, prefix sums with hash maps
+- Advanced hashing: rolling hash, polynomial hash, Rabin-Karp
+- Designing hash-based solutions for interview problems
+
+**Materials:** `Hashing/Hash maps&sets.md`, `Hashing/Advanced Hashing.md`
+
+---
+
+## Topic 4: Recursion — Deep
+
+**Status:** Complete
+
+**Date Completed:** Week 2, Day 3-4
+
+**What Was Taught:**
+- Recursive thinking: base case, recursive case, trust the recursion
+- Call stack mechanics and space analysis
+- Recursive complexity analysis (recursion trees, recurrence relations)
+- Memoization and tabulation (DP introduction)
+- Advanced recursion: backtracking, divide-and-conquer
+- Master Theorem introduction and application
+
+**Materials:** `Recursion/Recursion.md`, `Recursion/Advanced Recursion.md`
+
+---
+
+## Topic 5: Week 2 Integration Drilling
+
+**Status:** Complete
+
+**Date Completed:** Week 2, Day 5-6
+
+**What Was Tested:**
+- 12 integration problems with NO pattern labels (student must identify technique)
+- Problems combine multiple topics from Weeks 1-2
+
+**Materials:** `Retention Questions/Week 2 Drilling Set.md`
+
+**Problems Completed (All 12/12):**
+
+| # | Problem | Pattern Used | Complexity |
+|---|---|---|---|
+| 1 | Longest Palindromic Substring | Expand Around Center | O(n²) time, O(1) space |
+| 2 | Product of Array Except Self | Prefix/Suffix Product (Two-Pass) | O(n) time, O(1) space |
+| 3 | Find the Duplicate Number | Floyd's Cycle Detection | O(n) time, O(1) space |
+| 4 | Decode Ways | Memoized Recursion / DP (Fibonacci-like) | O(n) time, O(1) space |
+| 5 | Subarray Sum Divisible by K | Prefix Sum + Hash Map + Modular Arithmetic | O(n) time, O(k) space |
+| 6 | Minimum Size Subarray Sum | Sliding Window (Variable Size) | O(n) time, O(1) space |
+| 7 | Word Ladder Length | BFS on Implicit Graph | O(n×L) time, O(n×L) space |
+| 8 | String Interleaving | Memoized Recursion / 2D DP | O(m×n) time, O(m×n) space |
+| 9 | Next Permutation | Algorithmic Reasoning (no standard pattern) | O(n) time, O(1) space |
+| 10 | Longest Valid Parentheses | Two-Pass Counter (solved 2 ways, picked O(1) space) | O(n) time, O(1) space |
+| 11 | Count of Range Sum | Modified Merge Sort on Prefix Sums | O(n log n) time, O(n) space |
+| 12 | Alien Dictionary | Graph Construction + Topological Sort (Kahn's BFS) | O(C) time, O(V+E) space |
 
 ---
 
@@ -341,8 +383,8 @@ def search(index, category, prefix):
 
 # SECTION 7: NEXT ACTIONS
 
-1. **Immediate:** Student to complete Problems 9 and 10 (Big O final gaps)
-2. **Next:** Teacher to prepare Day 2 **Scope Document** for Arrays & Strings — presented for student approval BEFORE teaching begins
+1. **Immediate:** Complete Week 2 Day 7 Retention Grill — cumulative test covering Big O + Arrays + Hashing + Recursion
+2. **Next:** Begin Week 3 (Searching & Sorting) — Teacher to prepare **Scope Document** for Binary Search + Sorting Algorithms
 3. **Ongoing:** Every future topic follows the Scope Document Protocol defined in Section 2
 
 ---
