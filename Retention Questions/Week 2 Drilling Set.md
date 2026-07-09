@@ -2,6 +2,15 @@
 
 ---
 
+**Governance update (2026-07-09):** Integration credit only for **earned** tools. Problems that need Graphs or Sorting machinery are **`PREVIEW — no mastery credit`**. Solving them does not unlock those modules and does not count toward timed gates for those pattern families. Re-queue for real credit after the home module is `complete` (see `Handoff Doc.md` §2F).
+
+| # | Credit |
+|---|---|
+| 1–6, 8–10 | Earned (Module 1–2 tools) |
+| 7, 11, 12 | **PREVIEW** |
+
+---
+
 **The rules are different now.**
 
 Days 1-4 told you which pattern to use. Real interviews and competitions don't. These problems:
@@ -107,6 +116,8 @@ Output: 1
 
 ### Problem 7: Word Ladder Length
 
+> **`PREVIEW — no mastery credit`** · Home module: **Graphs I (Module 7)** · Re-queue for timed credit after BFS is `complete`.
+
 Given two words `beginWord` and `endWord`, and a word list, find the length of the shortest transformation sequence from `beginWord` to `endWord`, such that:
 - Only one letter can be changed at a time
 - Each transformed word must exist in the word list
@@ -177,6 +188,8 @@ Output: 0
 
 ### Problem 11: Count of Range Sum
 
+> **`PREVIEW — no mastery credit`** · Home module: **Searching & Sorting (Module 3)** · Re-queue for timed credit after merge sort is `complete`.
+
 Given an integer array `nums` and two integers `lower` and `upper`, return the number of range sums that lie in `[lower, upper]` inclusive.
 
 Range sum `S(i, j)` = sum of elements from index i to j.
@@ -188,11 +201,13 @@ Output: 3 (ranges: [0,0]=-2, [2,2]=-1, [0,2]=2)
 
 **Brute force is O(n²). Can you do O(n log n)?**
 
-Hint: Think about what technique from this week handles "count pairs satisfying a condition on prefix sums."
+Hint (PREVIEW): The efficient approach uses modified merge sort on prefix sums — that is Module 3 machinery, not an earned Module 2 pattern.
 
 ---
 
 ### Problem 12: The Boss — Alien Dictionary
+
+> **`PREVIEW — no mastery credit`** · Home module: **Graphs I (Module 7)** · Re-queue for timed credit after topological sort is `complete`.
 
 Given a list of words sorted in an alien language's alphabetical order, derive the order of characters in that language.
 

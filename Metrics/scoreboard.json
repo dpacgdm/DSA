@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "last_updated": "2026-07-09",
+  "phase_a_ready": false,
+  "gates": {
+    "G1": {
+      "threshold": "Pass per completed module",
+      "current": "Module 1 historical; M2+ pending",
+      "met": false
+    },
+    "G2": {
+      "threshold": "No weak overdue > 2 cycles",
+      "current": "Ledger initialized; M2+ grills not learner-passed",
+      "met": false
+    },
+    "G3": {
+      "threshold": ">=70% of last 20 mediums first-pass",
+      "current": "0 timed logged",
+      "met": false
+    },
+    "G4": {
+      "threshold": ">=40% of last 10 hards first-pass or recovery",
+      "current": "0 timed logged",
+      "met": false
+    },
+    "G5": {
+      "threshold": ">=4.0/5.0 over last 4 mocks",
+      "current": "0 mocks",
+      "met": false
+    },
+    "G6": {
+      "threshold": ">=90% blind redo after >=7 days",
+      "current": "Queue empty",
+      "met": false
+    },
+    "G7": {
+      "threshold": "100% of timed misses tagged",
+      "current": "N/A (no misses yet)",
+      "met": null
+    }
+  },
+  "modules": [
+    {
+      "module": 1,
+      "name": "Complexity + Arrays & Strings",
+      "content": "delivered",
+      "learner": "retention-passed"
+    },
+    {
+      "module": 2,
+      "name": "Hashing + Recursion",
+      "content": "delivered",
+      "learner": "drilled"
+    },
+    {
+      "module": 3,
+      "name": "Searching & Sorting",
+      "content": "delivered",
+      "learner": "not-started"
+    },
+    {
+      "module": 4,
+      "name": "Linked Lists + Stacks & Queues",
+      "content": "delivered",
+      "learner": "not-started"
+    },
+    {
+      "module": 5,
+      "name": "Trees",
+      "content": "delivered",
+      "learner": "not-started"
+    },
+    {
+      "module": 6,
+      "name": "Heaps + Advanced Patterns",
+      "content": "delivered",
+      "learner": "not-started"
+    },
+    {
+      "module": 7,
+      "name": "Graphs I",
+      "content": "delivered",
+      "learner": "not-started"
+    },
+    {
+      "module": 8,
+      "name": "Graphs II + DP I",
+      "content": "delivered",
+      "learner": "not-started"
+    },
+    {
+      "module": 9,
+      "name": "DP II + Backtracking + Greedy",
+      "content": "delivered",
+      "learner": "not-started"
+    },
+    {
+      "module": 10,
+      "name": "Tries / Monotonic / Fenwick exposure",
+      "content": "delivered",
+      "learner": "not-started"
+    },
+    {
+      "module": 11,
+      "name": "Gauntlet + Final Assessment",
+      "content": "delivered",
+      "learner": "not-started"
+    }
+  ],
+  "timed_sets": [],
+  "error_log": [],
+  "redo_queue": [],
+  "mocks": [],
+  "contests": []
+}

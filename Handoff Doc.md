@@ -4,8 +4,12 @@
 
 ## DOCUMENT VERSION
 - **Created:** Session 1
-- **Last Updated:** Week 2 completion (2026-04-24)
+- **Last Updated:** 2026-07-09 — Phase A content delivery + **tooling/QA/timed protocol** layer
 - **Status:** Active
+- **Governing principle:** No calendar deadline. Advance only on evidence. Comfort and session length are the student's choice; mastery gates are not optional.
+- **Content craft floor:** ≥95% (lessons + retention answer keys). See `Phase A Curriculum Index.md`.
+- **Answer keys:** Intentionally **kept** in retention files for self-grade / tutor sessions — not removed.
+- **Learner loop:** Temporarily removed for bulk delivery. Content is `content-delivered`. Learner statuses (`retention-passed` / `timed-verified` / `complete`) still require practice evidence when the loop resumes.
 
 ---
 
@@ -14,16 +18,22 @@
 | Field | Detail |
 |---|---|
 | **Background** | Python basics. Some DSA exposure ~1 year ago (arrays, stacks, queues, graphs, trees) — no retained knowledge |
-| **Primary Language** | Python (confirmed — no C++ during this program) |
-| **Goals** | Competitive Programming, FAANG Interviews, System Design |
-| **Realistic Target** | Top 5-10% in 3 months → top 0.1% in following 3-6 months |
-| **Daily Commitment** | 4 hours |
-| **Timeline** | 12 weeks (3 months) |
-| **Concurrent Activity** | Studying alongside |
-| **Learning Style** | WHY before HOW, then practice. Textbook model: teach all concepts thoroughly, then questions at the end |
-| **Brutality Level** | 10/10 — no advancement without proven mastery |
-| **Module Structure** | Weekly modules with milestones |
+| **Primary Language** | Python (confirmed — no C++ during Phase A) |
+| **Primary Goal** | **FAANG-style interview DSA mastery** (single primary outcome) |
+| **Secondary Goals (deferred phases)** | Competitive Programming (Phase B, language TBD); System Design (Phase C, after DSA gates) |
+| **Timeline** | **Indefinite.** No week count as a deadline. Modules are ordered units of mastery, not calendar weeks. |
+| **Pace** | Student-chosen. Light / medium / deep sessions allowed. Skipping mastery gates is not allowed. |
+| **Daily Commitment** | Flexible — student sets hours; quality of evidence matters more than hours logged |
+| **Learning Style** | WHY before HOW, then practice. Textbook model: teach concepts thoroughly, then questions |
+| **Brutality Level** | 10/10 on gates — no advancement without proven mastery. Soft on schedule. |
+| **Module Structure** | Ordered modules with milestones; "Week N" labels are historical names only |
 | **Platform Access** | LeetCode, Codeforces, and similar platforms available |
+
+### Outcome honesty (non-negotiable)
+
+- We do **not** claim "top 5–10%" or "top 0.1%" as program targets. Those are marketing numbers, not gates.
+- Success = passing the **Evidence Gates** in Section 2B for Phase A (Interview DSA).
+- Phase B (CP) and Phase C (System Design) start only after Phase A gates, or as explicitly optional side tracks that never block Phase A.
 
 ---
 
@@ -32,195 +42,345 @@
 ## Core Principles (Established Through Student Feedback)
 
 ### What Works
-1. **Framework-first teaching.** Give the student a repeatable, mechanical process before showing examples. Never show finished answers and expect reverse-engineering.
-2. **Sub-skill isolation.** Break every topic into individual micro-skills. Teach each one in isolation before combining.
-3. **Gradual escalation.** Start with smallest possible unit, build up systematically.
-4. **Cheat sheets and reference tables.** Consolidated, memorizable reference material for every topic.
-5. **Complete recipe approach.** The student described it as: "For me to successfully cook biryani, I need to learn how to cut vegetables, how to follow recipe, and so on."
-6. **Real-world use cases.** Not history, but practical relevance to CP/FAANG/system design.
-7. **Socratic retention testing.** Problems at the end that escalate in difficulty and cover ALL taught material.
+1. **Framework-first teaching.** Give a repeatable, mechanical process before examples. Never show finished answers and expect reverse-engineering.
+2. **Sub-skill isolation.** Break every topic into micro-skills. Teach each in isolation before combining.
+3. **Gradual escalation.** Smallest unit first, then combine.
+4. **Cheat sheets and reference tables.** Memorizable reference material per topic.
+5. **Complete recipe approach.** ("To cook biryani, learn to cut vegetables, follow the recipe…")
+6. **Real-world use cases.** Practical relevance to interviews (and later CP/SD).
+7. **Socratic retention testing.** Escalating problems covering ALL taught material.
 
 ### What Does NOT Work
-1. **Teaching by example without framework.** Showing "this is O(n), this is O(n²)" without teaching HOW to arrive at that answer.
-2. **Assuming pattern recognition.** Student learns to match specific examples but can't handle novel code.
-3. **Small test sets.** One or two problems do not prove mastery. Need 6-8 minimum, escalating in difficulty.
-4. **Rushing to completion.** Momentum over completeness is the wrong tradeoff for this student.
-5. **Surface-level coverage.** Student explicitly wants depth, fine details, edge cases, and traps.
+1. Teaching by example without a framework.
+2. Assuming pattern recognition from a few demos.
+3. Small test sets (need 6–8+ escalating problems).
+4. Rushing to completion over completeness.
+5. Surface-level coverage.
+6. **Declaring Complete before retention + blind timed evidence.**
+7. **Integration drills that require untaught heavy machinery** (unless labeled PREVIEW).
 
 ### Teaching Quality Failures Log
 | Instance | What Happened | Lesson Learned |
 |---|---|---|
-| Big O v1 | Taught concepts by example without a systematic framework. Student rated 6/10. | Always provide a mechanical process, not just demonstrations. |
-| Big O v2 | Improved framework but still had gaps. Student rated 7/10. Insufficient depth, not enough examples per concept, didn't teach how to handle large/complex code. | Every sub-skill must be taught in isolation with its own examples before combining. Must show method on large code, not just tiny snippets. |
-| Big O "COMPLETE" claim #1 | Declared topic complete after student passed 8 problems. Student challenged, 5 gaps found immediately. | Passing a test ≠ topic is complete. Test must cover ALL material. Self-audit before claiming completion. |
-| Big O "COMPLETE" claim #2 | Taught the 5 gaps, implied completion again. Student called out the pattern of reactive teaching. | Structural process change required. See Scope Document Protocol below. |
+| Big O v1 | Concepts by example, no framework. Rated 6/10. | Always provide a mechanical process. |
+| Big O v2 | Better framework, still gaps. Rated 7/10. | Isolate every sub-skill; show method on large code. |
+| Big O "COMPLETE" #1 | Declared complete after 8 problems; 5 gaps found. | Passing a test ≠ complete. Cover ALL material. |
+| Big O "COMPLETE" #2 | Implied complete again; student called out reactive teaching. | Scope Document Protocol required. |
+| Week 2 integration sequencing | Graph/topo/merge-sort problems before those modules. | Integration may only use earned tools, or must be PREVIEW. |
+| Status inflation | Topics marked Complete while Day-7 retention not started. | Status enum enforced (Section 2A). |
+| Deadline / percentile claims | 12-week + top-% targets conflicted with honesty. | Indefinite pace; evidence gates only. |
 
 ---
 
-## Structural Process (Implemented After Big O)
+## SECTION 2A: TOPIC STATUS ENUM (MANDATORY)
+
+Nothing is **Complete** until every prior stage is true.
+
+| Status | Meaning | Allowed to advance past topic? |
+|---|---|---|
+| `not-started` | Not begun | N/A |
+| `scoped` | Scope document approved | No |
+| `content-delivered` | Full lesson + retention grill written (≥95% craft). **Not** learner mastery. | Study yes; gate credit no |
+| `taught` | Student has consumed the lesson (self or tutored) | No |
+| `drilled` | Guided + solo practice done (may include chat-guided solves) | No |
+| `retention-passed` | Cumulative retention grill passed for this module + prior material due | No (not yet Complete) |
+| `timed-verified` | Blind timed set for this module's patterns meets gate thresholds | No |
+| `complete` | All of the above + spaced-ledger entries created | Yes |
+
+**Chat-guided solves count as `drilled` only, never as `timed-verified`.**
+
+**Honest labeling (still required):**
+- **"Covered for current scope"** — used only at `taught` / `drilled` when deferrals are named
+- **"Fully complete"** — synonym of status `complete` only
+- **"Needs revisiting when we reach [topic]"** — explicit deferred items
+- **"PREVIEW"** — problem or concept used before its module; does not grant mastery credit
+
+---
+
+## SECTION 2B: EVIDENCE GATES & SCOREBOARD (98% QUALITY BAR)
+
+### Primary goal gates (Phase A — Interview DSA)
+
+Advance to the next **module** only when the current module reaches `complete`.  
+Declare **Phase A ready for mocks-at-scale / applications** only when ALL of the following hold:
+
+| Gate | Metric | Threshold |
+|---|---|---|
+| G1 Concept | Can teach back every completed module's core framework without notes | Pass/fail per module |
+| G2 Retention | Spaced ledger: no `weak` subskills overdue > 2 review cycles | 100% of due items cleared or re-taught |
+| G3 Blind timed | Rolling last 20 timed mediums (module-appropriate): first-pass correct without hints | ≥ 70% |
+| G4 Hard transfer | Rolling last 10 timed hards (earned patterns only) | ≥ 40% first-pass or clear recovery to correct in same session |
+| G5 Interview skill | Mini-mock rubric average (clarity, correctness, complexity talk, code quality, recovery) | ≥ 4.0 / 5.0 over last 4 mocks |
+| G6 Redo integrity | Problems failed or hinted: re-solved blind after ≥ 7 days | ≥ 90% success on redo queue |
+| G7 Error honesty | Every timed miss tagged: knowledge-gap / misread / time-pressure / careless-slip | 100% of misses tagged |
+
+### Scoreboard files
+- **Machine SoT:** `Metrics/scoreboard.json` — append via `py -3 tools/scoreboard_update.py`
+- **Human mirror:** `Metrics/Scoreboard.md` — regenerated from JSON
+- Update after every timed set, retention grill, and mock. Timed protocol: `Practice/Timed Transfer Protocol.md`.
+
+### What we refuse to claim
+- Percentile ranks ("top X%")
+- Guaranteed offers or ratings
+- That chat "12/12" equals interview readiness
+
+---
+
+## SECTION 2C: SPACED RETENTION LEDGER
+
+Named "spaced repetition" without a ledger is theater.
+
+- **Machine SoT:** `Metrics/ledger.json` — fields: subskill, heat, last_pass, next_due, fail_count, module
+- **Human mirror:** `Metrics/Retention Ledger.md`
+- **Drill generator:** `py -3 tools/spaced_drill.py --write` → stdout + `Metrics/drill_plan_latest.md` (weak/due first + Practice Spine pulls)
+- Every subskill gets: last pass date, next due, fail count, heat (`strong` / `shaky` / `weak`)
+- Every retention grill **must** pull from the ledger (due items) plus new module material
+- Fail on a due item → heat downgraded, next due shortened, re-teach if `weak` twice in a row
+
+---
+
+## SECTION 2D: TIMED PRACTICE PROTOCOL
+
+Untimed explain-everything practice alone builds slow perfectionists.
+
+**Full protocol:** `Practice/Timed Transfer Protocol.md` (45/60/90 templates, screen-pass rubric, anti-cheat, module blueprints).  
+**Mocks / mixed sets:** `Gauntlet/Phase A Gauntlet.md`.
+
+| When | What |
+|---|---|
+| From Module 3 onward | At least one timed block per module (45–60 min), blind, no pattern labels |
+| Every module after `drilled` | Timed verification set before `timed-verified` |
+| Ongoing | Track: solve time, first wrong, hint used (Y/N), would-pass-screen (Y/N) |
+| Contests (optional) | LC weekly / CF — logged on scoreboard; never required for Phase A gates |
+
+---
+
+## SECTION 2E: INTERVIEW PERFORMANCE PROTOCOL
+
+| When | What |
+|---|---|
+| From Module 4 onward | Mini-mock every 2 modules (25–35 min, talk while coding) |
+| Rubric dimensions | Clarity · Correctness · Complexity communication · Code quality · Recovery |
+| Full mocks | After majority of Phase A modules are `complete`, not only at the end |
+| Chat traces | Do not replace mocks |
+
+---
+
+## SECTION 2F: INTEGRATION / DRILL SEQUENCING RULES
+
+1. Integration sets may only require **earned** primitives (status ≥ `taught` for that tool), **OR** must be labeled **`PREVIEW — no mastery credit`**.
+2. Solving a PREVIEW problem does not unlock the future module and does not count toward G3/G4 for that pattern family.
+3. After the real module is `complete`, PREVIEW problems may be re-queued as timed verification for real credit.
+
+**Week 2 drilling set reclassification (binding):**
+
+| # | Problem | Classification |
+|---|---|---|
+| 1–6, 8–10 | Arrays / hashing / recursion / DP-intro earned or adjacent | **Earned credit** (drilled) |
+| 7 | Word Ladder (BFS / implicit graph) | **PREVIEW** — Graphs module |
+| 11 | Count of Range Sum (merge sort on prefixes) | **PREVIEW** — Sorting module |
+| 12 | Alien Dictionary (topo sort) | **PREVIEW** — Graphs module |
+
+---
+
+## SECTION 2G: STRUCTURAL PROCESS (SCOPE PROTOCOL)
 
 ### Before Teaching Any Topic
 
-**Step 1: Scope Document**
-Present a complete outline of every subtopic, concept, edge case, trap, and Python-specific detail planned for coverage. Include what's being deferred and excluded with justification.
+**Step 1: Scope Document**  
+Complete outline of every subtopic, edge case, trap, Python detail. Name deferrals and exclusions with justification.
 
-**Step 2: Student Approval**
-Student reviews scope document. Adjustments made. Teaching only begins after agreement.
+**Step 2: Student Approval**  
+Teaching begins only after agreement.
 
-**Step 3: Gap Check Against Goals**
-Every subtopic must be justified against at least one of: CP, FAANG interviews, System Design. If not relevant to any, cut or flag as optional.
+**Step 3: Gap Check Against Primary Goal**  
+Every subtopic must justify against **Interview DSA**. CP/SD relevance may be noted but cannot bloat Phase A.
 
 ### After Teaching Any Topic
 
-**Step 4: Self-Audit Before Claiming Completion**
-Answer these questions honestly before saying "complete":
-- What would a FAANG interviewer ask that my lesson doesn't cover?
-- What edge case would break the student's understanding?
-- What Python-specific trap did I miss?
-- What connects this topic to future topics that needs planting now?
-- If I were the student, what would confuse me on a real problem?
+**Step 4: Self-Audit Before Raising Status**  
+- What would a FAANG interviewer ask that this lesson misses?
+- What edge case breaks the student's model?
+- What Python trap was missed?
+- What future connection must be planted now?
+- If I were the student, what would confuse me on a real timed problem?
 
-**Step 5: Honest Labeling**
-- **"Covered for current scope"** — handled what's needed now, specific deferrals named
-- **"Fully complete"** — no remaining gaps for our goals
-- **"Needs revisiting when we reach [topic]"** — explicit deferred items
+**Step 5: Raise status only via the enum** (`taught` → `drilled` → `retention-passed` → `timed-verified` → `complete`).
 
-**Step 6: Never claim complete without listing what was considered for exclusion and why.**
+**Step 6: Never claim `complete` without listing exclusions and why.**
 
-### Weekly Rhythm
+### Master Theorem — single source of truth
 
-| Day | Activity |
+| Item | Status | Where |
+|---|---|---|
+| Master Theorem | **Deferred to Module 3 (Searching & Sorting)** | Not counted as taught in Recursion |
+| Recursion trees / recurrence setup | Taught in Recursion (needed for later MT) | Module 2 |
+| Full MT application on mergesort/quicksort | Module 3 | After sorts are taught |
+
+Any older note that Recursion "includes Master Theorem introduction" means **preview of recurrence shape only**, not MT mastery.
+
+### Module Rhythm (pace-flexible; order fixed)
+
+| Block | Activity |
 |---|---|
-| Day 1-2 | TEACHING — Full concept delivery with frameworks, cheat sheets, sub-skill isolation, real-world use cases |
-| Day 3-4 | GUIDED PRACTICE — Solve problems together, show patterns, correct ruthlessly |
-| Day 5-6 | SOLO COMBAT — Student solves assigned problems alone, minimum 30 min struggle before hints |
-| Day 7 | RETENTION GRILL — Questions on current week AND all previous weeks. Spaced repetition. Fail = no advancement. |
+| Teach | Full concept delivery: frameworks, cheat sheets, sub-skill isolation |
+| Guided practice | Solve together; correct ruthlessly |
+| Solo combat | Student alone; minimum 30 min struggle before hints |
+| Retention grill | Current module + ledger due items. Fail = repeat, no advance |
+| Timed verify | Blind timed set → `timed-verified` |
+| Close | Update scoreboard + retention ledger |
 
 ### Rules of Engagement
-1. No moving forward with gaps. Day 7 failure = repeat.
-2. Student must explain concepts back. If you can't teach it, you don't know it.
-3. Every concept gets "why does this exist" and "when does this fail" treatment.
-4. Problems escalate: Easy → Medium → Hard. No skipping.
-5. Trick questions designed to expose shallow understanding.
-6. Student has standing permission and is ENCOURAGED to challenge teaching quality at any time.
+1. No moving forward with open gates. Retention fail = repeat.
+2. Student must explain concepts back.
+3. Every concept gets "why it exists" and "when it fails."
+4. Problems escalate: Easy → Medium → Hard. No skipping the ladder inside a module.
+5. Trick questions to expose shallow understanding.
+6. Student may challenge teaching quality at any time.
+7. **Student chooses session length and calendar spacing. Teacher does not waive gates for comfort.**
 
 ---
 
-# SECTION 3: COMPLETE ROADMAP
+# SECTION 3: COMPLETE ROADMAP (INDEFINITE)
 
-## Phase 1 — THE FOUNDATION (Weeks 1-3)
+Labels like "Week N" are **module IDs**, not deadlines. Take as long as needed.
 
-### Week 1: Complexity Analysis + Arrays & Strings
-| Day | Topic | Status |
+## PHASE A — INTERVIEW DSA (PRIMARY)
+
+**Teacher content status: FINISHED for Modules 1–11.**  
+Map: `Phase A Curriculum Index.md`.  
+Columns below: **Content** = materials exist · **Learner** = evidence status when practice resumes.
+
+### Module 1: Complexity + Arrays & Strings
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | Big O & Complexity Analysis | `content-delivered` | `complete` (historical) |
+| Teach | Arrays & Strings — Deep | `content-delivered` | `retention-passed` |
+| Teach | Array Patterns: Two Pointers, Sliding Window | `content-delivered` | `retention-passed` |
+| Retention | `Retention Questions/Week 1.md` | `content-delivered` | `retention-passed` |
+| Timed | Module 1 timed backfill | blueprints in gauntlet | `not-started` |
+
+### Module 2: Hashing + Recursion
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | Hash Maps & Hash Sets — Deep | `content-delivered` | `drilled` |
+| Teach | Recursion — Deep (**MT deferred to M3**) | `content-delivered` | `drilled` |
+| Drill | Week 2 set (PREVIEW #7/#11/#12) | `content-delivered` | `drilled` |
+| Retention | `Retention Questions/Module 2 Retention.md` | `content-delivered` | `not-started` |
+| Timed | Module 2 timed verify | blueprints available | `not-started` |
+
+### Module 3: Searching & Sorting
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | `Searching & Sorting/Binary Search.md` | `content-delivered` | `not-started` |
+| Teach | `Searching & Sorting/Sorting.md` (Master Theorem home) | `content-delivered` | `not-started` |
+| Retention | `Retention Questions/Module 3 Retention.md` | `content-delivered` | `not-started` |
+| Re-credit | Count of Range Sum | earned in Sorting + M3 retention | pending learner |
+
+### Module 4: Linked Lists + Stacks & Queues
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | `Linked Lists/Linked Lists.md` | `content-delivered` | `not-started` |
+| Teach | `Stacks & Queues/Stacks & Queues.md` | `content-delivered` | `not-started` |
+| Retention | `Retention Questions/Module 4 Retention.md` | `content-delivered` | `not-started` |
+| Mocks | Mini-mock #1 (after learner `drilled`) | protocol in Gauntlet | `not-started` |
+
+### Module 5: Trees
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | `Trees/Binary Trees.md` | `content-delivered` | `not-started` |
+| Teach | `Trees/Binary Search Trees.md` | `content-delivered` | `not-started` |
+| Retention | `Retention Questions/Module 5 Retention.md` | `content-delivered` | `not-started` |
+
+### Module 6: Heaps + Advanced Array Patterns
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | `Heaps/Heaps & Priority Queues.md` | `content-delivered` | `not-started` |
+| Teach | `Arrays/Advanced Patterns.md` | `content-delivered` | `not-started` |
+| Retention | `Retention Questions/Module 6 Retention.md` | `content-delivered` | `not-started` |
+| Mocks | Mini-mock #2 | protocol in Gauntlet | `not-started` |
+
+### Module 7: Graphs I
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | `Graphs/Graphs I.md` | `content-delivered` | `not-started` |
+| Retention | `Retention Questions/Module 7 Retention.md` | `content-delivered` | `not-started` |
+| Re-credit | Word Ladder + Alien Dictionary | earned in Graphs I | pending learner |
+
+### Module 8: Graphs II + DP I
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | `Graphs/Graphs II.md` | `content-delivered` | `not-started` |
+| Teach | `Dynamic Programming/DP I.md` | `content-delivered` | `not-started` |
+| Retention | `Retention Questions/Module 8 Retention.md` | `content-delivered` | `not-started` |
+| Mocks | Mini-mock #3 | protocol in Gauntlet | `not-started` |
+
+### Module 9: DP II + Backtracking + Greedy
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | `Dynamic Programming/DP II.md` | `content-delivered` | `not-started` |
+| Teach | `Backtracking/Backtracking & Greedy.md` | `content-delivered` | `not-started` |
+| Retention | `Retention Questions/Module 9 Retention.md` | `content-delivered` | `not-started` |
+
+### Module 10: Advanced Structures (interview-weighted)
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | `Advanced/Tries & Monotonic.md` | `content-delivered` | `not-started` |
+| Teach | `Advanced/Segment & Fenwick Exposure.md` (exposure) | `content-delivered` | `not-started` |
+| Retention | `Retention Questions/Module 10 Retention.md` | `content-delivered` | `not-started` |
+| Mocks | Mini-mock #4+ | protocol in Gauntlet | `not-started` |
+
+### Module 11: Gauntlet (Phase A close)
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Gauntlet | `Gauntlet/Phase A Gauntlet.md` | `content-delivered` | `not-started` |
+| Final | `Retention Questions/Module 11 Final Assessment.md` | `content-delivered` | `not-started` |
+| Phase A declaration | Gates G1–G7 | materials ready | **not declared** (needs learner evidence) |
+
+### Coverage modules (interview gaps — interleaved after M3–M6 foundations)
+| Block | Topic | Content | Learner |
+|---|---|---|---|
+| Teach | `Intervals/Intervals & Sweep Line.md` | `content-delivered` | `not-started` |
+| Teach | `Bitwise/Bit Manipulation.md` | `content-delivered` | `not-started` |
+| Teach | `Strings/String Algorithms.md` | `content-delivered` | `not-started` |
+| Teach | `Math/Math for Interviews.md` | `content-delivered` | `not-started` |
+| Teach | `Matrix/Matrix & Grid Patterns.md` | `content-delivered` | `not-started` |
+| Teach | `Design/Design Data Structures.md` | `content-delivered` | `not-started` |
+| Retention | `Retention Questions/Coverage Gaps Retention.md` | `content-delivered` | `not-started` |
+| Spine | `Practice Spines/Phase A MVP Spines.md` § Coverage | `content-delivered` | `not-started` |
+
+### Operating system (gaps closed 2026-07-09 — except answer-key removal, intentionally kept)
+| Piece | Path | Status |
 |---|---|---|
-| Day 1-2 | Big O & Complexity Analysis | ✅ Covered for current scope |
-| Day 3-4 | Arrays & Strings — Deep | ✅ Complete |
-| Day 5-6 | Array Patterns: Two Pointers, Sliding Window | ✅ Complete |
-| Day 7 | Retention Grill: Big O + Arrays combined | ✅ Complete |
+| Executable problem bank | `problem-bank/` (24 problems, 133 tests) | live — `py -3 problem-bank/run_all.py` |
+| Debugging pedagogy | `Debugging/Debugging Diagnosis.md` | delivered |
+| Interview templates | `Templates/Interview Templates.md` + `python_templates.py` | delivered |
+| MVP spines | `Practice Spines/Phase A MVP Spines.md` | delivered |
+| Spaced drill generator | `tools/spaced_drill.py` + `Metrics/ledger.json` | live |
+| Scoreboard logger | `tools/scoreboard_update.py` + `Metrics/scoreboard.json` | live |
+| Timed transfer protocol | `Practice/Timed Transfer Protocol.md` | delivered |
+| Battle-test QA | `QA/Battle Test Protocol.md` + `QA/Phase A Audit Log.md` | delivered (+ lesson fixes logged) |
+| Monotonic ownership | `QA/Monotonic Ownership.md` | delivered |
 
-### Week 2: Hashing + Recursion
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | Hash Maps & Hash Sets — Deep | ✅ Complete |
-| Day 3-4 | Recursion — Deep (includes recursive complexity analysis, call stack space, Master Theorem introduction) | ✅ Complete |
-| Day 5-6 | Integration Problem Drilling (12 problems, no pattern labels) | ✅ Complete |
-| Day 7 | Retention Grill: All previous + Hashing + Recursion | 🔲 Not started |
+## PHASE B — COMPETITIVE PROGRAMMING (OPTIONAL, AFTER PHASE A)
 
-### Week 3: Searching & Sorting
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | Binary Search — Deep (+ bisect module) | 🔲 Not started |
-| Day 3-4 | Sorting Algorithms (Merge Sort, Quick Sort, their complexities, Master Theorem application) | 🔲 Not started |
-| Day 5-6 | Searching & Sorting Problem Drilling | 🔲 Not started |
-| Day 7 | Retention Grill: All previous topics cumulative | 🔲 Not started |
+- Separate track. Language decision (C++/Java/Python) made at Phase B start.
+- Contest rating goals set then — not before.
+- Does not block Phase A.
 
-## Phase 2 — THE ARSENAL (Weeks 4-6)
+## PHASE C — SYSTEM DESIGN (OPTIONAL, AFTER PHASE A)
 
-### Week 4: Linked Lists + Stacks & Queues
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | Linked Lists (Singly, Doubly, implementation, patterns) | 🔲 Not started |
-| Day 3-4 | Stacks & Queues (implementation, patterns, monotonic stack introduction) | 🔲 Not started |
-| Day 5-6 | Problem Drilling | 🔲 Not started |
-| Day 7 | Retention Grill: Cumulative | 🔲 Not started |
-
-### Week 5: Trees
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | Binary Trees (traversals, properties, recursive thinking on trees) | 🔲 Not started |
-| Day 3-4 | Binary Search Trees (operations, balancing concepts) | 🔲 Not started |
-| Day 5-6 | Tree Problem Drilling | 🔲 Not started |
-| Day 7 | Retention Grill: Cumulative | 🔲 Not started |
-
-### Week 6: Heaps + Advanced Patterns
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | Heaps & Priority Queues (heapq module, patterns) | 🔲 Not started |
-| Day 3-4 | Sliding Window Advanced + Two Pointer Advanced | 🔲 Not started |
-| Day 5-6 | Problem Drilling | 🔲 Not started |
-| Day 7 | Retention Grill: Cumulative | 🔲 Not started |
-
-## Phase 3 — THE CRUCIBLE (Weeks 7-9)
-
-### Week 7: Graphs I
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | Graph Representation, BFS, DFS | 🔲 Not started |
-| Day 3-4 | Topological Sort, Connected Components | 🔲 Not started |
-| Day 5-6 | Graph Problem Drilling | 🔲 Not started |
-| Day 7 | Retention Grill: Cumulative | 🔲 Not started |
-
-### Week 8: Graphs II + Dynamic Programming I
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | Dijkstra, Union-Find | 🔲 Not started |
-| Day 3-4 | DP Introduction (memoization, tabulation, 1D problems) | 🔲 Not started |
-| Day 5-6 | Problem Drilling | 🔲 Not started |
-| Day 7 | Retention Grill: Cumulative | 🔲 Not started |
-
-### Week 9: Dynamic Programming II + Backtracking
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | DP Advanced (2D, subsequences, knapsack variants) | 🔲 Not started |
-| Day 3-4 | Backtracking + Greedy Algorithms | 🔲 Not started |
-| Day 5-6 | Problem Drilling | 🔲 Not started |
-| Day 7 | Retention Grill: Cumulative | 🔲 Not started |
-
-## Phase 4 — THE FORGE (Weeks 10-12)
-
-### Week 10: Advanced Data Structures
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | Tries, Monotonic Stack/Queue Deep Dive | 🔲 Not started |
-| Day 3-4 | Segment Trees / Fenwick Trees (exposure level) | 🔲 Not started |
-| Day 5-6 | Problem Drilling | 🔲 Not started |
-| Day 7 | Retention Grill: Cumulative | 🔲 Not started |
-
-### Week 11: System Design Fundamentals
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | System Design Thinking (scaling, load balancing, caching basics) | 🔲 Not started |
-| Day 3-4 | Database Design, API Design, CAP Theorem | 🔲 Not started |
-| Day 5-6 | System Design Practice Problems | 🔲 Not started |
-| Day 7 | Retention Grill: Cumulative | 🔲 Not started |
-
-### Week 12: The Gauntlet
-| Day | Topic | Status |
-|---|---|---|
-| Day 1-2 | Mock Interviews (full simulation) | 🔲 Not started |
-| Day 3-4 | Timed Problem Sets — CP style | 🔲 Not started |
-| Day 5-6 | Weak Spot Identification and Targeted Drilling | 🔲 Not started |
-| Day 7 | Final Cumulative Assessment | 🔲 Not started |
+- Intro → intermediate SD only after interview DSA gates.
+- Removed from the middle of the DSA spine so it cannot steal pattern reps.
+- Topics formerly "Week 11" live here: scaling, LB, caching, DB/API design, CAP, practice prompts.
 
 ---
 
-# SECTION 4: COMPLETED TOPICS — DETAILED RECORD
+# SECTION 4: COMPLETED / IN-PROGRESS TOPICS — DETAILED RECORD
 
 ## Topic 1: Big O & Complexity Analysis
 
-**Status:** Covered for current scope
-
-**Date Completed:** Session 1
+**Status:** `complete` (Module 1; keep warm via ledger)
 
 **What Was Taught:**
 - Why Big O exists and what "shape of growth" means
@@ -232,171 +392,157 @@ Answer these questions honestly before saying "complete":
 - The 6-skill framework for time complexity analysis
 - Complete space complexity framework including call stack
 - All loop patterns: linear, constant step, halving, doubling, multiplying by constant, squaring (log log n)
-- Sequential blocks: ADD
-- Nested loops: MULTIPLY
+- Sequential blocks: ADD; Nested loops: MULTIPLY
 - Dependent nesting: linear sum → O(n²), harmonic series → O(n log n)
 - Hidden costs inside loops (list search, string concat, slicing, sorting, function calls)
 - Conditional branches: worst case rule with exception for provably limited branches
-- Python operations cheat sheet (lists, sets, dicts, strings, deque, heapq, bisect, Counter)
+- Python operations cheat sheet
 - String immutability trap and O(n²) concatenation pattern
-- In-place vs out-of-place algorithms
-- While loops with complex termination conditions
+- In-place vs out-of-place; while loops with complex termination
 - Multi-part preprocess + query pattern
-- Sorting space cost (Timsort uses O(n) space)
-- Practical constraints table (n → required complexity)
-- Real-world use cases (Amazon, Google Maps, System Design)
-- How to communicate complexity in interviews
-- Code examples for every complexity class including O(2ⁿ) and O(n!)
+- Sorting space cost (Timsort O(n) space)
+- Practical constraints table; interview communication of complexity
 
-**What Was Tested:**
-- 8 escalating problems, all passed with full reasoning
-- Problems covered: single operations, loop patterns, sequential blocks with traps, conditional branches, different inputs, function calls inside loops, dependent nesting with hidden inner costs (mathematical derivation), large multi-block production-style function
-
-**What Was Deferred (With Justification):**
+**What Was Deferred:**
 
 | Topic | Deferred To | Justification |
 |---|---|---|
-| Deep recursive complexity (recursion trees, recurrence relations) | Week 2: Recursion | Needs recursion fundamentals first. Abstract without ability to write recursive code. |
-| Master Theorem | Week 3: Sorting | Only useful for divide-and-conquer. No anchor without merge sort / quick sort. |
-| Memoization space analysis | Week 8-9: DP | Requires understanding of DP and caching. |
-| O(V + E) graph complexity | Week 7: Graphs | Requires graph representation knowledge. |
+| Deep recursive complexity (recursion trees, recurrence relations) | Module 2: Recursion | Needs recursion fundamentals first |
+| Master Theorem | Module 3: Sorting | Needs divide-and-conquer anchors |
+| Memoization space analysis | Modules 8–9: DP | Requires DP |
+| O(V + E) graph complexity | Module 7: Graphs | Requires graph representation |
 
-**What Was Excluded (With Justification):**
-
-| Topic | Why Excluded |
-|---|---|
-| Little-o, little-omega notation | Academic only. Never appears in interviews or CP. |
-| Formal mathematical proofs of Big O | Need to USE Big O, not prove its properties. |
-| NP-completeness / P vs NP (deep) | Will mention briefly at backtracking. Full treatment not needed for our goals. |
-| Formal amortized analysis methods (aggregate, accounting, potential) | Intuitive understanding sufficient. Formal methods are graduate-level. |
-
-**Outstanding Items:** None — all problems completed.
+**What Was Excluded:** Little-o/ω, formal Big-O proofs, deep P vs NP, formal amortized methods (aggregate/accounting/potential).
 
 ---
 
-# SECTION 5: COMPLETED TOPICS — CONTINUED
-
 ## Topic 2: Arrays & Strings — Deep
 
-**Status:** Complete
-
-**Date Completed:** Week 1, Day 3-4
-
-**What Was Taught:**
-- Full arrays deep dive: dynamic arrays, memory layout, contiguous allocation
-- Strings as immutable arrays, string immutability traps
-- Two Pointers pattern (opposite direction, same direction)
-- Sliding Window pattern (fixed size, variable size)
-- Prefix sums and running computations
-- In-place array manipulation techniques
-- Common array/string patterns for FAANG interviews
+**Status:** `retention-passed` (timed backfill recommended)
 
 **Materials:** `Arrays/Arrays.md`, `Arrays/Arrays&Strings.md`
 
-**What Was Tested:**
-- Week 1 Retention Grill (see `Retention Questions/Week 1.md`)
-- Sections: Rapid Fire complexity analysis (A1-A5), Conceptual questions (B1-B5), Problem solving (C1-C4)
-- C1: Sliding window trap — positive vs negative arrays
-- C2: QuickSelect — k-th smallest with full partition trace
-- C3: Three Sum — sort + two pointers + duplicate skipping
-- C4: Group Anagrams — hash map with canonical key
-- All problems passed with full reasoning, traces, and edge cases
+**What Was Taught:** Dynamic arrays, memory layout, strings/immutability, two pointers, sliding window, prefix sums, in-place techniques, common interview patterns.
+
+**What Was Tested:** Week 1 Retention Grill (`Retention Questions/Week 1.md`) — passed with full reasoning.
 
 ---
 
 ## Topic 3: Hash Maps & Hash Sets — Deep
 
-**Status:** Complete
-
-**Date Completed:** Week 2, Day 1-2
-
-**What Was Taught:**
-- Hash function internals, collision handling (chaining, open addressing)
-- Python dict and set implementation details
-- Hash map patterns: frequency counting, prefix sums with hash maps
-- Advanced hashing: rolling hash, polynomial hash, Rabin-Karp
-- Designing hash-based solutions for interview problems
+**Status:** `drilled` — **blocked on Module 2 retention + timed verify**
 
 **Materials:** `Hashing/Hash maps&sets.md`, `Hashing/Advanced Hashing.md`
+
+**What Was Taught:** Hash internals, collisions, Python dict/set, frequency / prefix-hash patterns, rolling/polynomial hash & Rabin-Karp exposure, interview hash designs.
 
 ---
 
 ## Topic 4: Recursion — Deep
 
-**Status:** Complete
-
-**Date Completed:** Week 2, Day 3-4
-
-**What Was Taught:**
-- Recursive thinking: base case, recursive case, trust the recursion
-- Call stack mechanics and space analysis
-- Recursive complexity analysis (recursion trees, recurrence relations)
-- Memoization and tabulation (DP introduction)
-- Advanced recursion: backtracking, divide-and-conquer
-- Master Theorem introduction and application
+**Status:** `drilled` — **blocked on Module 2 retention + timed verify**
 
 **Materials:** `Recursion/Recursion.md`, `Recursion/Advanced Recursion.md`
 
+**What Was Taught:** Base/recursive/combine, call stack & space, recursion trees, recurrence setup, memoization/tabulation intro, backtracking & D&C exposure.
+
+**Master Theorem:** **Not complete here.** Recurrence setup only. Full MT → Module 3.
+
 ---
 
-## Topic 5: Week 2 Integration Drilling
+## Topic 5: Module 2 Integration Drilling
 
-**Status:** Complete
-
-**Date Completed:** Week 2, Day 5-6
-
-**What Was Tested:**
-- 12 integration problems with NO pattern labels (student must identify technique)
-- Problems combine multiple topics from Weeks 1-2
+**Status:** `drilled` (credit only for earned problems; PREVIEW separated)
 
 **Materials:** `Retention Questions/Week 2 Drilling Set.md`
 
-**Problems Completed (All 12/12):**
-
-| # | Problem | Pattern Used | Complexity |
+| # | Problem | Pattern | Credit |
 |---|---|---|---|
-| 1 | Longest Palindromic Substring | Expand Around Center | O(n²) time, O(1) space |
-| 2 | Product of Array Except Self | Prefix/Suffix Product (Two-Pass) | O(n) time, O(1) space |
-| 3 | Find the Duplicate Number | Floyd's Cycle Detection | O(n) time, O(1) space |
-| 4 | Decode Ways | Memoized Recursion / DP (Fibonacci-like) | O(n) time, O(1) space |
-| 5 | Subarray Sum Divisible by K | Prefix Sum + Hash Map + Modular Arithmetic | O(n) time, O(k) space |
-| 6 | Minimum Size Subarray Sum | Sliding Window (Variable Size) | O(n) time, O(1) space |
-| 7 | Word Ladder Length | BFS on Implicit Graph | O(n×L) time, O(n×L) space |
-| 8 | String Interleaving | Memoized Recursion / 2D DP | O(m×n) time, O(m×n) space |
-| 9 | Next Permutation | Algorithmic Reasoning (no standard pattern) | O(n) time, O(1) space |
-| 10 | Longest Valid Parentheses | Two-Pass Counter (solved 2 ways, picked O(1) space) | O(n) time, O(1) space |
-| 11 | Count of Range Sum | Modified Merge Sort on Prefix Sums | O(n log n) time, O(n) space |
-| 12 | Alien Dictionary | Graph Construction + Topological Sort (Kahn's BFS) | O(C) time, O(V+E) space |
+| 1 | Longest Palindromic Substring | Expand Around Center | Earned |
+| 2 | Product of Array Except Self | Prefix/Suffix Product | Earned |
+| 3 | Find the Duplicate Number | Floyd's Cycle Detection | Earned* |
+| 4 | Decode Ways | Memoized Recursion / DP | Earned |
+| 5 | Subarray Sum Divisible by K | Prefix + Hash + Mod | Earned |
+| 6 | Minimum Size Subarray Sum | Variable Sliding Window | Earned |
+| 7 | Word Ladder Length | BFS on Implicit Graph | **PREVIEW** |
+| 8 | String Interleaving | Memoized Recursion / 2D DP | Earned |
+| 9 | Next Permutation | Algorithmic reasoning | Earned |
+| 10 | Longest Valid Parentheses | Two-Pass Counter | Earned |
+| 11 | Count of Range Sum | Merge Sort on Prefix Sums | **PREVIEW** |
+| 12 | Alien Dictionary | Graph + Topo Sort | **PREVIEW** |
+
+\*Floyd on arrays is acceptable as array/linked-list-cycle insight; full graph module still owns BFS/topo.
 
 ---
 
-# SECTION 6: KEY DECISIONS LOG
+# SECTION 5: KEY DECISIONS LOG
 
 | Decision | Rationale | Date |
 |---|---|---|
-| Python as primary language | 3-month timeline too tight to learn C++ simultaneously. Language doesn't matter at FAANG interviews. Python first, C++ later for CP if desired. | Session 1 |
-| Realistic target adjusted to top 5-10% in 3 months | 336 hours vs 2000+ hours needed for 0.1%. Launchpad approach: strong enough for FAANG in 3 months, 0.1% in following 3-6 months. | Session 1 |
-| Scope document protocol adopted | Repeated teaching quality failures where gaps were only caught by student, not teacher. Structural fix to prevent reactive teaching. | Session 1, after Big O |
-| System Design included in Week 11 | Student listed it as a goal. Intro-level treatment given timeline constraints. | Session 1 |
+| Python as primary language (Phase A) | Interview DSA first; language secondary at FAANG screens | Session 1 |
+| Scope document protocol | Stop reactive gap-filling | Session 1, after Big O |
+| **Remove 12-week deadline** | Calendar pressure fought mastery; pace is student-chosen | 2026-07-09 |
+| **Kill percentile / 0.1% targets** | Unmeasurable vanity; replace with evidence gates | 2026-07-09 |
+| **Single primary goal: Interview DSA** | CP + SD diluted the spine | 2026-07-09 |
+| **CP → Phase B, SD → Phase C** | Optional after Phase A gates | 2026-07-09 |
+| **Status enum + Complete only after timed-verify** | End status inflation | 2026-07-09 |
+| **PREVIEW tagging for Week 2 #7, #11, #12** | Fix sequencing integrity | 2026-07-09 |
+| **Master Theorem only in Module 3** | One source of truth | 2026-07-09 |
+| **Timed practice from Module 3; mocks from Module 4** | Pressure skills cannot wait for a final gauntlet | 2026-07-09 |
+| **Scoreboard + Retention Ledger files** | Spaced repetition and metrics must be engineered | 2026-07-09 |
+| **Content craft floor ≥95%** | Raise lesson/retention quality bar above prior 85% maintain | 2026-07-09 |
+| **Phase A bulk content delivery** | Finish all M3–M11 lessons + retention (+ M2 grill) without learner gating | 2026-07-09 |
+| **`content-delivered` ≠ `complete`** | Honest split: materials ready vs learner evidence | 2026-07-09 |
+| **Keep retention answer keys** | Self-grade + tutor sessions; keys are a feature, not a leak to delete | 2026-07-09 |
+| **`ledger.json` + `spaced_drill.py`** | Spaced drills must be productized, not vibes | 2026-07-09 |
+| **`scoreboard.json` + `scoreboard_update.py`** | Timed/mock logging must be machine-appendable on Windows | 2026-07-09 |
+| **Timed Transfer Protocol file** | Harden G3/G4 practice with templates + screen-pass + anti-cheat | 2026-07-09 |
+| **Battle-test QA + Phase A Audit Log** | Pressure-test high-risk claims; fix real errors | 2026-07-09 |
+| **Monotonic ownership M4 vs M10** | Intro vs deep dive; cross-links + `QA/Monotonic Ownership.md` | 2026-07-09 |
+| **Index covers tools/QA/spines/bank** | Single map in `Phase A Curriculum Index.md` | 2026-07-09 |
+| **Close critique gaps 1–9 (keep answer keys)** | Coverage modules, executable bank, debugging, templates, spaced tool, MVP spines, QA audit, timed protocol; do **not** remove answer keys | 2026-07-09 |
+| **Coverage modules as first-class** | Intervals, Bits, Strings, Math, Matrix, Design DS — not optional shells | 2026-07-09 |
 
 ---
 
-# SECTION 7: NEXT ACTIONS
+# SECTION 6: NEXT ACTIONS
 
-1. **Immediate:** Complete Week 2 Day 7 Retention Grill — cumulative test covering Big O + Arrays + Hashing + Recursion
-2. **Next:** Begin Week 3 (Searching & Sorting) — Teacher to prepare **Scope Document** for Binary Search + Sorting Algorithms
-3. **Ongoing:** Every future topic follows the Scope Document Protocol defined in Section 2
+**Teacher side:** Phase A content + gap-closure OS is **DONE**. Index: `Phase A Curriculum Index.md`.
 
----
-
-# SECTION 8: STUDENT STRENGTHS OBSERVED
-
-- **Willingness to challenge the teacher.** This is rare and invaluable. Directly improved teaching quality three times in one session.
-- **Mathematical reasoning.** Problem 7 derivation (triple summation to O(n³)) showed strong analytical capability.
-- **Discipline in following frameworks.** Once given the recipe, applied it mechanically and correctly across all 8 problems without shortcuts.
-- **Tradeoff awareness.** Proactively suggested `.join()` fixes and discussed optimization beyond what was asked.
-- **Honest self-assessment.** Admitted when confused instead of pretending to understand. This is the single most important trait for reaching elite level.
+**When learner loop resumes (student choice of pace):**
+1. Module 2 Retention → update `Metrics/ledger.json`
+2. `py -3 tools/spaced_drill.py --write` before sessions
+3. Clear MVP spine for current module; red/green via `py -3 problem-bank/run_all.py` where banked
+4. Timed verify per `Practice/Timed Transfer Protocol.md` → `tools/scoreboard_update.py`
+5. Interleave coverage modules after M3–M6 foundations
+6. Use `Debugging/Debugging Diagnosis.md` on every failed case; templates from `Templates/`
+7. Gauntlet + G1–G7 for Phase A declaration — **content ≠ declaration**
 
 ---
 
-*End of Handoff Document. To be updated after each completed topic.*
+# SECTION 7: STUDENT STRENGTHS OBSERVED
+
+- Willingness to challenge the teacher — directly improved quality multiple times
+- Mathematical reasoning under nested complexity derivations
+- Discipline applying frameworks mechanically once given the recipe
+- Tradeoff awareness beyond the minimum asked
+- Honest self-assessment when confused
+
+---
+
+# SECTION 8: QUALITY BAR (TARGET)
+
+Program operating target after this redesign:
+
+| Aggregate metric | Target | Notes |
+|---|---|---|
+| Plan quality (as a career system) | **98%** | Indefinite pace + evidence gates |
+| Teaching process integrity (gates, sequencing, honesty) | **98%** | Status enum; PREVIEW rules; MT home = M3 |
+| Measurement & accountability | **98%** | Scoreboard + ledger |
+| Content craft (lessons + retention keys) | **≥95%** | Phase A materials delivered 2026-07-09 |
+
+Targets are operating standards for how we run the program — not a promise of interview outcomes.
+
+---
+
+*End of Handoff Document. Update after each status change, timed set, retention grill, and mock.*

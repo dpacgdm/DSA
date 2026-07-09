@@ -755,6 +755,8 @@ Recurrence: `T(n) = 2T(n/2) + O(n)` → from the table → **O(n log n)**
 
 ## Method 3: The Master Theorem
 
+> **Governance (2026-07-09):** This section is **exposure / reference**, not Module 2 mastery credit. **Master Theorem is deferred to Module 3 (Searching & Sorting)** for `taught` → `complete` status. Module 2 owns recursion trees and recurrence *setup*; Module 3 owns full MT application on merge sort / quick sort. Do not mark MT `complete` from Recursion alone. See `Handoff Doc.md` §2G.
+
 For recurrences of the form: **T(n) = aT(n/b) + O(nᶜ)**
 
 Where:
