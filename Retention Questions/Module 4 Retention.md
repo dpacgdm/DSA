@@ -1,3 +1,6 @@
+<!-- ANSWER KEYS MOVED: see Retention Questions/keys/Module 4 Retention.keys.md -->
+> **Blind mode:** Answers were moved to `keys/Module 4 Retention.keys.md`. Attempt first, then grade.
+
 # MODULE 4 RETENTION GRILL — LINKED LISTS + STACKS & QUEUES
 
 **With answers.** Use blind first: cover the answer blocks, speak/write your solution, then check.
@@ -16,93 +19,78 @@ Answer in one breath. Then check.
 
 ## A1. Why is `arr[i]` O(1) but walking to the i-th linked-list node O(n)?
 
-**Answer:** Arrays are contiguous — address = base + i × size (one arithmetic jump). Linked lists are pointer chains — you must follow `next` i times. No random access.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 1)
 
 ## A2. Why do arrays often beat linked lists in practice for sequential scans even when both are O(n)?
 
-**Answer:** **Cache locality.** Contiguous array elements ride into CPU cache together. LL nodes are scattered heap allocations → frequent cache misses.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 2)
 
 ## A3. Singly vs doubly: when do you need `prev`?
 
-**Answer:** When you must **delete/move an arbitrary known node in O(1)** without scanning for its predecessor (classic: **LRU** with hash map + DLL).
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 3)
 
 ## A4. What does a dummy head buy you?
 
-**Answer:** One code path for mutations that might change the real head (delete head, merge, remove nth from end). Return `dummy.next` as the new head.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 4)
 
 ## A5. Floyd cycle detection: slow +1, fast +2. If they meet, is there a cycle? How do you find the entrance?
 
-**Answer:** Meeting ⇒ cycle (or they'd hit `None`). Then put one pointer at `head`, both walk +1; meeting point = entrance. Compare nodes with `is`, not values.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 5)
 
 ## A6. Remove nth from end in one pass — what's the setup?
 
-**Answer:** Dummy → head. Advance `fast` by n from dummy. Walk `fast` and `slow` until `fast.next` is None. `slow` is before the victim; splice `slow.next = slow.next.next`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 6)
 
 ## A7. Stack vs queue in one sentence each. Python implementations?
 
-**Answer:** Stack = LIFO → `list` (`append`/`pop`). Queue = FIFO → `collections.deque` (`append`/`popleft`). Never `list.pop(0)` for a hot queue.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 7)
 
 ## A8. Why is `list.pop(0)` wrong for a queue?
 
-**Answer:** O(n) — every element shifts left. `deque.popleft()` is O(1).
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 8)
 
 ## A9. Monotonic stack: why O(n) for next greater?
 
-**Answer:** Each index is **pushed once and popped at most once**. Total stack ops ≤ 2n.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 9)
 
 ## A10. Daily temperatures vs next greater — what's the only difference?
 
-**Answer:** Same decreasing monotonic stack. Next greater stores **values**; daily temps stores **index distances** `i - j`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 10)
 
 ## A11. Sliding window maximum: why a deque, and what does the front represent?
 
-**Answer:** Need O(1) expire from front and discard dominated from back. Front index = **current window's maximum**.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 11)
 
 ## A12. Min stack: how is getMin O(1)?
 
-**Answer:** Store `(val, min_so_far)` on each push (or a parallel mins stack). Top's min field is the answer — no scan.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 12)
 
 ## A13. Valid parentheses: why isn't counting open/close enough?
 
-**Answer:** Order matters. `([)]` has balanced counts but wrong nesting. Stack enforces LIFO matching.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 13)
 
 ## A14. Recursion on a linked list: what's the hidden cost?
 
-**Answer:** O(n) **call stack** space (and Python's ~1000 recursion limit on long lists). Prefer iterative reverse when space/limit matters.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 14)
 
 ## A15. Intersection of two LLs: why `a is b`, not `a.val == b.val`?
 
-**Answer:** Intersection means **shared nodes** (same object identity), not equal values that happen to match.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 15)
 
 # SECTION B: CONCEPTUAL (TEACH-BACK)
 
@@ -112,67 +100,53 @@ Speak answers out loud like an interview. Then compare.
 
 ## B1. Walk through iterative reverse of `1→2→3`. Name the three pointers and the Save→Rewire→Advance order.
 
-**Answer:**  
-`prev=None`, `cur=1`.  
-Loop: `nxt=cur.next` (Save) → `cur.next=prev` (Rewire) → `prev=cur; cur=nxt` (Advance).  
-After: `prev=3` is new head → `3→2→1`.  
-If you rewire before saving `nxt`, you lose the rest of the list.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 16)
 
 ## B2. Explain merge two sorted lists with a dummy. What do you do when one list empties?
 
-**Answer:** `dummy` + `tail`. Always attach the smaller head of `list1`/`list2`, advance that list and `tail`. When one is exhausted: `tail.next = list1 or list2` (attach the leftover chain). Return `dummy.next`. Reuses nodes — O(1) extra space.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 17)
 
 ## B3. Histogram largest rectangle: what does the monotonic stack find for each bar?
 
-**Answer:** For each bar height h, the largest rectangle of height h extends left/right until a **strictly shorter** bar. An increasing monotonic stack finds **previous smaller** and **next smaller** as bounds. Area = `h * (right - left - 1)`. Sentinels of height 0 avoid empty-stack edge cases.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 18)
 
 ## B4. Queue via two stacks: where does the amortization come from?
 
-**Answer:** `in_s` receives pushes. On pop/peek, if `out_s` is empty, pour all of `in_s` into `out_s` (reverses order → FIFO). Each element is moved **at most once** in→out, so amortized O(1) per op.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 19)
 
 ## B5. Decode string `"3[a2[c]]"` — what is on the stack when you hit the first `]`?
 
-**Answer:** After `3[a2[c`: stack has `("", 3)` then `("a", 2)`, `cur_str="c"`. First `]` pops `("a", 2)` → `cur_str = "a" + "c"*2 = "acc"`. Second `]` pops `("", 3)` → `"acc"*3 = "accaccacc"`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 20)
 
 ## B6. When would you choose a linked list over a dynamic array in an interview design question?
 
-**Answer:** When you already hold a node reference and need **O(1) local insert/delete/splice**, or the problem API is `ListNode`, or you're building **LRU** (DLL + map). If you need index access or tight loops over data, prefer arrays/deques and say so (cache).
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 21)
 
 ## B7. Cumulative — Arrays: Fixed sliding window sum vs variable window "min length with sum ≥ target" — one sentence each on the pointer motion.
 
-**Answer:** Fixed: add right, subtract left when window exceeds size k. Variable (positives): expand right; while sum ≥ target shrink left and track min length — classic two-pointer window.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 22)
 
 ## B8. Cumulative — Hashing: Why is "two sum → indices" a hash map problem, not two pointers, on an unsorted array?
 
-**Answer:** Unsorted → can't rely on ordered two pointers without sorting (which loses indices or needs pairs). Map `value → index` gives O(n) complement lookup. (Sorted + two pointers works for the *values* variant if indices aren't required.)
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 23)
 
 ## B9. Cumulative — Recursion: Three components of every recursive function?
 
-**Answer:** **Base case** (stop), **recursive case** (shrink), **combination** (use sub-result). Missing any → infinite recursion or wrong answer.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 24)
 
 ## B10. Cumulative — Binary search: What must be true about the search space?
 
-**Answer:** It must be **monotonic** with respect to the predicate (sorted values, or a boolean feasible/infeasible that flips once). BS answers "first true / last false" on that space — not on arbitrary unsorted data.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 25)
 
 # SECTION C: PROBLEMS (6–8) — FULL SOLUTIONS
 
@@ -866,9 +840,8 @@ def reverse(head):
     return prev
 ```
 
-**Answer:** Lost `nxt`. After `cur.next = prev`, `cur.next` is the old prev — you cannot advance. Fix: `nxt = cur.next` before rewiring.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 26)
 
 ## D2.
 
@@ -879,9 +852,8 @@ q.append(2)
 x = q.pop(0)  # as queue
 ```
 
-**Answer:** Correct functionally, **O(n)** per dequeue. Use `deque.popleft()`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 27)
 
 ## D3.
 
@@ -891,9 +863,8 @@ while stack and stack[-1] < nums[i]:
     ans[stack.pop()] = nums[i]
 ```
 
-**Answer:** If stack stores **indices**, compare `nums[stack[-1]] < nums[i]`, not `stack[-1] < nums[i]`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 28)
 
 ## D4.
 
@@ -908,9 +879,8 @@ def has_cycle(head):
     return False
 ```
 
-**Answer:** Value collision ≠ cycle. Use `slow is fast`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 29)
 
 ## D5.
 
@@ -926,9 +896,8 @@ def daily_temperatures(T):
     return ans
 ```
 
-**Answer:** Should be **index distance** `i - j`, not temperature difference.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 30)
 
 ## D6.
 
@@ -946,9 +915,8 @@ def max_sliding_window(nums, k):
     return out
 ```
 
-**Answer:** Must `if dq[0] <= i - k: dq.popleft()` before reading the max — otherwise expired indices poison the front.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 31)
 
 ## D7.
 
@@ -967,9 +935,8 @@ def merge(l1, l2):
     return dummy.next  # ???
 ```
 
-**Answer:** Missing `tail.next = l1 or l2` — leftover chain dropped.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 32)
 
 # SECTION E: INTERVIEW TALK RUBRIC (SELF-SCORE 1–5)
 
@@ -1050,63 +1017,53 @@ Ledger: copy due items into `Metrics/Retention Ledger.md`. Fail → shorten next
 
 ## A16. Reorder list — name the three phases.
 
-**Answer:** Find middle (slow/fast) → reverse second half → weave/merge alternate.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 33)
 
 ## A17. Rotate right by k — why `k %= n`?
 
-**Answer:** Full rotations are no-ops. Without mod, you walk off the list or do useless O(k) work when k ≫ n.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 34)
 
 ## A18. RPN: after tokens `["4","13","5","/","+"]`, what is the stack just before `+`?
 
-**Answer:** `[4, 2]` — because `13/5 → 2` (toward zero).
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 35)
 
 ## A19. Histogram sentinels — why height 0 on both ends?
 
-**Answer:** Guarantees every bar gets popped/finalized; avoids empty-stack special cases for left bound.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 36)
 
 ## A20. Copy list with random pointer — hash map approach in one sentence.
 
-**Answer:** First pass create `old→new` nodes; second pass set each copy's `next`/`random` via the map.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 37)
 
 ## A21. Asteroid: do `[-2,-1,1,2]` collide?
 
-**Answer:** No — negatives move left, positives right, never meet if already ordered that way.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 38)
 
 ## A22. Cumulative — amortized append on dynamic array is O(1). Why?
 
-**Answer:** Occasional O(n) resize (≈2×) spreads over many cheap appends; geometric series → amortized O(1).
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 39)
 
 ## A23. Cumulative — why is `x in list` O(n) but `x in set` average O(1)?
 
-**Answer:** List scans; set hashes to a bucket.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 40)
 
 ## A24. Queue via stacks: when do you pour `in_s` into `out_s`?
 
-**Answer:** Only when `out_s` is empty on pop/peek — preserves FIFO and amortizes moves.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 41)
 
 ## A25. Palindrome LL O(1) space — what do you reverse?
 
-**Answer:** The second half (from the middle). Then compare first half vs reversed second.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 42)
 
 # SECTION I: CONCEPTUAL ROUND 2
 
@@ -1114,28 +1071,21 @@ Ledger: copy due items into `Metrics/Retention Ledger.md`. Fail → shorten next
 
 ## B11. Why store indices (not values) in a monotonic stack for daily temperatures?
 
-**Answer:** You need **positions** to compute `i - j`. Values alone cannot give day distance. Indices also let you look up `T[j]` when comparing.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 43)
 
 ## B12. Explain LRU at Module 4 depth (no full code required).
 
-**Answer:** Hash map `key → node` for O(1) lookup. Doubly linked list orders keys by recency (MRU↔LRU). `get`/`put` move node to MRU; on capacity, delete LRU node and map entry. DLL needed so middle removal is O(1).
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 44)
 
 ## B13. Cumulative — Master Theorem flash: T(n)=2T(n/2)+O(n). Case and result?
 
-**Answer:** Case 2 (work matches root): **Θ(n log n)** — like mergesort. (Confirm a=2,b=2, f=O(n), n^{log_b a}=n.)
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 45)
 
 ## B14. When is sliding window the wrong tool for "subarray sum = k"?
 
-**Answer:** When nums can be **negative** (or zero in ways that break monotonic window sum). Use prefix + hash instead.
 
----
+> **Answer key:** `Retention Questions/keys/Module 4 Retention.keys.md` (block 46)
 
-**Next:** Timed verification set for Module 4 patterns (blind, no labels). Then first mini-mock when `drilled`.
-
-*End of Module 4 Retention Grill*

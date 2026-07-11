@@ -446,3 +446,168 @@ def build_adj_weighted(
     for u, v, w in edges:
         g[u].append((v, w))
     return g
+
+
+
+# =============================================================================
+# 0-1 BFS (weights in {0, 1}) — Graphs II
+# =============================================================================
+def zero_one_bfs(
+    n: int, graph: dict[int, list[tuple[int, int]]], src: int
+) -> list[int]:
+    """graph[u] = [(v, w), ...] with w in {0, 1}. Returns dist from src."""
+    INF = 10**18
+    dist = [INF] * n
+    dist[src] = 0
+    dq: deque[int] = deque([src])
+    while dq:
+        u = dq.popleft()
+        for v, w in graph[u]:
+            nd = dist[u] + w
+            if nd < dist[v]:
+                dist[v] = nd
+                if w == 0:
+                    dq.appendleft(v)
+                else:
+                    dq.append(v)
+    return dist
+
+
+# =============================================================================
+# LRU Cache — hash map + doubly linked list
+# =============================================================================
+class _LRUNode:
+    __slots__ = ("key", "val", "prev", "next")
+
+    def __init__(self, key: int = 0, val: int = 0):
+        self.key, self.val = key, val
+        self.prev = self.next = None
+
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        self.cap = capacity
+        self.map: dict[int, _LRUNode] = {}
+        self.head, self.tail = _LRUNode(), _LRUNode()
+        self.head.next, self.tail.prev = self.tail, self.head
+
+    def _remove(self, node: _LRUNode) -> None:
+        node.prev.next = node.next
+        node.next.prev = node.prev
+
+    def _add_mru(self, node: _LRUNode) -> None:
+        node.next = self.head.next
+        node.prev = self.head
+        self.head.next.prev = node
+        self.head.next = node
+
+    def get(self, key: int) -> int:
+        node = self.map.get(key)
+        if not node:
+            return -1
+        self._remove(node)
+        self._add_mru(node)
+        return node.val
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.map:
+            node = self.map[key]
+            node.val = value
+            self._remove(node)
+            self._add_mru(node)
+            return
+        if len(self.map) == self.cap:
+            lru = self.tail.prev
+            self._remove(lru)
+            del self.map[lru.key]
+        node = _LRUNode(key, value)
+        self.map[key] = node
+        self._add_mru(node)
+
+
+# =============================================================================
+# Serialize / deserialize binary tree — preorder with '#' nulls
+# =============================================================================
+class TreeNode:
+    def __init__(self, val: int = 0, left=None, right=None):
+        self.val, self.left, self.right = val, left, right
+
+
+class Codec:
+    def serialize(self, root: Optional[TreeNode]) -> str:
+        vals: list[str] = []
+
+        def dfs(node: Optional[TreeNode]) -> None:
+            if not node:
+                vals.append("#")
+                return
+            vals.append(str(node.val))
+            dfs(node.left)
+            dfs(node.right)
+
+        dfs(root)
+        return ",".join(vals)
+
+    def deserialize(self, data: str) -> Optional[TreeNode]:
+        tokens = iter(data.split(","))
+
+        def dfs() -> Optional[TreeNode]:
+            val = next(tokens)
+            if val == "#":
+                return None
+            node = TreeNode(int(val))
+            node.left = dfs()
+            node.right = dfs()
+            return node
+
+        return dfs()
+
+
+# =============================================================================
+# KMP — prefix function (LPS) + search
+# =============================================================================
+def prefix_function(s: str) -> list[int]:
+    n = len(s)
+    pi = [0] * n
+    for i in range(1, n):
+        j = pi[i - 1]
+        while j > 0 and s[i] != s[j]:
+            j = pi[j - 1]
+        if s[i] == s[j]:
+            j += 1
+        pi[i] = j
+    return pi
+
+
+def kmp_search(text: str, pattern: str) -> list[int]:
+    """Return start indices of pattern in text."""
+    if not pattern:
+        return list(range(len(text) + 1))
+    pi = prefix_function(pattern)
+    out: list[int] = []
+    j = 0
+    for i, ch in enumerate(text):
+        while j > 0 and ch != pattern[j]:
+            j = pi[j - 1]
+        if ch == pattern[j]:
+            j += 1
+        if j == len(pattern):
+            out.append(i - j + 1)
+            j = pi[j - 1]
+    return out
+
+
+# =============================================================================
+# Tree DP — House Robber III style (rob, skip)
+# =============================================================================
+def tree_rob(root: Optional[TreeNode]) -> int:
+    def dfs(node: Optional[TreeNode]) -> tuple[int, int]:
+        if not node:
+            return 0, 0
+        lr, ls = dfs(node.left)
+        rr, rs = dfs(node.right)
+        rob = node.val + ls + rs
+        skip = max(lr, ls) + max(rr, rs)
+        return rob, skip
+
+    return max(dfs(root))

@@ -1067,15 +1067,124 @@ serialize: 1,2,#,#,3,4,#,#,5,#,#
 deserialize consumes tokens in same preorder, building left then right.
 ```
 
-## Level-Order Variant
+## Level-Order Variant (LC-style BFS protocol)
 
-Same idea as LC input format — BFS queue, append children (including nulls), stop when queue drains. Slightly more code; same O(n).
+```python
+from collections import deque
+
+class CodecBFS:
+    def serialize(self, root):
+        if not root:
+            return ""
+        out, q = [], deque([root])
+        while q:
+            node = q.popleft()
+            if not node:
+                out.append('#')
+                continue
+            out.append(str(node.val))
+            q.append(node.left)
+            q.append(node.right)
+        # optional: trim trailing #s
+        while out and out[-1] == '#':
+            out.pop()
+        return ','.join(out)
+
+    def deserialize(self, data):
+        if not data:
+            return None
+        vals = data.split(',')
+        root = TreeNode(int(vals[0]))
+        q = deque([root])
+        i = 1
+        while q and i < len(vals):
+            node = q.popleft()
+            if vals[i] != '#':
+                node.left = TreeNode(int(vals[i]))
+                q.append(node.left)
+            i += 1
+            if i < len(vals) and vals[i] != '#':
+                node.right = TreeNode(int(vals[i]))
+                q.append(node.right)
+            i += 1
+        return root
+```
+
+**Interview tip:** State the protocol first ("preorder with `#` nulls" or "BFS with `#`"), then code. Mismatched serialize/deserialize is the #1 fail.
 
 ## Edge Cases
 
-Empty tree → `"#"` or `""` (pick one and stay consistent). Negative values — `str(node.val)` handles them. Multi-digit — delimiter `,` required.
+Empty tree → `"#"` or `""` (pick one and stay consistent). Negative values — `str(node.val)` handles them. Multi-digit — delimiter `,` required. Single node → `"5,#,#"` (preorder) or `"5"`.
 
 > **Time: O(n), Space: O(n)**
+
+**Spine:** LC 297 is an M5/M11 hard — blind-code both protocols once.
+
+---
+
+# PART 9B: TREE DP FAMILY (MUST-KNOW)
+
+Tree DP = postorder returning a **tuple of states** for the subtree (not a single scalar).
+
+### Pattern template
+
+```
+dfs(node) -> tuple:
+  base: empty → zeros / -inf as needed
+  combine children tuples
+  return states for *this* subtree
+answer = best over root states (or global)
+```
+
+### Classic 1 — House Robber III (LC 337)
+
+State: `(rob_this, skip_this)`.
+
+```python
+def rob(root):
+    def dfs(node):
+        if not node:
+            return 0, 0
+        lr, ls = dfs(node.left)
+        rr, rs = dfs(node.right)
+        rob_this = node.val + ls + rs
+        skip_this = max(lr, ls) + max(rr, rs)
+        return rob_this, skip_this
+    return max(dfs(root))
+```
+
+### Classic 2 — Binary Tree Max Path Sum (LC 124)
+
+Path can bend at a node. Helper returns **gain downward** (one arm); global tracks bend.
+
+```python
+def maxPathSum(root):
+    best = float('-inf')
+    def gain(node):
+        nonlocal best
+        if not node:
+            return 0
+        L = max(0, gain(node.left))
+        R = max(0, gain(node.right))
+        best = max(best, node.val + L + R)  # bend
+        return node.val + max(L, R)         # one arm to parent
+    gain(root)
+    return best
+```
+
+### Classic 3 — Binary Tree Cameras (LC 968) — stretch
+
+State per subtree: `0` = needs camera, `1` = has camera, `2` = covered by child. Place greedily in postorder. Know the state machine; code once under timer as stretch.
+
+### Decision cues
+
+| Cue | Tool |
+|---|---|
+| Choose parent XOR child | Rob/skip tuple |
+| Path may bend | Down-gain + global |
+| Cover / infect / camera | Multi-state postorder |
+
+**Not the same as** graph DP on general graphs (cycles). Trees: no visited-set drama if you only go to children.
 
 ---
 
@@ -1598,7 +1707,7 @@ O(n) time, O(w) space.
 
 ---
 
-# Problem 5: House Robber III (LC 337) — Tree DP Preview
+# Problem 5: House Robber III (LC 337) — Tree DP (see Part 9B)
 
 ## Pattern Identification
 
@@ -1673,6 +1782,7 @@ def validateBinaryTreeNodes(n, leftChild, rightChild):
 | Heaps as trees | Module 6 |
 | Graphs (general) | Module 7 — trees are special DAGs/undirected acyclic graphs |
 | Segment / Fenwick | Module 10 exposure |
+| Re-rooting DP / binary lifting LCA | Optional stretch / Phase B |
 
 ---
 

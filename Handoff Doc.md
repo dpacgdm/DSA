@@ -4,11 +4,11 @@
 
 ## DOCUMENT VERSION
 - **Created:** Session 1
-- **Last Updated:** 2026-07-09 — Phase A content delivery + **tooling/QA/timed protocol** layer
+- **Last Updated:** 2026-07-11 — Pedagogy/coverage 9.5 pass (dedup, keys split, 0-1 BFS, tree DP, LRU, README)
 - **Status:** Active
 - **Governing principle:** No calendar deadline. Advance only on evidence. Comfort and session length are the student's choice; mastery gates are not optional.
 - **Content craft floor:** ≥95% (lessons + retention answer keys). See `Phase A Curriculum Index.md`.
-- **Answer keys:** Intentionally **kept** in retention files for self-grade / tutor sessions — not removed.
+- **Answer keys:** Moved to `Retention Questions/keys/` for blind self-grade; tutor sessions may open both.
 - **Learner loop:** Temporarily removed for bulk delivery. Content is `content-delivered`. Learner statuses (`retention-passed` / `timed-verified` / `complete`) still require practice evidence when the loop resumes.
 
 ---
@@ -255,7 +255,7 @@ Columns below: **Content** = materials exist · **Learner** = evidence status wh
 | Block | Topic | Content | Learner |
 |---|---|---|---|
 | Teach | Big O & Complexity Analysis | `content-delivered` | `complete` (historical) |
-| Teach | Arrays & Strings — Deep | `content-delivered` | `retention-passed` |
+| Teach | Arrays — Deep (`Arrays/Arrays.md` canonical; `Arrays&Strings.md` archived) | `content-delivered` | `retention-passed` |
 | Teach | Array Patterns: Two Pointers, Sliding Window | `content-delivered` | `retention-passed` |
 | Retention | `Retention Questions/Week 1.md` | `content-delivered` | `retention-passed` |
 | Timed | Module 1 timed backfill | blueprints in gauntlet | `not-started` |
@@ -352,7 +352,9 @@ Columns below: **Content** = materials exist · **Learner** = evidence status wh
 ### Operating system (gaps closed 2026-07-09 — except answer-key removal, intentionally kept)
 | Piece | Path | Status |
 |---|---|---|
-| Executable problem bank | `problem-bank/` (24 problems, 133 tests) | live — `py -3 problem-bank/run_all.py` |
+| Executable problem bank | `problem-bank/` (26 problems) | live — `python problem-bank/run_all.py` |
+| Retention keys | `Retention Questions/keys/` | separated for blind grade |
+| Root README | `README.md` | Day-1 entry |
 | Debugging pedagogy | `Debugging/Debugging Diagnosis.md` | delivered |
 | Interview templates | `Templates/Interview Templates.md` + `python_templates.py` | delivered |
 | MVP spines | `Practice Spines/Phase A MVP Spines.md` | delivered |

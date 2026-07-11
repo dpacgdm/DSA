@@ -2,6 +2,9 @@
 
 ---
 
+> **Lesson contract:** Read framework + patterns first. Cap in-lesson traces at a few exemplars; drill from Retention + Spine. Answers for retention live under `Retention Questions/keys/`.
+
+
 # PART 1: WHAT RECURSION ACTUALLY IS
 
 ## The Core Idea

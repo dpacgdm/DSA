@@ -465,6 +465,9 @@ $$T(n) = 2T(n/2) + \Theta(1)$$
 
 ## 3J: When Master Theorem FAILS (must know)
 
+> **Demoted for FAANG screens:** Know the three cases as *awareness* for merge/quick analysis. Do not gate Phase A on drilling Master Theorem proofs. Prefer stability, `key=`, and BS-on-answer reps.
+
+
 | Situation | Example | What to do instead |
 |---|---|---|
 | Unequal subproblem sizes | T(n)=T(n/3)+T(2n/3)+Θ(n) | Recursion tree / Akra–Bazzi |

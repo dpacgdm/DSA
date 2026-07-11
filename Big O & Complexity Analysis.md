@@ -1185,9 +1185,11 @@ def analyze_orders(orders, vip_list, min_amount):
 
 ---
 
-**Take your time. Follow the recipe mechanically for every single problem. Show all work. I will grade ruthlessly.**
+---
 
-**When you're done, I'll also know exactly where your understanding is strong and where it's still shaky. That determines whether we move to Day 2 or drill again.**
+# ANSWER KEY — PART 9
+
+Attempt all problem statements **above** before reading. Keys intentionally colocated historically for Module 1; prefer grading from `Retention Questions/Week 1.md` keys when available.
 
 # Problem 1: Warm-Up
 

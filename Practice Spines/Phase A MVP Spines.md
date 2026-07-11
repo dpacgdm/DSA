@@ -80,7 +80,7 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | Kth Largest (sort/heap) | Order stats | M | 215 | — |
 | Merge Sorted Arrays | Merge step of mergesort | E | 88 | — |
 | Sort List (merge sort) | Linked mergesort | M | 148 | — |
-| Count of Range Sum | Merge-sort on prefixes (re-credit) | H | 327 | — |
+| Count of Range Sum | Merge-sort on prefixes — **optional / gauntlet only** | H | 327 | — |
 | Meeting Rooms II | Sort + heap/sweep | M | 253 | — |
 | Insertion / quick mental | Complexity + Master Theorem talk | — | — | — |
 | Search 2D Matrix | BS on virtual index | M | 74 | — |
@@ -112,7 +112,7 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 
 ---
 
-## Module 5 — Trees (18)
+## Module 5 — Trees (20)
 
 | Problem | Why it earns M5 | Diff | LC | Bank |
 |---|---|---|---|---|
@@ -134,6 +134,8 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | BST Iterator | Controlled inorder | M | 173 | — |
 | Right Side View | BFS last / DFS depth | M | 199 | — |
 | Flatten to Linked List | Morris/rethread | M | 114 | — |
+| Binary Tree Max Path Sum | Tree DP bend | H | 124 | — |
+| House Robber III | Tree DP rob/skip | M | 337 | — |
 
 ---
 
@@ -160,7 +162,7 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 
 ---
 
-## Module 7 — Graphs I (16)
+## Module 7 — Graphs I (17)
 
 | Problem | Why it earns M7 | Diff | LC | Bank |
 |---|---|---|---|---|
@@ -180,6 +182,7 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | Keys and Rooms | Reachability | M | 841 | — |
 | Shortest Path Binary Matrix | Grid BFS | M | 1091 | — |
 | Accounts Merge | UF + strings | M | 721 | — |
+| Is Graph Bipartite? | 2-color BFS/DFS | M | 785 | — |
 
 ---
 
@@ -188,10 +191,11 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | Problem | Why it earns M8 | Diff | LC | Bank |
 |---|---|---|---|---|
 | Network Delay Time | Dijkstra | M | 743 | Y `15_network_delay` |
-| Cheapest Flights K Stops | Bellman / constrained | M | 787 | — |
+| 0-1 BFS shortest path | Deque 0/1 weights | M | — | Y `25_zero_one_bfs` |
+| Cheapest Flights K Stops | Bounded BF/DP (awareness) | M | 787 | — |
 | Path With Minimum Effort | BS + BFS or Dijkstra | M | 1631 | — |
 | Min Cost to Connect All Points | MST (Prim/Kruskal) | M | 1584 | — |
-| Critical Connections | Tarjan bridges (exposure) | H | 1192 | — |
+| Critical Connections | Tarjan bridges — **exposure only, not gate** | H | 1192 | — |
 | Climbing Stairs | 1D DP base | E | 70 | Y |
 | House Robber | Choose/skip DP | M | 198 | — |
 | House Robber II | Circular casework | M | 213 | — |
@@ -299,29 +303,33 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 | Counting Bits | DP on bits | E | 338 | — |
 | Subsets (bit mask) | Mask enumeration | M | 78 | Y `18_subsets` |
 
-### String Algorithms (4)
+### String Algorithms (5)
 | Problem | Why | Diff | LC | Bank |
 |---|---|---|---|---|
 | Implement strStr / needle | KMP or rolling hash | M | 28 | — |
 | Repeated Substring Pattern | Prefix / KMP border | E | 459 | — |
 | Longest Happy Prefix | Prefix function | H | 1392 | — |
+| Find Duplicate Substring | Rolling hash / binary search | M | 1044 | — |
 | Valid Anagram | Freq bridge | E | 242 | Y `23_valid_anagram` |
 
-### Math for Interviews (4)
+### Math for Interviews (5)
 | Problem | Why | Diff | LC | Bank |
 |---|---|---|---|---|
 | Pow(x, n) | Fast pow | M | 50 | — |
 | Sqrt(x) | Integer root / BS | E | 69 | — |
-| Excel Sheet Column Number | Base conversion | E | 171 | — |
-| Happy Number | Cycle / math | E | 202 | — |
+| GCD / LCM pair ops | Euclidean + overflow care | E | — | — |
+| Count Primes | Sieve mental model | M | 204 | — |
+| Super Pow / mod exponent | Mod arithmetic | M | 372 | — |
 
-### Matrix & Grid (4)
+### Matrix & Grid (6)
 | Problem | Why | Diff | LC | Bank |
 |---|---|---|---|---|
 | Number of Islands | Grid graph | M | 200 | Y `21_num_islands` |
 | Spiral Matrix | Layer sim | M | 54 | — |
 | Set Matrix Zeroes | In-place markers | M | 73 | — |
 | Rotate Image | Transpose + reverse | M | 48 | — |
+| Search a 2D Matrix II | Staircase search | M | 240 | — |
+| Walls and Gates | Multi-source BFS | M | 286 | — |
 
 ### Design Data Structures (4)
 | Problem | Why | Diff | LC | Bank |
@@ -329,7 +337,7 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 | Insert Delete GetRandom O(1) | Hash + list | M | 380 | Y `22_randomized_set` |
 | Min Stack | Aux stack | M | 155 | — |
 | Time Based Key-Value | Hash + BS | M | 981 | — |
-| LRU Cache | Design + DLL/hash | M | 146 | — |
+| LRU Cache | Design + DLL/hash (full in Design Part 15) | M | 146 | Y `26_lru_cache` |
 
 ---
 
@@ -341,15 +349,15 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 | M2 | 16 |
 | M3 | 18 |
 | M4 | 18 |
-| M5 | 18 |
+| M5 | 20 |
 | M6 | 16 |
-| M7 | 16 |
+| M7 | 17 |
 | M8 | 18 |
 | M9 | 18 |
 | M10 | 15 |
 | M11 | 15 |
-| Coverage modules | 24 |
-| **Total spine rows** | **210** |
-| **In problem-bank** | **24 unique packages** (many spines point at the same bank ids) |
+| Coverage modules | 27 |
+| **Total spine rows** | **~217** |
+| **In problem-bank** | **26 unique packages** (many spines point at the same bank ids) |
 
-Bank ids: `01`–`24` under `problem-bank/problems/`. Run: `py -3 problem-bank/run_all.py`.
+Bank ids: `01`–`26` under `problem-bank/problems/`. Run: `py -3 problem-bank/run_all.py`.

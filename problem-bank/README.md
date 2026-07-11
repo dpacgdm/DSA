@@ -63,7 +63,7 @@ Or write a thin pytest wrapper that imports `harness.run_problem`.
    - and/or `TESTS = [callable(sol_module), ...]` that assert
 3. Run `python run_all.py <slug>`.
 
-## Coverage map (24 problems)
+## Coverage map (26 problems)
 
 | ID | Slug | Pattern |
 |---|---|---|
@@ -91,3 +91,6 @@ Or write a thin pytest wrapper that imports `harness.run_problem`.
 | 22 | randomized_set | Design O(1) |
 | 23 | valid_anagram | Hashing |
 | 24 | product_except_self | Prefix products |
+| 25 | zero_one_bfs | 0-1 BFS |
+| 26 | lru_cache | Design LRU |
+

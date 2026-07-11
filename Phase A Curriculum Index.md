@@ -1,9 +1,9 @@
 # PHASE A — CURRICULUM INDEX (CONTENT DELIVERED)
 
 **Delivered:** 2026-07-09  
-**Updated:** 2026-07-09 — tools, timed protocol, QA, machine-readable metrics  
+**Updated:** 2026-07-11 — pedagogy 9.5 pass: dedup, keys split, 0-1 BFS / tree DP / LRU, README  
 **Mode:** Teacher-side complete. Learner gates (timed / retention pass / mocks) remain for when practice resumes.  
-**Content craft target:** ≥95%  
+**Content craft target:** ≥95% (editorial pass in progress; dual Arrays retired; keys separated)  
 **Answer keys:** Retention files **intentionally keep** full answer keys for self-grade / tutor sessions (not removed).
 
 This index is the map. Study in module order.
@@ -15,9 +15,9 @@ This index is the map. Study in module order.
 | Material | Path |
 |---|---|
 | Lesson | `Big O & Complexity Analysis.md` |
-| Lesson | `Arrays/Arrays.md` |
-| Lesson | `Arrays/Arrays&Strings.md` |
-| Retention | `Retention Questions/Week 1.md` |
+| Lesson | `Arrays/Arrays.md` (canonical) |
+| Archived | `Arrays/Arrays&Strings.md` — **do not** study as second lesson |
+| Retention | `Retention Questions/Week 1.md` (keys in `Retention Questions/keys/`) |
 | Spine | `Practice Spines/Phase A MVP Spines.md` § Module 1 |
 
 ## Module 2 — Hashing + Recursion
@@ -54,7 +54,7 @@ This index is the map. Study in module order.
 
 | Material | Path |
 |---|---|
-| Lesson | `Trees/Binary Trees.md` |
+| Lesson | `Trees/Binary Trees.md` (serialize + **Tree DP** Part 9B) |
 | Lesson | `Trees/Binary Search Trees.md` |
 | Retention | `Retention Questions/Module 5 Retention.md` |
 
@@ -78,7 +78,7 @@ This index is the map. Study in module order.
 
 | Material | Path |
 |---|---|
-| Lesson | `Graphs/Graphs II.md` |
+| Lesson | `Graphs/Graphs II.md` (**includes 0-1 BFS**) |
 | Lesson | `Dynamic Programming/DP I.md` |
 | Retention | `Retention Questions/Module 8 Retention.md` |
 
@@ -119,7 +119,7 @@ Schedule after Module 3–6 foundations (or interleaved). Full lessons + shared 
 | String Algorithms (KMP/Z/hash) | `Strings/String Algorithms.md` |
 | Math for Interviews | `Math/Math for Interviews.md` |
 | Matrix & Grid Patterns | `Matrix/Matrix & Grid Patterns.md` |
-| Design Data Structures | `Design/Design Data Structures.md` |
+| Design Data Structures | `Design/Design Data Structures.md` (**full LRU** Part 15) |
 | Retention (all six) | `Retention Questions/Coverage Gaps Retention.md` |
 
 ## Practice, tools, QA
@@ -127,8 +127,10 @@ Schedule after Module 3–6 foundations (or interleaved). Full lessons + shared 
 | Area | Path | Role |
 |---|---|---|
 | Timed transfer | `Practice/Timed Transfer Protocol.md` | 45/60/90 templates, screen-pass rubric, anti-cheat, module blueprints |
+| Unlabeled timed | `Practice/Unlabeled Timed Sets/` | Blind mixes without pattern titles |
+| Retention keys | `Retention Questions/keys/` | Answers separated for blind self-grade |
 | MVP spines | `Practice Spines/Phase A MVP Spines.md` | 15–25 problems per module + coverage spine |
-| Problem bank | `problem-bank/` | 24 executable problems, 133 tests (`py -3 run_all.py`) |
+| Problem bank | `problem-bank/` | 26 executable problems (`python problem-bank/run_all.py`) |
 | Debugging pedagogy | `Debugging/Debugging Diagnosis.md` | Taxonomy + diagnosis trees + failed-case walkthroughs |
 | Templates (prose) | `Templates/Interview Templates.md` | Hygiene + how to use shells |
 | Templates (code) | `Templates/python_templates.py` | Copy-paste BS/window/BFS/UF/Dijkstra/DP/backtrack/trie/LL/heap/mono |
@@ -145,6 +147,7 @@ Schedule after Module 3–6 foundations (or interleaved). Full lessons + shared 
 
 | File | Role |
 |---|---|
+| `README.md` | Day-1 entry path |
 | `Handoff Doc.md` | Source of truth: goals, gates, status enum, decision log |
 | `Metrics/Scoreboard.md` | Human scoreboard (generated from JSON) |
 | `Metrics/scoreboard.json` | Machine-readable timed / mock / gate data |
@@ -159,7 +162,7 @@ For each module M3→M11:
 1. Read lesson(s) end-to-end  
 2. Re-derive frameworks on paper  
 3. Attempt retention **without** looking at answers  
-4. Grade against answer key (keys are kept on purpose)  
+4. Grade against `Retention Questions/keys/` (keys separated on purpose)  
 5. Update `Metrics/ledger.json` / Retention Ledger; log timed work via `tools/scoreboard_update.py`  
 6. Run `py -3 tools/spaced_drill.py --write` for due review  
 7. Timed blind set per `Practice/Timed Transfer Protocol.md` / Gauntlet  

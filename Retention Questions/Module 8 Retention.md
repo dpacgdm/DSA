@@ -1,3 +1,6 @@
+<!-- ANSWER KEYS MOVED: see Retention Questions/keys/Module 8 Retention.keys.md -->
+> **Blind mode:** Answers were moved to `keys/Module 8 Retention.keys.md`. Attempt first, then grade.
+
 # MODULE 8 RETENTION — GRAPHS II + DP I
 
 **Purpose:** Cumulative retention grill for Module 8 teach blocks.  
@@ -950,39 +953,22 @@ After the grill, tag each miss:
 
 Heap after improvements contains both `(4,1)` and `(3,1)`. Dist[1]=3. What happens when `(4,1)` is popped?
 
-### Answer
-`4 > dist[1]` → **continue** (skip). No neighbor relaxation from the stale pop.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 1)
 
 ## J2. Bellman-Ford one round vs Dijkstra
 
 Graph: `0→1 (10)`, `0→2 (5)`, `2→1 (1)`. Source 0. After **one** BF relaxation pass over edges in order `(0,1),(0,2),(2,1)`, what is `dist`? After Dijkstra completes?
 
-### Answer
-After one BF pass (that order): dist[1] becomes 10 then 2→1 updates to 6; dist=[0,6,5]. Dijkstra final same `[0,6,5]`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 2)
 
 ## J3. Union by size vs rank
 
 Implement `union` by **size** instead of rank (attach smaller to larger; update size). Same API return bool.
 
-### Answer
 
-```python
-def union(parent, size, a, b):
-    ra, rb = find(parent, a), find(parent, b)
-    if ra == rb:
-        return False
-    if size[ra] < size[rb]:
-        ra, rb = rb, ra
-    parent[rb] = ra
-    size[ra] += size[rb]
-    return True
-```
-
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 3)
 
 ## J4. Accounts merge code output
 
@@ -991,114 +977,81 @@ def union(parent, size, a, b):
 ```
 Final merged emails for the single Gabe group (sorted)?
 
-### Answer
-`gabe0@, gabe2@, gabe3@, gabe4@` (all linked via gabe0/gabe2).
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 4)
 
 ## J5. Kruskal reject
 
 MST building; components currently `{0,1,2}` and `{3}`. Edge `(1,2,9)` — add or reject? Edge `(2,3,4)`?
 
-### Answer
-`(1,2)` reject (same component). `(2,3)` add (merges).
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 5)
 
 ## J6. Climb stairs k=3
 
 Ways to climb `n=4` with steps 1, 2, or 3.
 
-### Answer
-`dp[0]=1`
-`dp[1]=1`
-`dp[2]=2` (1+1, 2)
-`dp[3]=4` (1+1+1, 1+2, 2+1, 3)
-`dp[4]=7`
-Answer **7**.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 6)
 
 ## J7. Decode `"2101"` full dp array
 
-### Answer
-`dp = [1, 1, 2, 1, 1]` → answer **1**.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 7)
 
 ## J8. Coin change II
 
 `amount=5, coins=[1,2,5]` combination count?
 
-### Answer
-**4** (see DP I combinations trace).
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 8)
 
 ## J9. Delete and earn
 
 `nums=[2,2,3,3,3,4]` → ?
 
-### Answer
-**9**.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 9)
 
 ## J10. Max product
 
 `nums=[2,3,-2,4]` → ?
 
-### Answer
-**6**.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 10)
 
 ## J11. Jump II greedy layers (optional)
 
 `[2,3,1,1,4]` — explain O(n) BFS-layer idea in 3 sentences.
 
-### Answer
-Maintain current jump's end window. Scan window for farthest reach. When index hits window end, jumps += 1 and set new end to farthest. Like BFS levels on the array.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 11)
 
 ## J12. Min effort path tool
 
 Heights grid; minimize the max step absolute difference. Which Module 8 tool, and how is relaxation defined?
 
-### Answer
-**Dijkstra**; `new_effort = max(old_effort, |Δheight|)`; minimize effort.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 12)
 
 ## J13. Virtual node MST
 
 Water wells + pipes problem in one sentence.
 
-### Answer
-Add virtual node connected to each village by well cost; MST on that graph = optimal dig/pipe mix.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 13)
 
 ## J14. Write five lines for Perfect Squares
 
-### Answer
-STATE: `dp[i]` = min squares summing to i.  
-TRANSITION: `dp[i]=min(dp[i-sq]+1)` for sq=1,4,9,…≤i.  
-BASE: `dp[0]=0`.  
-ORDER: i=1..n.  
-ANSWER: `dp[n]`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 14)
 
 ## J15. False friend: Dijkstra for longest path
 
 Why doesn't swapping min-heap for max-heap solve longest simple path?
 
-### Answer
-No optimal substructure with simple-path constraint (cycles/reuse); problem is NP-hard. Heap trick doesn't apply.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 15)
 
 # SECTION K: TIMED-STYLE MINI SET (ANSWERS BELOW)
 
@@ -1152,73 +1105,53 @@ For each wrong student answer, diagnose type.
 
 ## M1. Prim vs Kruskal one-liner each.
 
-### Answer
-Kruskal: sort edges, DSU add if no cycle. Prim: grow tree from a node with a heap of outgoing edges.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 16)
 
 ## M2. What does `α(n)` mean in DSU complexity talk?
 
-### Answer
-Inverse Ackermann — grows so slowly it's ≤ 4 for all practical n; say "effectively constant amortized."
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 17)
 
 ## M3. Dijkstra on undirected graph — implementation pitfall?
 
-### Answer
-Must insert both `(u,v,w)` and `(v,u,w)` into the adjacency list.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 18)
 
 ## M4. `dp` for climb stairs: is `dp[0]=1` or `0`?
 
-### Answer
-**1** if `dp[i]` = ways to climb `i` stairs (one empty way). If you only define `dp[1], dp[2]`, set those explicitly instead.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 19)
 
 ## M5. Word break time with max word length L?
 
-### Answer
-O(n²) worst; with L cap on inner span often O(n·L) checks.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 20)
 
 ## M6. Can Dijkstra handle 0-weight edges?
 
-### Answer
-**Yes** — non-negative includes 0. Still correct.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 21)
 
 ## M7. MST unique?
 
-### Answer
-Not always. Different MSTs can share the same total weight if equal-weight edges exist.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 22)
 
 ## M8. House robber empty / single?
 
-### Answer
-`[]→0`, `[x]→x`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 23)
 
 ## M9. BF early exit?
 
-### Answer
-If a full pass does zero updates, stop early — distances already stable.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 24)
 
 ## M10. Accounts merge: same name different people?
 
-### Answer
-Allowed. Only **shared email** merges accounts; names are labels for output.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 25)
 
 # SECTION N: FULL SOLUTION WRITEUPS
 
@@ -1333,38 +1266,28 @@ def length_of_lis(nums):
 
 ## O1. Cheapest flights with k stops — why layer copy?
 
-### Answer
-Without `nxt = dist[:]`, multiple edges might chain in one "round," exceeding the stop budget. Layer copy enforces at most one new edge per iteration.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 26)
 
 ## O2. Min cost connect points — Prim vs Kruskal when n=1000?
 
-### Answer
-Both O(n² log n) dominated by O(n²) edges. Prim with binary heap on dense graph similar; Kruskal fine. n=1000 → ~5e5 edges OK.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 27)
 
 ## O3. Give a graph where Dijkstra returns wrong with a negative edge (numbers).
 
-### Answer
-A→B 1, B→C −100, A→C 2. True dist C = −99. If C finalized at 2 first, wrong.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 28)
 
 ## O4. Transform "max sum non-adjacent" on array to house robber.
 
-### Answer
-Identical problem — `nums` are house values.
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 29)
 
 ## O5. Is `"12"` decode ways 1 or 2?
 
-### Answer
-**2**: `AB` (1|2) and `L` (12).
 
----
+> **Answer key:** `Retention Questions/keys/Module 8 Retention.keys.md` (block 30)
 
 # SECTION P: PASS BAR FOR MODULE 8 RETENTION
 

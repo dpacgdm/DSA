@@ -102,3 +102,23 @@
 ---
 
 *Next audit: after major lesson edits or student-found contradictions.*
+
+
+---
+
+## 2026-07-11 — Pedagogy / coverage 9.5 pass
+
+**Scope:** Structural craft + coverage holes (approved plan D1–D6).
+
+| Change | Result |
+|---|---|
+| Arrays dual-lesson | `Arrays&Strings.md` archived; Arrays stripped matrix/bitwise dups; Part 10 capped at 3 exemplars (~3653→~1974 lines) |
+| Big O / DP I | Chat residue removed; DP I Part 32 checklist fixed (was Graphs II paste) |
+| Retention keys | Split to `Retention Questions/keys/` |
+| Must-add | 0-1 BFS (Graphs II), Tree DP (Trees 9B), LRU full (Design 15), serialize BFS protocol |
+| Spines | M5/M7/M8/Math/Matrix/Strings aligned; Count of Range Sum / Tarjan demoted |
+| Bank | +`25_zero_one_bfs`, +`26_lru_cache` (26/26 green) |
+| Ledger | Seeded M3–M11 + coverage subskills |
+| Entry | Root `README.md` + unlabeled timed stubs |
+
+**Follow-ups:** Continue deflating Hashing/Recursion in-lesson banks; expand bank toward full spine; full line audit still not claimed as ≥95% craft.

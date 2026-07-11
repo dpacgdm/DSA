@@ -1,3 +1,12 @@
+# ARCHIVED — DO NOT USE AS MODULE 1 LESSON
+
+**Status:** Superseded duplicate of `Arrays/Arrays.md` (~70% overlap).  
+**Action for learners:** Study **`Arrays/Arrays.md`** only for Module 1 array/string patterns.  
+**Canonical elsewhere:** `Strings/String Algorithms.md` (KMP/Z/hash) · `Matrix/` · `Bitwise/`.  
+**Kept on disk** for historical tutor traces only. Index no longer lists this as a Module 1 lesson.
+
+---
+
 # ARRAYS & STRINGS — THE COMPLETE LESSON
 
 ---

@@ -1,3 +1,6 @@
+<!-- ANSWER KEYS MOVED: see Retention Questions/keys/Module 2 Retention.keys.md -->
+> **Blind mode:** Answers were moved to `keys/Module 2 Retention.keys.md`. Attempt first, then grade.
+
 # MODULE 2 RETENTION GRILL — BIG O + ARRAYS + HASHING + RECURSION
 
 **CRITICAL BLOCKING GATE** (Handoff Doc §6): Hashing + Recursion stay below `complete` until this grill passes, then timed verify.
@@ -33,14 +36,8 @@ def f(arr):
     return s
 ```
 
-### Answer
 
-Outer `i`: n values. Inner `j`: `n - i` iterations. Total iterations = n + (n-1) + … + 1 = n(n+1)/2 → **O(n²)** time.  
-Body is O(1). Space: scalars → **O(1)**.
-
-> **Time: O(n²), Space: O(1)**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 1)
 
 ## A2.
 
@@ -55,13 +52,8 @@ def f(n):
     return i
 ```
 
-### Answer
 
-Outer: n iterations. Inner: `j` doubles → **O(log n)** per outer. Total **O(n log n)**. Space **O(1)**.
-
-> **Time: O(n log n), Space: O(1)**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 2)
 
 ## A3.
 
@@ -77,13 +69,8 @@ def f(arr):
     return i
 ```
 
-### Answer
 
-Classic "two pointers advance" / run-length style. Each index visited by `j` at most once; `i` jumps to `j`. **O(n)** time, **O(1)** space. Not O(n²) — inner work is amortized linear.
-
-> **Time: O(n), Space: O(1)**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 3)
 
 ## A4.
 
@@ -95,13 +82,8 @@ def f(s):
     return "".join(out)
 ```
 
-### Answer
 
-Append O(1) amortized each; join O(n). **O(n)** time, **O(n)** space. Contrast with `out = out + c` which would be O(n²).
-
-> **Time: O(n), Space: O(n)**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 4)
 
 ## A5.
 
@@ -110,13 +92,8 @@ def f(arr, x):
     return x in arr  # arr is a list
 ```
 
-### Answer
 
-List membership is linear scan → **O(n)** time, **O(1)** space. If `arr` were a `set`, O(1) average.
-
-> **Time: O(n), Space: O(1)**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 5)
 
 ## A6.
 
@@ -127,13 +104,8 @@ def f(n):
     return f(n - 1) + f(n - 2)
 ```
 
-### Answer
 
-Classic fib tree: **O(φⁿ) ⊂ O(2ⁿ)** time, **O(n)** stack space. Recurrence T(n)=T(n-1)+T(n-2)+O(1). Overlapping subproblems → memo makes O(n) time / O(n) space.
-
-> **Time: O(2ⁿ), Space: O(n)** (naive)
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 6)
 
 ## A7.
 
@@ -145,13 +117,8 @@ def f(arr):
     return arr
 ```
 
-### Answer
 
-Slice `arr[:i]` costs O(i) and allocates. Sum 0+1+…+(n-1) → **O(n²)** time, **O(n)** extra peak space for largest slice.
-
-> **Time: O(n²), Space: O(n)**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 7)
 
 ## A8.
 
@@ -163,13 +130,8 @@ def f(a, b):
             pass
 ```
 
-### Answer
 
-Different inputs → **O(n·m)** time, **O(1)** space. Do not collapse to O(n²) unless n=m is stated.
-
-> **Time: O(n·m), Space: O(1)**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 8)
 
 ## A9.
 
@@ -181,13 +143,8 @@ def f(arr):
     return freq
 ```
 
-### Answer
 
-n dict ops, O(1) average each → **O(n)** time, **O(k)** space (k = distinct keys ≤ n).
-
-> **Time: O(n), Space: O(k) ≤ O(n)**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 9)
 
 ## A10.
 
@@ -206,35 +163,22 @@ def permute(path, used, nums, out):
         used[i] = False
 ```
 
-### Answer
 
-n! leaves; work along paths → **O(n·n!)** time typical (copy path O(n) at leaves, or O(n!) nodes × branching). Space: O(n) recursion depth + O(n·n!) output.
-
-> **Time: O(n·n!), Space: O(n) stack + output**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 10)
 
 ## A11.
 
 Dependent nesting: outer `i = 1..n`, inner `j = 1; j < n; j += i`. Complexity?
 
-### Answer
 
-For each i, inner runs ~ n/i times. Total Σ_{i=1}^{n} n/i = n·H_n = **O(n log n)** (harmonic series).
-
-> **Time: O(n log n)**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 11)
 
 ## A12.
 
 `dict` average vs worst lookup? When does worst happen?
 
-### Answer
 
-Average **O(1)**; worst **O(n)** with pathological collisions (or adversarial keys historically). Python uses open addressing + randomized hash seed — treat as amortized O(1) in interviews unless asked about attacks.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 12)
 
 # SECTION B: CONCEPTUAL (TEACH-BACK)
 
@@ -244,89 +188,53 @@ Speak like an interview. Then compare.
 
 ## B1. State the three Big-O simplification rules.
 
-### Answer
 
-1. Drop constant factors (`3n` → O(n)).  
-2. Drop non-dominant terms (`n² + n` → O(n²)).  
-3. Different input sizes → different variables (`O(n + m)`, not fake `O(n)`).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 13)
 
 ## B2. Why is string concatenation in a loop often O(n²) in Python?
 
-### Answer
 
-Strings are **immutable**. Each `s = s + c` allocates a new string and copies the old characters. Lengths 1+2+…+n → O(n²). Fix: list append + `join`, or bytearray.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 14)
 
 ## B3. Two pointers vs sliding window — when each?
 
-### Answer
 
-**Two pointers:** ordered structure / opposite ends / partition / pair sums on sorted data; pointers move based on a condition, often toward each other or in tandem.  
-**Sliding window:** contiguous subarray/substring; maintain a valid window invariant; expand right, shrink left (fixed or variable size).  
-Window is a special case of same-direction two pointers with a segment invariant.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 15)
 
 ## B4. Prefix sum: what does `prefix[r+1] - prefix[l]` give? Empty range?
 
-### Answer
 
-Sum of `arr[l..r]` inclusive if `prefix[i] = sum(arr[0..i-1])` (length n+1, `prefix[0]=0`). Empty: `l > r` or use `prefix[i]-prefix[i]=0`. Sentinel `prefix[0]=0` makes subarrays starting at 0 clean.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 16)
 
 ## B5. Why hash maps for subarray sum = k?
 
-### Answer
 
-Running prefix `p`. Need prior prefix `p - k`. Store first/last index or frequency of prefixes in a dict → O(n) instead of O(n²). Classic: count of subarrays, longest/shortest with sum k (with care for zeros/negatives).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 17)
 
 ## B6. Explain collision handling at a high level. What does Python use?
 
-### Answer
 
-Two keys → same bucket index. Strategies: chaining (list per bucket) or open addressing (probe). CPython dict: **open addressing** with perturbed probing; hash randomization. Load factor triggers resize (amortized O(1) inserts).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 18)
 
 ## B7. Recursion: base case, recursive case, combine. Call-stack space?
 
-### Answer
 
-Base: stops recursion. Recursive: smaller subproblem(s). Combine: build answer from returns. Space ≥ **depth** of simultaneous frames. Tail calls are **not** optimized in Python → depth-n recursion uses O(n) stack and may hit `RecursionError` (~1000).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 19)
 
 ## B8. Memoization vs tabulation (intro level).
 
-### Answer
 
-**Memo:** top-down recursion + cache; only needed states.  
-**Tabulation:** bottom-up loops filling DP table.  
-Same asymptotic family often; memo has recursion overhead/stack; tab can be tighter control. Full DP frameworks = Modules 8–9; here only the idea.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 20)
 
 ## B9. Backtracking skeleton in one breath.
 
-### Answer
 
-`choose → explore → unchoose` (or push/recurse/pop). Prune when partial solution can't work. Used for permutations, subsets, combinations, constraint search.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 21)
 
 ## B10. When is a hash set the wrong tool vs two pointers on a sorted array?
 
-### Answer
 
-If you need **ordered** pairs, closest values, or in-place O(1) extra space on sorted input — two pointers. Hash set wins for unsorted membership / pairwise complements when O(n) space is OK.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 22)
 
 # SECTION C: PROBLEM SOLVING (8+)
 
@@ -336,236 +244,53 @@ For each: approach → code → complexity. Full answers below.
 
 ## C1. Two Sum (unsorted) — return indices
 
-### Answer
 
-**Pattern:** One-pass hash map value → index.
-
-```python
-def two_sum(nums, target):
-    seen = {}
-    for i, x in enumerate(nums):
-        need = target - x
-        if need in seen:
-            return [seen[need], i]
-        seen[x] = i
-    return []
-```
-
-**Trace:** `nums=[2,7,11,15], target=9` → at 7, need 2 in seen → [0,1].
-
-**Edges:** duplicates, no pair, negatives.
-
-**Time O(n), Space O(n).** Sorted + two pointers also works but loses original indices unless you store pairs.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 23)
 
 ## C2. Longest Substring Without Repeating Characters
 
-### Answer
 
-**Pattern:** Variable sliding window + last-seen index (or set).
-
-```python
-def length_of_longest_substring(s):
-    last = {}
-    left = 0
-    best = 0
-    for right, c in enumerate(s):
-        if c in last and last[c] >= left:
-            left = last[c] + 1
-        last[c] = right
-        best = max(best, right - left + 1)
-    return best
-```
-
-**Time O(n), Space O(min(n, alphabet)).**
-
-**Trap:** only advance `left` when the previous occurrence is inside the window.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 24)
 
 ## C3. Subarray Sum Equals K (count)
 
-### Answer
 
-**Pattern:** Prefix + frequency hash.
-
-```python
-from collections import defaultdict
-
-def subarray_sum(nums, k):
-    freq = defaultdict(int)
-    freq[0] = 1
-    p = ans = 0
-    for x in nums:
-        p += x
-        ans += freq[p - k]
-        freq[p] += 1
-    return ans
-```
-
-**Time O(n), Space O(n).** Works with negatives (window alone does not).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 25)
 
 ## C4. Product of Array Except Self (no division)
 
-### Answer
 
-**Pattern:** Prefix/suffix products.
-
-```python
-def product_except_self(nums):
-    n = len(nums)
-    out = [1] * n
-    left = 1
-    for i in range(n):
-        out[i] = left
-        left *= nums[i]
-    right = 1
-    for i in range(n - 1, -1, -1):
-        out[i] *= right
-        right *= nums[i]
-    return out
-```
-
-**Time O(n), Space O(1) extra** (output doesn't count per LC convention).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 26)
 
 ## C5. Valid Anagram / Group Anagrams (pick group)
 
-### Answer
 
-```python
-from collections import defaultdict
-
-def group_anagrams(strs):
-    groups = defaultdict(list)
-    for s in strs:
-        key = tuple(sorted(s))  # or 26-count tuple
-        groups[key].append(s)
-    return list(groups.values())
-```
-
-**Time O(n·L log L)** with sort key, or **O(n·L·26)** with counts. Space O(n·L).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 27)
 
 ## C6. Climbing Stairs / Fibonacci with memo
 
-### Answer
 
-```python
-def climb(n, memo=None):
-    if memo is None:
-        memo = {}
-    if n <= 2:
-        return n
-    if n in memo:
-        return memo[n]
-    memo[n] = climb(n - 1, memo) + climb(n - 2, memo)
-    return memo[n]
-```
-
-Or iterative O(n)/O(1): `a,b = 1,2; …`.
-
-**Naive recursion fails time; memo O(n).** Recurrence setup: T(n)=T(n-1)+T(n-2)+O(1) before memo.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 28)
 
 ## C7. Subsets (backtracking)
 
-### Answer
 
-```python
-def subsets(nums):
-    out = []
-    path = []
-    def dfs(start):
-        out.append(path[:])
-        for i in range(start, len(nums)):
-            path.append(nums[i])
-            dfs(i + 1)
-            path.pop()
-    dfs(0)
-    return out
-```
-
-**Time O(n·2ⁿ), Space O(n) stack + output.**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 29)
 
 ## C8. Minimum Size Subarray Sum (positives, target)
 
-### Answer
 
-**Pattern:** Variable window (positives ⇒ shrinking is safe).
-
-```python
-def min_subarray_len(target, nums):
-    left = 0
-    s = 0
-    best = float("inf")
-    for right, x in enumerate(nums):
-        s += x
-        while s >= target:
-            best = min(best, right - left + 1)
-            s -= nums[left]
-            left += 1
-    return 0 if best == float("inf") else best
-```
-
-**Time O(n), Space O(1).** Negatives → this breaks; use prefix+hash for other variants.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 30)
 
 ## C9. Decode Ways (memoized recursion) — `"226"`
 
-### Answer
 
-```python
-def num_decodings(s):
-    memo = {}
-    def dp(i):
-        if i == len(s):
-            return 1
-        if s[i] == "0":
-            return 0
-        if i in memo:
-            return memo[i]
-        ans = dp(i + 1)
-        if i + 1 < len(s) and int(s[i:i+2]) <= 26:
-            ans += dp(i + 2)
-        memo[i] = ans
-        return ans
-    return dp(0)
-```
-
-`"226"` → 3 (`BBF`, `VF`, `BZ`). **Time O(n), Space O(n).**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 31)
 
 ## C10. Longest Consecutive Sequence (O(n))
 
-### Answer
 
-```python
-def longest_consecutive(nums):
-    s = set(nums)
-    best = 0
-    for x in s:
-        if x - 1 not in s:  # start of a run
-            y = x
-            while y in s:
-                y += 1
-            best = max(best, y - x)
-    return best
-```
-
-**Time O(n)** — each number visited constant times. Space O(n). Sorting is O(n log n); hash set is the intended trick.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 32)
 
 # SECTION D: TRICK QUESTIONS
 
@@ -575,83 +300,53 @@ These catch shallow understanding.
 
 ## D1. True/False: Sliding window always works for "subarray sum = k".
 
-### Answer
 
-**False.** Standard shrink-window needs **non-negative** (or otherwise monotone) sums. With negatives, sum can grow when shrinking — use **prefix + hash**.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 33)
 
 ## D2. Is `freq[x] += 1` safe when `x` missing?
 
-### Answer
 
-**No** on plain `dict` → KeyError. Use `freq[x] = freq.get(x,0)+1`, `defaultdict(int)`, or `Counter`.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 34)
 
 ## D3. Complexity of building `set(arr)` then `for x in arr: if x in s`?
 
-### Answer
 
-Build O(n), each lookup O(1) avg → **O(n)** total. Not O(n²). Contrast `if x in arr` on a list inside a loop → O(n²).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 35)
 
 ## D4. Recurrence T(n)=2T(n/2)+O(n). What algorithm family? Is Master Theorem required to say O(n log n)?
 
-### Answer
 
-Mergesort-shaped divide-and-conquer. You can unfold the tree: log n levels × O(n) per level → **O(n log n)** without naming Master Theorem. **MT formally deferred to Module 3** — recurrence setup is enough here.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 36)
 
 ## D5. Does memoization always reduce exponential recursion to linear?
 
-### Answer
 
-**No.** Only when there are **overlapping subproblems** and a polynomial number of distinct states. Tree recursion for all permutations has ~n! states — memo doesn't make it polynomial.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 37)
 
 ## D6. `for i in range(n): for j in range(n): for k in range(j):` — complexity?
 
-### Answer
 
-k runs j times; j runs n; i runs n → i·Σ_j j = n·n(n-1)/2 → **O(n³)**.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 38)
 
 ## D7. Why is `arr.pop(0)` O(n) but `dict.pop(key)` average O(1)?
 
-### Answer
 
-List: contiguous array — removing front shifts all elements. Dict: hash table remove by key — no shift of arbitrary elements (rehash/probe maintenance amortized O(1)).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 39)
 
 ## D8. Can you replace a trie (not yet taught) for "anagram groups"?
 
-### Answer
 
-Yes — sorting/counting keys in a hash map is the right Module 2 tool. Trie is for **prefixes**, not anagram grouping.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 40)
 
 ## D9. Space of DFS recursion on a linked structure of n nodes vs iterative with explicit stack?
 
-### Answer
 
-Both **O(n)** worst-case stack space. Iterative avoids Python recursion limit; same asymptotic space class.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 41)
 
 ## D10. Interview says "optimize this O(n²) pair search." First questions you ask?
 
-### Answer
 
-Sorted? Need indices? Duplicates? Online/stream? Memory limit? → choose two pointers vs hash vs sort+two pointers. Don't jump to exotic structures.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 42)
 
 # SECTION E: CUMULATIVE MINI MIX (BLIND STYLE)
 
@@ -661,43 +356,28 @@ Short prompts — answers compressed.
 
 ## E1. Reverse words in a string (strip multiple spaces) — approach?
 
-### Answer
 
-`split()` + reverse + join, or two pointers on a char list in-place. Careful with leading/trailing/multiple spaces. Time O(n).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 43)
 
 ## E2. Find all duplicates in array where `1 ≤ a[i] ≤ n` — O(n) time O(1) extra?
 
-### Answer
 
-Index-sign marking or cyclic sort style swaps. Hash set is O(n) space easier. In-place sign flip: for each x, mark `nums[abs(x)-1]` negative; if already negative, duplicate.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 44)
 
 ## E3. Generate parentheses n pairs — tool?
 
-### Answer
 
-Backtracking with counts of open/close; prune `close > open` or `open > n`.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 45)
 
 ## E4. Is `"ab"/"eidbaooo"` a permutation inclusion (Permutation in String)?
 
-### Answer
 
-Fixed window of len(s1) + frequency match (hash/array counts). O(|s2|·26).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 46)
 
 ## E5. Max profit one buy/sell stock — need DP?
 
-### Answer
 
-No — one pass track min price so far / max profit. O(n)/O(1). Kadane-flavored thinking, still Module 1–2 tools.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 47)
 
 # SECTION F: SELF-AUDIT CHECKLIST
 
@@ -760,13 +440,8 @@ def f(arr):
     return ans
 ```
 
-### Answer
 
-Outer: i doubles → O(log n) iterations. Inner lengths 1+2+4+…≤n → geometric **O(n)** time, O(1) space. Not O(n log n).
-
-> **Time: O(n), Space: O(1)**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 48)
 
 ## A14.
 
@@ -775,11 +450,8 @@ def f(s, t):
     return t in s  # substring
 ```
 
-### Answer
 
-Interview-safe bound **O(n·m)** worst case; CPython is faster in practice. Space O(1) extra.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 49)
 
 ## A15.
 
@@ -789,11 +461,8 @@ def f(n):
     f(n-1); f(n-1)
 ```
 
-### Answer
 
-**O(2ⁿ)** calls, **O(n)** stack.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 50)
 
 ## A16.
 
@@ -805,123 +474,78 @@ def f(n):
     return f(n-1)+f(n-2)
 ```
 
-### Answer
 
-Memo fib **O(n)** time, **O(n)** space.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 51)
 
 ## A17. Why is `append` amortized O(1)?
 
-### Answer
 
-Occasional geometric resize O(n) is rare; average per append O(1).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 52)
 
 ## A18. `while j: j //= 2` inside `for i in range(n)`?
 
-### Answer
 
-**O(n log n)** if j starts at n each time.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 53)
 
 ## A19. `sorted(set(arr))`?
 
-### Answer
 
-**O(n log n)** time, O(n) space.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 54)
 
 ## A20. Space of storing all subsets as copied paths?
 
-### Answer
 
-**O(n·2ⁿ)** output + O(n) stack.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 55)
 
 ## A21. `for i in range(1,n+1): for j in range(i,n+1,i):`?
 
-### Answer
 
-**O(n log n)** harmonic.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 56)
 
 ## A22. `d[k]` vs `d.get(k)` vs `k in d`?
 
-### Answer
 
-KeyError vs default vs membership — all O(1) avg; behavior differs on miss.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 57)
 
 ## A23. Nested n×n with early break — quote which complexity?
 
-### Answer
 
-**Worst case O(n²)** unless exit is proven always.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 58)
 
 ## A24. T(n)=T(n-1)+O(n)?
 
-### Answer
 
-**O(n²)**.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 59)
 
 ## A25. T(n)=2T(n-1)+O(1)?
 
-### Answer
 
-**O(2ⁿ)**.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 60)
 
 ## A26. n× `insert(0,x)` on list?
 
-### Answer
 
-**O(n²)**. Use deque or append+reverse.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 61)
 
 ## A27. `"".join(n chars)`?
 
-### Answer
 
-**O(n)**.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 62)
 
 ## A28. Hash n strings length L into set?
 
-### Answer
 
-**O(n·L)**.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 63)
 
 ## A29. DFS stack on tree height h?
 
-### Answer
 
-**O(h)**; worst skew O(n).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 64)
 
 ## A30. Master Theorem on this grill?
 
-### Answer
 
-**No** — deferred to Module 3. Use recursion trees.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 65)
 
 # SECTION I: EXPANDED CONCEPTUAL (B11–B20)
 
@@ -929,83 +553,53 @@ KeyError vs default vs membership — all O(1) avg; behavior differs on miss.
 
 ## B11. Load factor + resize?
 
-### Answer
 
-n/capacity high → grow table, rehash all — O(n) rare, amortized O(1) inserts.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 66)
 
 ## B12. Why `freq[p-k]` can be >1?
 
-### Answer
 
-Multiple earlier prefixes equal `p-k` ⇒ multiple subarrays ending at i.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 67)
 
 ## B13. Longest vs minimum window — when update best?
 
-### Answer
 
-Longest: after making window valid (post-shrink). Minimum covering: while valid, update then shrink.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 68)
 
 ## B14. Leap of faith?
 
-### Answer
 
-Assume smaller calls work; write base + combine only.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 69)
 
 ## B15. Backtracking vs DP?
 
-### Answer
 
-BT enumerates/prunes. DP reuses overlapping states for count/opt without listing all.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 70)
 
 ## B16. In-place reverse invariant?
 
-### Answer
 
-Outside `[lo,hi]` done; swap ends; move inward.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 71)
 
 ## B17. Kadane vs prefix for max subarray?
 
-### Answer
 
-Both O(n); Kadane O(1) space classic; prefix tracks min prefix.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 72)
 
 ## B18. Why sort for 3Sum?
 
-### Answer
 
-Ordered two-pointers + duplicate skipping.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 73)
 
 ## B19. Call stack vs explicit stack?
 
-### Answer
 
-Same O(depth) class; explicit avoids recursion limit.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 74)
 
 ## B20. MT deferred where?
 
-### Answer
 
-Module 3 Sorting — recurrence setup only in Module 2.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 75)
 
 # SECTION J: MORE PROBLEMS (C11–C20)
 
@@ -1013,128 +607,53 @@ Module 3 Sorting — recurrence setup only in Module 2.
 
 ## C11. Group Anagrams — 26-count key
 
-### Answer
 
-```python
-from collections import defaultdict
-def group_anagrams(strs):
-    g = defaultdict(list)
-    for s in strs:
-        cnt = [0]*26
-        for c in s: cnt[ord(c)-97]+=1
-        g[tuple(cnt)].append(s)
-    return list(g.values())
-```
-
-**O(n·L·26).**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 76)
 
 ## C12. Longest Palindromic Substring — expand centers
 
-### Answer
 
-```python
-def longest_palindrome(s):
-    def exp(l,r):
-        while l>=0 and r<len(s) and s[l]==s[r]:
-            l-=1; r+=1
-        return s[l+1:r]
-    best=""
-    for i in range(len(s)):
-        for pal in (exp(i,i), exp(i,i+1)):
-            if len(pal)>len(best): best=pal
-    return best
-```
-
-**O(n²)/O(1).**
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 77)
 
 ## C13. Subarrays divisible by K
 
-### Answer
 
-```python
-def subarraysDivByK(nums,k):
-    freq={0:1}; p=ans=0
-    for x in nums:
-        p=(p+x)%k
-        ans+=freq.get(p,0)
-        freq[p]=freq.get(p,0)+1
-    return ans
-```
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 78)
 
 ## C14. Permutation in String
 
-### Answer
 
-Fixed window Counter equality — O(|s2|·26).
-
-```python
-from collections import Counter
-def checkInclusion(s1,s2):
-    need,window=Counter(s1),Counter(); k=len(s1)
-    for i,c in enumerate(s2):
-        window[c]+=1
-        if i>=k:
-            left=s2[i-k]; window[left]-=1
-            if window[left]==0: del window[left]
-        if window==need: return True
-    return False
-```
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 79)
 
 ## C15. Generate Parentheses
 
-### Answer
 
-BT with `opens<n` and `closes<opens` constraints. O(Catalan·n).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 80)
 
 ## C16. Combination Sum (reuse allowed)
 
-### Answer
 
-DFS `dfs(i, remain)` recurse same `i` for reuse; prune `cands[i]>remain`.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 81)
 
 ## C17. Sort Colors Dutch flag
 
-### Answer
 
-`lo,mid,hi` invariants; on swap 2 with hi, **don't** mid++.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 82)
 
 ## C18. Best Time Stock I
 
-### Answer
 
-Track min so far / max profit — O(n)/O(1).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 83)
 
 ## C19. Word Break memo
 
-### Answer
 
-`dp(i)`: try all `s[i:j] in words` and `dp(j)`. Memo O(n²·L) style.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 84)
 
 ## C20. Find All Anagrams
 
-### Answer
 
-Same fixed-window freq as C14; record start indices.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 85)
 
 # SECTION K: TRICKS EXPANDED (D11–D25)
 
@@ -1178,64 +697,33 @@ Same fixed-window freq as C14; record start indices.
 
 ## L1. Letter Combinations of Phone Number
 
-### Answer
 
-Dict digit→letters + BT. O(4ⁿ·n) style.
-
-```python
-def letterCombinations(digits):
-    if not digits: return []
-    m={"2":"abc","3":"def","4":"ghi","5":"jkl","6":"mno","7":"pqrs","8":"tuv","9":"wxyz"}
-    out,path=[],[]
-    def dfs(i):
-        if i==len(digits):
-            out.append("".join(path)); return
-        for ch in m[digits[i]]:
-            path.append(ch); dfs(i+1); path.pop()
-    dfs(0); return out
-```
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 86)
 
 ## L2. Word Search I (single word)
 
-### Answer
 
-Board BT mark/unmark — **no trie** required. O(RC·4^L).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 87)
 
 ## L3. Target Sum (±)
 
-### Answer
 
-Memo `(i,s)`; branch +/−. O(n·sumRange).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 88)
 
 ## L4. Clone LL random — map old→new
 
-### Answer
 
-Hash map + two passes (Module 4 owns deep LL; map pattern is hashing).
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 89)
 
 ## L5. Subset sum count vs list all subsets
 
-### Answer
 
-Count → DP/memo. List all → BT must output exponential.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 90)
 
 ## L6. Top-K frequent before heaps module?
 
-### Answer
 
-Counter + bucket by frequency is earned; `heapq.nlargest` OK but heap theory is Module 6.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 91)
 
 # SECTION M: WEEK-1-STYLE TRACES
 
@@ -1243,43 +731,28 @@ Counter + bucket by frequency is earned; `heapq.nlargest` OK but heap theory is 
 
 ## M1. Subarray sum k=`3`, nums=`[1,2,3]`
 
-### Answer
 
-Prefixes 1,3,6 → hits: `[1,2]` and `[3]` → **2**.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 92)
 
 ## M2. Decode ways `"2101"`
 
-### Answer
 
-Only `2,10,1` — **1 way**. Zero handling kills `21,0,1`.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 93)
 
 ## M3. Min size subarray sum target 7, `[2,3,1,2,4,3]`
 
-### Answer
 
-Best window `[4,3]` length **2**.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 94)
 
 ## M4. Two Sum `[3,2,4]`, target 6
 
-### Answer
 
-At 4 need 2 → indices `[1,2]`.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 95)
 
 ## M5. Longest substring no repeat `"pwwkew"`
 
-### Answer
 
-`"wke"` length **3**.
-
----
+> **Answer key:** `Retention Questions/keys/Module 2 Retention.keys.md` (block 96)
 
 # SECTION N: SELF-AUDIT EXPANDED
 

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "last_updated": "2026-07-09",
-  "notes": "Machine-readable source of truth for spaced drills. Sync human edits from Retention Ledger.md into this file (or regenerate via tools). Heat: strong | shaky | weak.",
+  "last_updated": "2026-07-11",
+  "notes": "Machine-readable SoT for spaced drills. Seeded M3\u2013M11 + coverage 2026-07-11. Heat: strong | shaky | weak. Sync human edits from Retention Ledger.md.",
   "intervals_days": {
     "strong": 21,
     "shaky": 7,
@@ -149,7 +149,7 @@
       "last_pass": null,
       "next_due": "2026-07-09",
       "fail_count": 0,
-      "notes": "drilled only — M2 retention pending"
+      "notes": "drilled only \u2014 M2 retention pending"
     },
     {
       "id": "m2-hash-python",
@@ -219,7 +219,7 @@
     },
     {
       "id": "m2-rec-tree",
-      "subskill": "Recursion tree → recurrence setup",
+      "subskill": "Recursion tree \u2192 recurrence setup",
       "module": 2,
       "module_name": "Recursion",
       "heat": "shaky",
@@ -249,39 +249,473 @@
       "next_due": "2026-07-09",
       "fail_count": 0,
       "notes": ""
+    },
+    {
+      "id": "m3-bs-template",
+      "subskill": "Binary search closed/open templates",
+      "module": 3,
+      "module_name": "Searching & Sorting",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m3-bs-on-answer",
+      "subskill": "Binary search on answer / monotonic predicate",
+      "module": 3,
+      "module_name": "Searching & Sorting",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m3-sort-stability",
+      "subskill": "Sorting stability + Python sort",
+      "module": 3,
+      "module_name": "Searching & Sorting",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m3-master-theorem",
+      "subskill": "Master Theorem awareness (appendix)",
+      "module": 3,
+      "module_name": "Searching & Sorting",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m4-ll-dummy",
+      "subskill": "Linked list dummy head / reverse / Floyd",
+      "module": 4,
+      "module_name": "Linked Lists + Stacks",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m4-mono-intro",
+      "subskill": "Monotonic stack intro",
+      "module": 4,
+      "module_name": "Linked Lists + Stacks",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m4-deque-window",
+      "subskill": "Sliding window maximum deque",
+      "module": 4,
+      "module_name": "Linked Lists + Stacks",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m5-traversals",
+      "subskill": "Tree traversals + recursive framework",
+      "module": 5,
+      "module_name": "Trees",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m5-serialize",
+      "subskill": "Serialize/deserialize protocols",
+      "module": 5,
+      "module_name": "Trees",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m5-tree-dp",
+      "subskill": "Tree DP (rob/skip, max path)",
+      "module": 5,
+      "module_name": "Trees",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m5-bst",
+      "subskill": "BST invariant + validate + LCA",
+      "module": 5,
+      "module_name": "Trees",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m6-heap-topk",
+      "subskill": "Heap top-k / two heaps median",
+      "module": 6,
+      "module_name": "Heaps + Arrays Adv",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m6-adv-window",
+      "subskill": "Advanced window / two pointers",
+      "module": 6,
+      "module_name": "Heaps + Arrays Adv",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m7-bfs-dfs",
+      "subskill": "Graph BFS/DFS + visited",
+      "module": 7,
+      "module_name": "Graphs I",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m7-topo",
+      "subskill": "Topo Kahn + DFS finish",
+      "module": 7,
+      "module_name": "Graphs I",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m7-bipartite",
+      "subskill": "Bipartite 2-color",
+      "module": 7,
+      "module_name": "Graphs I",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m8-dijkstra",
+      "subskill": "Dijkstra lazy heap",
+      "module": 8,
+      "module_name": "Graphs II + DP I",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m8-01bfs",
+      "subskill": "0-1 BFS deque",
+      "module": 8,
+      "module_name": "Graphs II + DP I",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m8-dsu",
+      "subskill": "Union-Find path compression + rank",
+      "module": 8,
+      "module_name": "Graphs II + DP I",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m8-dp1d",
+      "subskill": "1D DP five-line ritual",
+      "module": 8,
+      "module_name": "Graphs II + DP I",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m9-dp2",
+      "subskill": "2D / knapsack / LCS family",
+      "module": 9,
+      "module_name": "DP II + BT + Greedy",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m9-backtrack",
+      "subskill": "Backtracking template + prune",
+      "module": 9,
+      "module_name": "DP II + BT + Greedy",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m9-greedy",
+      "subskill": "Greedy exchange / end-sort",
+      "module": 9,
+      "module_name": "DP II + BT + Greedy",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m10-trie",
+      "subskill": "Trie API + Word Search II",
+      "module": 10,
+      "module_name": "Advanced",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m10-mono-deep",
+      "subskill": "Monotonic stack/deque deep",
+      "module": 10,
+      "module_name": "Advanced",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m10-fenwick-exp",
+      "subskill": "Fenwick/Seg exposure only",
+      "module": 10,
+      "module_name": "Advanced",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m11-mock-rubric",
+      "subskill": "Mock rubric G5 dimensions",
+      "module": 11,
+      "module_name": "Gauntlet",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "cov-intervals",
+      "subskill": "Intervals merge/sweep",
+      "module": 0,
+      "module_name": "Coverage",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "cov-bits",
+      "subskill": "Bit tricks interview set",
+      "module": 0,
+      "module_name": "Coverage",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "cov-strings",
+      "subskill": "KMP / rolling hash",
+      "module": 0,
+      "module_name": "Coverage",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "cov-math",
+      "subskill": "GCD / mod / sieve",
+      "module": 0,
+      "module_name": "Coverage",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "cov-matrix",
+      "subskill": "Matrix patterns + multi-source",
+      "module": 0,
+      "module_name": "Coverage",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "cov-lru",
+      "subskill": "LRU hash+DLL",
+      "module": 0,
+      "module_name": "Coverage",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
     }
   ],
   "seed_modules": {
-    "3": ["BS templates", "bounds", "BS-on-answer", "bisect", "merge/quick", "Master Theorem", "Count of Range Sum"],
-    "4": ["LL reverse/Floyd/dummy", "monotonic stack/queue intro", "deque vs list"],
-    "5": ["Traversals", "recursive tree framework", "BST CRUD/validate", "LCA"],
-    "6": ["heapq patterns", "top-K", "advanced window/two-pointer"],
-    "7": ["BFS/DFS", "components", "bipartite", "cycle", "topo", "Word Ladder", "Alien Dict"],
-    "8": ["Dijkstra", "DSU", "MST intuition", "DP 1D framework"],
-    "9": ["2D/knapsack/LCS/edit", "backtracking template", "greedy vs DP"],
-    "10": ["Trie ops", "monotonic contribution", "Fenwick exposure"],
-    "11": ["Mock rubric dims", "timed mixed sets", "weak-spot loop"]
+    "3": [
+      "BS templates",
+      "bounds",
+      "BS-on-answer",
+      "bisect",
+      "merge/quick",
+      "Master Theorem",
+      "Count of Range Sum"
+    ],
+    "4": [
+      "LL reverse/Floyd/dummy",
+      "monotonic stack/queue intro",
+      "deque vs list"
+    ],
+    "5": [
+      "Traversals",
+      "recursive tree framework",
+      "BST CRUD/validate",
+      "LCA"
+    ],
+    "6": [
+      "heapq patterns",
+      "top-K",
+      "advanced window/two-pointer"
+    ],
+    "7": [
+      "BFS/DFS",
+      "components",
+      "bipartite",
+      "cycle",
+      "topo",
+      "Word Ladder",
+      "Alien Dict"
+    ],
+    "8": [
+      "Dijkstra",
+      "DSU",
+      "MST intuition",
+      "DP 1D framework"
+    ],
+    "9": [
+      "2D/knapsack/LCS/edit",
+      "backtracking template",
+      "greedy vs DP"
+    ],
+    "10": [
+      "Trie ops",
+      "monotonic contribution",
+      "Fenwick exposure"
+    ],
+    "11": [
+      "Mock rubric dims",
+      "timed mixed sets",
+      "weak-spot loop"
+    ]
   },
   "practice_spine_hints": {
-    "1": "Practice Spines/Phase A MVP Spines.md § Module 1",
-    "2": "Practice Spines/Phase A MVP Spines.md § Module 2",
-    "3": "Practice Spines/Phase A MVP Spines.md § Module 3",
-    "4": "Practice Spines/Phase A MVP Spines.md § Module 4",
-    "5": "Practice Spines/Phase A MVP Spines.md § Module 5",
-    "6": "Practice Spines/Phase A MVP Spines.md § Module 6",
-    "7": "Practice Spines/Phase A MVP Spines.md § Module 7",
-    "8": "Practice Spines/Phase A MVP Spines.md § Module 8",
-    "9": "Practice Spines/Phase A MVP Spines.md § Module 9",
-    "10": "Practice Spines/Phase A MVP Spines.md § Module 10",
-    "11": "Gauntlet/Phase A Gauntlet.md + Practice Spines/Phase A MVP Spines.md § Module 11",
-    "12": "Practice Spines/Phase A MVP Spines.md § Coverage modules + Retention Questions/Coverage Gaps Retention.md"
+    "1": "Practice Spines/Phase A MVP Spines.md \u00a7 Module 1",
+    "2": "Practice Spines/Phase A MVP Spines.md \u00a7 Module 2",
+    "3": "Practice Spines/Phase A MVP Spines.md \u00a7 Module 3",
+    "4": "Practice Spines/Phase A MVP Spines.md \u00a7 Module 4",
+    "5": "Practice Spines/Phase A MVP Spines.md \u00a7 Module 5",
+    "6": "Practice Spines/Phase A MVP Spines.md \u00a7 Module 6",
+    "7": "Practice Spines/Phase A MVP Spines.md \u00a7 Module 7",
+    "8": "Practice Spines/Phase A MVP Spines.md \u00a7 Module 8",
+    "9": "Practice Spines/Phase A MVP Spines.md \u00a7 Module 9",
+    "10": "Practice Spines/Phase A MVP Spines.md \u00a7 Module 10",
+    "11": "Gauntlet/Phase A Gauntlet.md + Practice Spines/Phase A MVP Spines.md \u00a7 Module 11",
+    "12": "Practice Spines/Phase A MVP Spines.md \u00a7 Coverage modules + Retention Questions/Coverage Gaps Retention.md"
   },
   "coverage_seed": {
-    "intervals": ["merge/insert", "meeting rooms sweep", "difference array"],
-    "bitwise": ["XOR family", "n&(n-1)", "bit masks / subsets"],
-    "strings": ["KMP prefix function", "Z-algorithm", "rolling hash vs KMP"],
-    "math": ["gcd/mod", "fast pow", "sieve light"],
-    "matrix": ["spiral/rotate/set-zero", "grid BFS/DFS", "multi-source BFS"],
-    "design": ["RandomizedSet", "MinStack", "TimeMap", "LRU"]
+    "intervals": [
+      "merge/insert",
+      "meeting rooms sweep",
+      "difference array"
+    ],
+    "bitwise": [
+      "XOR family",
+      "n&(n-1)",
+      "bit masks / subsets"
+    ],
+    "strings": [
+      "KMP prefix function",
+      "Z-algorithm",
+      "rolling hash vs KMP"
+    ],
+    "math": [
+      "gcd/mod",
+      "fast pow",
+      "sieve light"
+    ],
+    "matrix": [
+      "spiral/rotate/set-zero",
+      "grid BFS/DFS",
+      "multi-source BFS"
+    ],
+    "design": [
+      "RandomizedSet",
+      "MinStack",
+      "TimeMap",
+      "LRU"
+    ]
   }
 }

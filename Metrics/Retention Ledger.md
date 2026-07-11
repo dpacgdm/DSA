@@ -90,3 +90,8 @@
 3. Grade vs answer key; tag fails; update heat  
 4. Update `Metrics/Scoreboard.md` G2  
 5. Raise learner status only via Handoff enum  
+
+
+## Seed note (2026-07-11)
+
+`ledger.json` now includes M3–M11 + coverage subskills at `weak` / due today until first pass. Run `python tools/spaced_drill.py --write`.

@@ -78,13 +78,75 @@ True weight-shortest: `s→a→t` cost 2 ≪ 100.
 | Situation | Algorithm | Why |
 |---|---|---|
 | Unweighted / all weights equal | **BFS** | Hop distance = weight distance |
-| Non-negative weights | **Dijkstra** | Greedy finalize works |
+| Weights ∈ {0,1} only | **0-1 BFS** (deque) | O(V+E); see Part 2B |
+| Non-negative weights (general) | **Dijkstra** | Greedy finalize works |
 | Negative weights, no neg cycle needed for answer | **Bellman-Ford** | Relaxes all edges V−1 times |
 | Detect negative cycle | **Bellman-Ford** (+1 pass) | Extra relaxation improves → cycle |
 | All-pairs, dense, no neg | Floyd-Warshall (rare in interviews) | O(V³) DP |
 | DAG | DP / topo order relax | One pass in topo order |
 
-**This module's focus:** Dijkstra (binary heap) + Bellman-Ford (when/why) + Union-Find + MST intuition.
+**This module's focus:** Dijkstra (binary heap) + **0-1 BFS** + Bellman-Ford (when/why, awareness) + Union-Find + MST intuition.
+
+| Situation | Algorithm | Why |
+|---|---|---|
+| **Weights only 0 or 1** | **0-1 BFS** (deque) | Faster than heap Dijkstra; same idea as BFS with front/back pushes |
+
+Update the decision tree: unweighted → BFS · **0/1 weights → 0-1 BFS** · general non-neg → Dijkstra · negatives → Bellman-Ford.
+
+---
+
+# PART 2B: 0-1 BFS — MUST-KNOW (FAANG)
+
+When every edge weight is **0 or 1**, you do **not** need a binary heap. Use a **deque**:
+
+- Weight **0** edge → `appendleft` (process ASAP — distance unchanged)
+- Weight **1** edge → `append` (distance +1)
+
+Invariant: deque stays sorted by distance (0/1 increments). Each node settled once via `dist[]`.
+
+```python
+from collections import deque
+
+def zero_one_bfs(n, graph, src):
+    """graph[u] = list of (v, w) with w in {0, 1}. Returns dist[]."""
+    INF = 10**18
+    dist = [INF] * n
+    dist[src] = 0
+    dq = deque([src])
+    while dq:
+        u = dq.popleft()
+        for v, w in graph[u]:
+            nd = dist[u] + w
+            if nd < dist[v]:
+                dist[v] = nd
+                if w == 0:
+                    dq.appendleft(v)
+                else:
+                    dq.append(v)
+    return dist
+```
+
+**Complexity:** O(V+E) — each edge relaxes like BFS, no `log V`.
+
+**Interview triggers:** grid with two move costs; "teleport" edges cost 0; binary graph shortest path; sometimes disguised as "special roads free."
+
+**Vs Dijkstra:** Same relaxation idea; deque replaces heap because 0/1 keeps distances nearly sorted. If weights are `{0,1,2,...,K}` small, Dial's algorithm generalizes — rare on screens; mention only if asked.
+
+**Vs plain BFS:** Plain BFS assumes all weights equal (usually 1). A 0-weight edge breaks hop-count = cost.
+
+### Mini worked example
+
+Nodes `0-3`. Edges: `0→1` w=1, `0→2` w=0, `2→1` w=0, `1→3` w=1.
+
+From 0: push 0. Pop 0; via w=0 to 2 → dist[2]=0 appendleft; via w=1 to 1 → dist[1]=1 append. Pop 2; via w=0 to 1 → dist[1]=0 (improve!) appendleft. Pop 1; to 3 → dist[3]=1. Answer dist = [0,0,0,1].
+
+Heap Dijkstra also works but is slower to code and asymptotics worse by `log V`.
+
+### Teach-back
+
+1. When must you refuse plain BFS even on an unweighted-looking graph?
+2. Why `appendleft` for weight 0?
+3. State the full shortest-path picker in one sentence.
 
 ---
 
@@ -289,7 +351,10 @@ Depending on pop order, greedy finalize can lock in a wrong distance because a *
 
 ---
 
-## 4B: Bellman-Ford — Brief, Interview-Ready
+## 4B: Bellman-Ford — Interview Awareness (Demoted Drill Depth)
+
+> **Craft note:** FAANG screens rarely require coding full BF. Know: (1) negatives break Dijkstra, (2) BF = V−1 relax rounds, (3) Nth pass detects neg cycle, (4) "cheapest within K stops" is bounded BF/DP. Prefer **0-1 BFS** and Dijkstra for timed reps.
+
 
 **Idea:** Relax **every** edge `|V|−1` times. After `k` rounds, `dist[u]` is correct for all paths using ≤ `k` edges (if no neg cycle reachable).
 
@@ -803,7 +868,8 @@ def union(a,b):
 ```
 Need distances on graph?
 ├── unweighted → BFS
-├── weights ≥ 0 → Dijkstra
+├── weights ∈ {0,1} → 0-1 BFS
+├── weights ≥ 0 (general) → Dijkstra
 └── negatives → Bellman-Ford
 
 Need merges / same-component queries?

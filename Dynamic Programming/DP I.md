@@ -1533,18 +1533,18 @@ Trace the John/Mary example from Graphs II.
 
 ---
 
-# PART 32: FINAL SELF-CHECK (YES/NO)
+# PART 32: FINAL SELF-CHECK (YES/NO) — DP I ONLY
 
-- [ ] I can write Dijkstra with stale skip from memory  
-- [ ] I can explain Dijkstra + negatives failure  
-- [ ] I can write DSU find+union by rank  
-- [ ] I can run Kruskal on paper  
-- [ ] I can fill five DP lines before coding  
-- [ ] I can do robber / decode / coin / word / LIS blind  
-- [ ] I know memo vs table tradeoff  
+*(Prior draft wrongly listed Dijkstra/DSU/Kruskal here — those belong to `Graphs/Graphs II.md`.)*
+
+- [ ] I can fill the five DP lines (STATE / TRANSITION / BASE / ORDER / ANSWER) before coding  
+- [ ] I can do climb / robber / decode / coin / word break / LIS blind  
+- [ ] I know memo vs tabulation tradeoffs  
 - [ ] I can roll O(1) space for 2-prev DP  
+- [ ] I can explain overlapping subproblems + optimal substructure in plain English  
+- [ ] I can debug a wrong DP by checking base cases then transition on a failing index  
 
-All yes → ready for Module 8 retention grill + timed set.
+All yes → ready for Module 8 retention grill + timed set (with Graphs II).
 
 ---
 

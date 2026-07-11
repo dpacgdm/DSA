@@ -1,3 +1,6 @@
+<!-- ANSWER KEYS MOVED: see Retention Questions/keys/Module 11 Final Assessment.keys.md -->
+> **Blind mode:** Answers were moved to `keys/Module 11 Final Assessment.keys.md`. Attempt first, then grade.
+
 # MODULE 11 FINAL ASSESSMENT — PHASE A CUMULATIVE
 
 **With answers.** This is the end-of–Phase A written/oral assessment. It does **not** replace gates G1–G7; it feeds evidence for G1 (teach-back) and retention. Pair with `Gauntlet/Phase A Gauntlet.md` for timed mocks (G3–G5).
@@ -23,171 +26,143 @@ One breath each.
 
 ## A1. Three Big-O simplification rules?
 
-**Answer:** Drop constants; drop non-dominant terms; different inputs → different variables.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 1)
 
 ## A2. `for i in range(n): for j in range(i):` complexity?
 
-**Answer:** O(n²) — triangle number of iterations.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 2)
 
 ## A3. Why is `s = s + c` in a loop O(n²) in Python?
 
-**Answer:** Immutable strings; each concat copies. Use list + `join`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 3)
 
 ## A4. Variable sliding window fails for subarray sum = k when?
 
-**Answer:** When negatives (or non-monotone sums) exist — use prefix + hash.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 4)
 
 ## A5. Two Sum unsorted — best expected approach?
 
-**Answer:** One-pass hash map value→index. O(n)/O(n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 5)
 
 ## A6. Prefix sum formula for `sum(l..r)` with `prefix[0]=0`, `prefix[i]=sum(a[0..i-1])`?
 
-**Answer:** `prefix[r+1] - prefix[l]`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 6)
 
 ## A7. Recursion space for depth-d call chain?
 
-**Answer:** O(d) stack (Python: no TCO; ~1000 limit).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 7)
 
 ## A8. Memoization helps when?
 
-**Answer:** Overlapping subproblems + polynomial state space.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 8)
 
 ## A9. Binary search: what must you define precisely?
 
-**Answer:** The boolean predicate / invariant (what is true on the left vs right of `lo`/`hi`).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 9)
 
 ## A10. Merge sort time/space? Quicksort average/worst?
 
-**Answer:** Merge: O(n log n) time, O(n) space. Quick: avg O(n log n), worst O(n²); expected O(n log n) with random pivot.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 10)
 
 ## A11. Dummy head in linked lists — why?
 
-**Answer:** Uniform handling when head may change (delete, merge, remove nth from end).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 11)
 
 ## A12. Floyd cycle: how find entrance after meeting?
 
-**Answer:** One pointer to head; both step +1; meet at entrance.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 12)
 
 ## A13. Stack vs queue Python implementations?
 
-**Answer:** Stack = `list` append/pop. Queue = `deque` append/popleft. Never `list.pop(0)` hot path.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 13)
 
 ## A14. Monotonic stack O(n) reason?
 
-**Answer:** Each index pushed and popped at most once.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 14)
 
 ## A15. Sliding window maximum structure?
 
-**Answer:** Decreasing deque of indices; front = max; expire left.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 15)
 
 ## A16. Tree preorder / inorder / postorder visit order?
 
-**Answer:** Root-L-R; L-Root-R; L-R-Root.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 16)
 
 ## A17. BST invariant — local child check enough?
 
-**Answer:** No — entire left subtree < node < entire right. Use bounds or inorder increasing.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 17)
 
 ## A18. Heap peek / insert / extract-min complexities (binary heap)?
 
-**Answer:** O(1) peek; O(log n) insert/extract.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 18)
 
 ## A19. BFS vs DFS primary data structures?
 
-**Answer:** BFS queue; DFS stack/recursion.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 19)
 
 ## A20. Topological sort — when impossible?
 
-**Answer:** Cycle in directed graph.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 20)
 
 ## A21. Union-Find use case one-liner?
 
-**Answer:** Dynamic connectivity / components with near-O(1) union and find (with path compression + union by rank).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 21)
 
 ## A22. Dijkstra finds?
 
-**Answer:** Shortest paths from source on graphs with **non-negative** weights.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 22)
 
 ## A23. 0/1 knapsack vs unbounded — DP difference (one line)?
 
-**Answer:** 0/1: each item once (loop capacity downward or 2D). Unbounded: item reusable (coin change style loops).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 23)
 
 ## A24. Backtracking three steps?
 
-**Answer:** Choose → explore → unchoose (push/recurse/pop).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 24)
 
 ## A25. Trie: search vs startsWith?
 
-**Answer:** Search requires `is_end`; startsWith only requires path exists.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 25)
 
 ## A26. Remove k digits — stack monotonicity?
 
-**Answer:** Non-decreasing digits; pop larger left peaks while k > 0.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 26)
 
 ## A27. Fenwick exposure: update + range sum?
 
-**Answer:** O(log n) each. Static → prefer prefix sums.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 27)
 
 ## A28. Greedy interval scheduling classic rule?
 
-**Answer:** Sort by end time; take next compatible (earliest finishing).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 28)
 
 # SECTION B: CONCEPTUAL TEACH-BACKS
 
@@ -195,63 +170,53 @@ One breath each.
 
 ## B1. Teach the sliding-window framework (variable size) in under 1 minute.
 
-**Answer:** Expand `right` to include new element; update state (sum/counts/set); while invariant violated, shrink `left` and undo state; track best. Amortized O(n) if each pointer moves ≤ n times. State must support O(1) add/remove.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 29)
 
 ## B2. Explain hash map for "count subarrays with sum k."
 
-**Answer:** Running prefix `p`; need prior prefixes equal to `p-k`; store frequencies of prefixes seen; `freq[0]=1` for subarrays from start. O(n). Works with negatives.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 30)
 
 ## B3. Recursion tree for T(n)=2T(n/2)+O(n) → O(n log n) without naming MT.
 
-**Answer:** log n levels; each level total work O(n); product O(n log n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 31)
 
 ## B4. Binary search on answer — when?
 
-**Answer:** When feasibility is monotone in a numeric answer (e.g., "can we finish in mid days?"). Binary search `mid`, check predicate O(f), total O(f log range).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 32)
 
 ## B5. Histogram largest rectangle — mono stack story.
 
-**Answer:** For each bar, width = distance between previous smaller and next smaller. Increasing stack finds those bounds; area = h×width. O(n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 33)
 
 ## B6. Validate BST with bounds — walk an example that fools local checks.
 
-**Answer:** Tree `5 → right 6 → left 4`. Local OK; bounds on 4 require >5 → fail.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 34)
 
 ## B7. Why Dijkstra fails with negative edges; what instead (name only)?
 
-**Answer:** Relaxation assumption breaks; negative cycles possible. Bellman-Ford / other (PREVIEW depth OK). Don't use Dijkstra.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 35)
 
 ## B8. DP definition: optimal substructure + overlapping — example.
 
-**Answer:** Fib/climb stairs/coin change: optimal solution built from smaller amounts; same sub-amount recomputed → memo/tabulate.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 36)
 
 ## B9. Trie vs hash set decision.
 
-**Answer:** Exact membership → set. Prefix/autocomplete/wildcard/shortest root → trie.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 37)
 
 ## B10. Interview: "point updates + range sums?" — 30-second answer.
 
-**Answer:** "Prefix sums if static. If updates interleave, Fenwick or segment tree, O(log n) update and query. I can sketch Fenwick for sums." (Exposure — don't force 100-line segtree.)
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 38)
 
 # SECTION C: PROBLEM SOLVING (MIXED MEDIUM/HARD)
 
@@ -261,108 +226,63 @@ Full solutions. Aim ≥ 8/12 solid.
 
 ## C1. Container With Most Water
 
-**Answer:** Two pointers at ends; move the shorter side inward. O(n).
 
-```python
-def max_area(height):
-    lo, hi = 0, len(height) - 1
-    best = 0
-    while lo < hi:
-        best = max(best, (hi - lo) * min(height[lo], height[hi]))
-        if height[lo] < height[hi]:
-            lo += 1
-        else:
-            hi -= 1
-    return best
-```
-
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 39)
 
 ## C2. Longest Consecutive Sequence
 
-**Answer:** Set; only start runs where `x-1 not in set`. O(n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 40)
 
 ## C3. Search in Rotated Sorted Array
 
-**Answer:** Binary search; identify which half is sorted; decide where target lies. O(log n).
 
-```python
-def search(nums, target):
-    lo, hi = 0, len(nums) - 1
-    while lo <= hi:
-        mid = (lo + hi) // 2
-        if nums[mid] == target:
-            return mid
-        if nums[lo] <= nums[mid]:
-            if nums[lo] <= target < nums[mid]:
-                hi = mid - 1
-            else:
-                lo = mid + 1
-        else:
-            if nums[mid] < target <= nums[hi]:
-                lo = mid + 1
-            else:
-                hi = mid - 1
-    return -1
-```
-
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 41)
 
 ## C4. Reverse Linked List + detect cycle (state both)
 
-**Answer:** Reverse: save/rewire/advance three pointers. Cycle: Floyd slow/fast.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 42)
 
 ## C5. Daily Temperatures
 
-**Answer:** Decreasing mono stack of indices; `ans[j]=i-j` on pop. O(n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 43)
 
 ## C6. Level Order + Zigzag (describe)
 
-**Answer:** BFS with deque; zigzag alternates append direction or reverse odd levels.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 44)
 
 ## C7. Kth Largest in Stream / Array
 
-**Answer:** Min-heap of size k. O(n log k).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 45)
 
 ## C8. Clone Graph
 
-**Answer:** Hash map old→new; BFS/DFS copy neighbors. O(V+E).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 46)
 
 ## C9. Course Schedule (can finish?)
 
-**Answer:** Topo / cycle detect DFS colors or Kahn indegree. Cycle ⇒ false.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 47)
 
 ## C10. LIS length O(n log n) sketch OR O(n²) DP
 
-**Answer:** O(n²): `dp[i]=1+max(dp[j])` for j<i with a[j]<a[i]. O(n log n): tails binary search patience method.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 48)
 
 ## C11. Combination Sum (backtracking)
 
-**Answer:** DFS with start index; reuse allowed → recurse `i` not `i+1`; prune when remain < 0.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 49)
 
 ## C12. Implement Trie + one Remove K Digits trace `"112", k=1`
 
-**Answer:** Trie skeleton standard. Remove k: pop first `1`? Actually `"112"` k=1 → pop last possible peak: stack [1,1,2], no pop during (non-decreasing), k left → pop end → `"11"`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 50)
 
 # SECTION D: TRICK / JUDGMENT
 
@@ -370,51 +290,43 @@ def search(nums, target):
 
 ## D1. True/False: Sorted array + hash set is always better than two pointers for pair sum.
 
-**Answer:** **False.** Two pointers O(1) extra space; hash O(n) space. Sorted enables two pointers.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 51)
 
 ## D2. True/False: BFS shortest path works on weighted graphs.
 
-**Answer:** **False** (for general positive weights). BFS = unweighted (or equal weight). Weighted → Dijkstra/0-1 BFS variants.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 52)
 
 ## D3. You used recursion for factorial of n=10^6. Issue?
 
-**Answer:** Stack overflow / recursion limit; use loop. Also unnecessary.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 53)
 
 ## D4. Window max via segment tree in a 45-min screen — good idea?
 
-**Answer:** Usually no — monotonic deque is expected. Segtree = overkill unless interviewer asks.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 54)
 
 ## D5. DP on tree vs graph with cycles.
 
-**Answer:** Tree DP OK along DAG of subtrees. General graph cycles need care (not naive tree recursion).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 55)
 
 ## D6. `dict` iteration while inserting — safe?
 
-**Answer:** No — `RuntimeError` if size changes during iterate. Copy keys or collect then mutate.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 56)
 
 ## D7. Quickselect worst case without randomization?
 
-**Answer:** O(n²) on adversarial pivots. Say so; mention random pivot.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 57)
 
 ## D8. Phase A declaration with G3 at 60%?
 
-**Answer:** **Not allowed.** Threshold 70% on last 20 timed mediums. Keep drilling.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 58)
 
 # SECTION E: SYNTHESIS / SYSTEMS OF THOUGHT
 
@@ -422,25 +334,18 @@ def search(nums, target):
 
 ## E1. Given a new problem, outline your 60-second classification checklist.
 
-**Answer (model):**
-1. Input type: array/string/LL/tree/graph/stream?
-2. Ask: contiguous? → window/prefix/mono deque. Pairs/complements? → hash/two ptr. Ordering/next greater? → mono stack. Hierarchy? → tree. Dependencies? → graph. Optimize count/min/max with subproblems? → DP. Enumerate? → BT. Prefix words? → trie.
-3. Constraints → rule out O(n²) if n=10^5.
-4. Brute → optimize; state complexity; code; trace edges.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 59)
 
 ## E2. Pick three patterns you are weakest on (from ledger). For each: one drill problem + error type you usually make.
 
-**Answer:** Personal — must fill from `Metrics/Retention Ledger.md`. Assessment incomplete without this honesty (G2/G7 spirit).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 60)
 
 ## E3. Explain to a junior: difference between `taught`, `drilled`, `retention-passed`, `timed-verified`, `complete`.
 
-**Answer:** Per Handoff enum — chat help = drilled only; complete needs retention + blind timed + ledger. No status inflation.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 61)
 
 # SECTION F: FULL WORKED HARD (CHOOSE ONE TO WRITE OUT)
 
@@ -450,47 +355,18 @@ Proctor picks one; reference below.
 
 ## F1. Word Search II (board + trie)
 
-**Answer:** Insert words in trie; DFS from each cell with trie node; mark visited; collect at end; prune. See Module 10.
 
-**Rubric focus:** Clarity of trie pruning; backtracking correctness; complexity honesty.
-
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 62)
 
 ## F2. Sum of Subarray Minimums
 
-**Answer:** Contribution via prev/next smaller mono stacks; mod 10⁹+7. Strictness asymmetry for ties.
 
-**Rubric focus:** Complexity talk; edge all-equal.
-
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 63)
 
 ## F3. Serialize / Deserialize Binary Tree
 
-**Answer:** Preorder with null markers, or level-order BFS. Parse recursively or with queue.
 
-```python
-class Codec:
-    def serialize(self, root):
-        def dfs(node):
-            if not node:
-                return ["#"]
-            return [str(node.val)] + dfs(node.left) + dfs(node.right)
-        return ",".join(dfs(root))
-
-    def deserialize(self, data):
-        vals = iter(data.split(","))
-        def dfs():
-            v = next(vals)
-            if v == "#":
-                return None
-            node = TreeNode(int(v))
-            node.left = dfs()
-            node.right = dfs()
-            return node
-        return dfs()
-```
-
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 64)
 
 # SECTION G: TIMED MINI-SET (30–40 MIN) — ANSWERS
 
@@ -577,315 +453,263 @@ def min_meeting_rooms(intervals):
 
 ## A29. Amortized array append — one sentence?
 
-**Answer:** Occasional O(n) resize; average O(1) per append.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 65)
 
 ## A30. Opposite-ends two pointers need what precondition for pair sum?
 
-**Answer:** Sorted order (or monotonic structure).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 66)
 
 ## A31. Fixed vs variable sliding window — difference?
 
-**Answer:** Fixed: size k always. Variable: shrink/grow to maintain invariant.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 67)
 
 ## A32. Kadane handles all-negative how?
 
-**Answer:** Initialize best/cur to first element (or track max element) — empty subarray disallowed variants differ.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 68)
 
 ## A33. Anagram check O(L) tool?
 
-**Answer:** Count array[26] or Counter equality.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 69)
 
 ## A34. Rolling hash exposure — collision handling?
 
-**Answer:** Verify substring on hash hit; or double hash. (Advanced Hashing lesson.)
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 70)
 
 ## A35. Recursion tree vs recurrence — relationship?
 
-**Answer:** Tree visualizes work per level; recurrence is algebraic form of same.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 71)
 
 ## A36. Backtracking prune example?
 
-**Answer:** Parentheses: never add `)` if closes ≥ opens.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 72)
 
 ## A37. Binary search first True in monotone predicate — template idea?
 
-**Answer:** `lo,hi` answer space; if `ok(mid): hi=mid` else `lo=mid+1`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 73)
 
 ## A38. Quicksort space average?
 
-**Answer:** O(log n) stack expected; O(n) worst.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 74)
 
 ## A39. Stable sort meaning? Python sort stable?
 
-**Answer:** Equal keys keep relative order. Timsort yes.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 75)
 
 ## A40. LL reverse three pointers?
 
-**Answer:** prev, cur, nxt — save / rewire / advance.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 76)
 
 ## A41. Intersection of two LL — length align method?
 
-**Answer:** Walk both; switch heads when None — meet at intersection or None.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 77)
 
 ## A42. Min stack O(1) — how?
 
-**Answer:** Store (val, min_so_far) pairs.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 78)
 
 ## A43. Evaluate RPN — structure?
 
-**Answer:** Stack; operands push; operator pops 2.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 79)
 
 ## A44. Tree diameter via heights?
 
-**Answer:** At each node, candidate = left_h+right_h; track global max; return height upward.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 80)
 
 ## A45. BST iterator — next amortized O(1)?
 
-**Answer:** Controlled inorder stack; each node push/pop once.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 81)
 
 ## A46. Lowest Common Ancestor BT (not BST)?
 
-**Answer:** DFS return found nodes; if both sides nonempty current is LCA.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 82)
 
 ## A47. Heapify Floyd why O(n)?
 
-**Answer:** Most nodes near leaves; Σ costs geometric O(n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 83)
 
 ## A48. Two-heap median invariant?
 
-**Answer:** max-heap left half, min-heap right; sizes differ ≤1; tops bound median.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 84)
 
 ## A49. Top-K largest — heap type size K?
 
-**Answer:** Min-heap of size K (root = Kth largest threshold).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 85)
 
 ## A50. BFS shortest path condition?
 
-**Answer:** Unweighted (or equal weight) edges.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 86)
 
 ## A51. Detect cycle directed DFS colors?
 
-**Answer:** Visiting gray neighbor ⇒ cycle.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 87)
 
 ## A52. Union by rank + path compression Ackermann?
 
-**Answer:** Amortized α(n) ≈ constant.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 88)
 
 ## A53. Dijkstra structure?
 
-**Answer:** Min-heap of (dist, node); relax neighbors; skip outdated pops.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 89)
 
 ## A54. 0/1 knapsack DP dim?
 
-**Answer:** Classic `dp[i][w]` or 1D backward capacity loop.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 90)
 
 ## A55. LCS recurrence?
 
-**Answer:** If equal: 1+LCS(i-1,j-1) else max(LCS(i-1,j), LCS(i,j-1)).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 91)
 
 ## A56. Greedy activity selection proof sketch?
 
-**Answer:** Earliest end leaves max room; exchange argument.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 92)
 
 ## A57. Trie delete danger?
 
-**Answer:** Don't remove nodes still needed by longer words — clear is_end + prune empty.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 93)
 
 ## A58. Sum subarray mins ties?
 
-**Answer:** Asymmetric strictness on left/right spans.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 94)
 
 ## A59. Remove k digits zeros?
 
-**Answer:** lstrip `0`; empty → `"0"`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 95)
 
 ## A60. Fenwick vs prefix one line?
 
-**Answer:** Dynamic vs static range sums.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 96)
 
 ## A61. Segment tree merge must be?
 
-**Answer:** Associative combination from children (sum/min/max/gcd…).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 97)
 
 ## A62. Interview overkill: window max with segtree?
 
-**Answer:** Yes overkill — use mono deque.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 98)
 
 ## A63. Space of mergesort?
 
-**Answer:** O(n) auxiliary typically.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 99)
 
 ## A64. Inorder of BST yields?
 
-**Answer:** Sorted order.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 100)
 
 ## A65. Graph adj list space?
 
-**Answer:** O(V+E).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 101)
 
 ## A66. DP vs greedy distinction?
 
-**Answer:** Greedy local choice proves global; DP considers many substates when greedy fails.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 102)
 
 ## A67. Memo key for grid unique paths with obstacles?
 
-**Answer:** `(r,c)` or 2D table.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 103)
 
 ## A68. Bit trick: x & -x?
 
-**Answer:** Lowest set bit — Fenwick jumps / some bit DPs.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 104)
 
 ## A69. Python recursion limit approx?
 
-**Answer:** ~1000 default.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 105)
 
 ## A70. When is O(n log n) better than O(n²) practically?
 
-**Answer:** Large n (1e5); constants matter but asymptotics dominate.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 106)
 
 ## A71. Sliding window max deque stores?
 
-**Answer:** Indices in decreasing value order.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 107)
 
 ## A72. Course schedule edge [a,b]?
 
-**Answer:** b prerequisite of a → b→a.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 108)
 
 ## A73. Prim vs Kruskal one line?
 
-**Answer:** Both MST; Prim grows tree; Kruskal sorts edges + UF.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 109)
 
 ## A74. Backtracking time for subsets?
 
-**Answer:** O(n·2ⁿ).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 110)
 
 ## A75. Hash collision resolution names?
 
-**Answer:** Chaining; open addressing.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 111)
 
 ## A76. String immutability interview line?
 
-**Answer:** Concat in loop copies → O(n²); use list join.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 112)
 
 ## A77. Tree BFS space worst?
 
-**Answer:** O(n) for wide level / queue.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 113)
 
 ## A78. DP coin change fewest — init?
 
-**Answer:** `dp[0]=0`, rest INF; relax `dp[x]=min(dp[x], dp[x-c]+1)`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 114)
 
 ## A79. Phase A G3 threshold?
 
-**Answer:** ≥70% first-pass on last 20 timed mediums.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 115)
 
 ## A80. Chat-guided solve counts as timed-verified?
 
-**Answer:** **No** — drilled only.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 116)
 
 # SECTION K: TOPIC-BY-TOPIC MINI PROBLEMS (WITH ANSWERS)
 
@@ -900,131 +724,103 @@ for i in range(n):
         j *= 2
 ```
 
-**Answer:** O(n log n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 117)
 
 ## K2. Arrays: move zeros in-place
 
-**Answer:** Read/write pointer — write non-zeros forward; fill zeros. O(n)/O(1).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 118)
 
 ## K3. Hash: first unique char in stream / string
 
-**Answer:** Counter then scan; or OrderedDict frequency.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 119)
 
 ## K4. Recursion: pow(x,n) fast
 
-**Answer:** Exponentiation by squaring O(log n).
 
-```python
-def myPow(x, n):
-    if n < 0: return 1/myPow(x, -n)
-    if n == 0: return 1
-    half = myPow(x, n//2)
-    return half*half if n%2==0 else half*half*x
-```
-
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 120)
 
 ## K5. Binary search: search insert position
 
-**Answer:** Lower bound bisect template. O(log n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 121)
 
 ## K6. Sorting: merge two sorted lists/arrays
 
-**Answer:** Two pointers into output. O(n+m).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 122)
 
 ## K7. LL: palindrome list
 
-**Answer:** Slow/fast mid; reverse second half; compare. O(n)/O(1).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 123)
 
 ## K8. Stack: daily temperatures
 
-**Answer:** Mono decreasing indices. O(n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 124)
 
 ## K9. Tree: max depth
 
-**Answer:** `1+max(left,right)`; empty 0. O(n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 125)
 
 ## K10. BST: delete node cases
 
-**Answer:** 0 children; 1 child; 2 children → successor/predecessor swap.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 126)
 
 ## K11. Heap: merge K sorted lists
 
-**Answer:** Min-heap of (val, list_id, node). O(N log K).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 127)
 
 ## K12. Graph: clone graph
 
-**Answer:** Map + BFS/DFS. O(V+E).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 128)
 
 ## K13. UF: redundant connection
 
-**Answer:** Union edges; first failing union is redundant.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 129)
 
 ## K14. DP: unique paths with obstacles
 
-**Answer:** `dp[0][0]` set; zeros on obstacle; sum from top/left.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 130)
 
 ## K15. BT: subsets with duplicates
 
-**Answer:** Sort; skip `i>start and nums[i]==nums[i-1]`.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 131)
 
 ## K16. Greedy: jump game I
 
-**Answer:** Track farthest reachable. O(n).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 132)
 
 ## K17. Trie: startsWith
 
-**Answer:** Walk; no is_end needed.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 133)
 
 ## K18. Mono: stock span
 
-**Answer:** Stack (price, span). Amortized O(1).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 134)
 
 ## K19. Fenwick exposure: when not to use
 
-**Answer:** Static queries; window max; tiny n.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 135)
 
 ## K20. Interview meta: G7 tags
 
-**Answer:** knowledge-gap / misread / time-pressure / careless-slip — 100% of timed misses.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 136)
 
 # SECTION L: FULL SOLUTIONS — EXTRA CUMULATIVE HARDS
 
@@ -1058,9 +854,8 @@ def minWindow(s, t):
 
 ## L2. LRU Cache (sketch)
 
-**Answer:** `OrderedDict` move_to_end / popitem(last=False), or DLL+dict. O(1) ops.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 137)
 
 ## L3. Edit Distance
 
@@ -1102,9 +897,8 @@ def maxPathSum(root):
 
 ## L5. Word Search II — reference pointer
 
-**Answer:** Full code in `Advanced/Tries & Monotonic.md` Part 7E.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 138)
 
 # SECTION M: JUDGMENT SCENARIOS
 
@@ -1112,63 +906,53 @@ def maxPathSum(root):
 
 ## M1. n=1e5, need range sum, no updates — tool?
 
-**Answer:** Prefix sums.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 139)
 
 ## M2. n=1e5, updates + range sum — tool?
 
-**Answer:** Fenwick/segment.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 140)
 
 ## M3. Find max in every window k — tool?
 
-**Answer:** Monotonic deque.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 141)
 
 ## M4. Dictionary prefix queries — tool?
 
-**Answer:** Trie (or sorted+bisect).
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 142)
 
 ## M5. Shortest path unweighted — tool?
 
-**Answer:** BFS.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 143)
 
 ## M6. Shortest path weighted nonnegative — tool?
 
-**Answer:** Dijkstra.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 144)
 
 ## M7. Greedy coin change OK?
 
-**Answer:** Only special coin systems; general → DP.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 145)
 
 ## M8. Interview 45 min, mentions segment tree follow-up — what do?
 
-**Answer:** Explain shape+complexity; offer Fenwick code for sums; don't derail into lazy unless asked.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 146)
 
 ## M9. Failed timed medium with hint — G3 credit?
 
-**Answer:** No first-pass credit; add redo queue G6.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 147)
 
 ## M10. Ready to declare Phase A with G5=3.8?
 
-**Answer:** No — need ≥4.0 on last 4 mocks.
 
----
+> **Answer key:** `Retention Questions/keys/Module 11 Final Assessment.keys.md` (block 148)
 
 # SECTION N: SYNTHESIS ESSAY PROMPTS (MODEL ANSWERS SHORT)
 

@@ -10,3 +10,5 @@
 Until unlabeled per-module files exist, pull from retention grills (hide keys) or `Gauntlet/Phase A Gauntlet.md`.
 
 Local executable practice: `problem-bank/` (`py -3 run_all.py`).
+
+Unlabeled timed mixes (no pattern titles): `Practice/Unlabeled Timed Sets/`.

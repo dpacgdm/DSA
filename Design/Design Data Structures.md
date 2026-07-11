@@ -4,7 +4,7 @@
 **Status:** `content-delivered` — drill / retention / timed still required for `complete`  
 **Language:** Python  
 **Prerequisite:** Hash maps, linked lists / ordered dict, heaps, stacks, binary search.  
-**Cross-refs:** LRU lives in Linked Lists / Hashing lessons; this hub covers the **rest of the design family**.
+**Cross-refs:** Full LRU is **Part 15 below** (canonical coded version). Linked Lists Pattern 8 = DLL motivation. This hub also covers the rest of the design family.
 
 ---
 
@@ -474,12 +474,114 @@ Queue of timestamps; binary search / bucket 300s.
 
 ---
 
-# PART 15: LRU RECAP (POINTER ONLY)
+# PART 15: LRU CACHE — FULL WORKED (MUST-KNOW)
 
-LRU = HashMap key→node + doubly linked list by recency.  
-`OrderedDict.move_to_end` / `popitem(last=False)` in Python.
+**LC 146.** Capacity `C`. `get(key)` / `put(key, value)` both **O(1)** average. Evict **least recently used** on overflow.
 
-**This lesson assumes LRU known;** focus is everything else. If rusty, revisit Linked Lists / Hashing LRU section.
+## Why HashMap + Doubly Linked List
+
+| Need | Structure |
+|---|---|
+| Find node by key in O(1) | `dict[key] → node` |
+| Move refreshed key to MRU in O(1) | Splice node in DLL |
+| Evict LRU in O(1) | Tail (or head) sentinel of DLL |
+
+Singly list fails: removing middle needs prev pointer. Array fails: moves are O(C).
+
+## Sentinel DLL sketch
+
+```
+sentinel ↔ MRU ↔ ... ↔ LRU ↔ sentinel   (circular) 
+# or: head=MRU end, tail=LRU end — pick one convention and stick to it
+```
+
+## Full Python (manual DLL — interview preferred over hiding behind OrderedDict)
+
+```python
+class Node:
+    __slots__ = ("key", "val", "prev", "next")
+    def __init__(self, key=0, val=0):
+        self.key, self.val = key, val
+        self.prev = self.next = None
+
+class LRUCache:
+    def __init__(self, capacity: int):
+        self.cap = capacity
+        self.map: dict[int, Node] = {}
+        self.head, self.tail = Node(), Node()  # head=MRU side, tail=LRU side
+        self.head.next, self.tail.prev = self.tail, self.head
+
+    def _remove(self, node: Node) -> None:
+        node.prev.next = node.next
+        node.next.prev = node.prev
+
+    def _add_mru(self, node: Node) -> None:
+        node.next = self.head.next
+        node.prev = self.head
+        self.head.next.prev = node
+        self.head.next = node
+
+    def get(self, key: int) -> int:
+        node = self.map.get(key)
+        if not node:
+            return -1
+        self._remove(node)
+        self._add_mru(node)
+        return node.val
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.map:
+            node = self.map[key]
+            node.val = value
+            self._remove(node)
+            self._add_mru(node)
+            return
+        if len(self.map) == self.cap:
+            lru = self.tail.prev
+            self._remove(lru)
+            del self.map[lru.key]
+        node = Node(key, value)
+        self.map[key] = node
+        self._add_mru(node)
+```
+
+## Trace
+
+`C=2`: put(1,1), put(2,2), get(1)→1 (1 becomes MRU), put(3,3) evicts key 2, get(2)→-1.
+
+## Edge cases
+
+- Capacity 1: every put may evict.  
+- get miss → `-1`, must **not** change order.  
+- put existing key: update value **and** mark MRU; no eviction.  
+- Evict **before** insert when at capacity (or carefully if inserting new).
+
+## OrderedDict shortcut (mention, then still know DLL)
+
+```python
+from collections import OrderedDict
+class LRUCache:
+    def __init__(self, capacity):
+        self.cap, self.od = capacity, OrderedDict()
+    def get(self, key):
+        if key not in self.od: return -1
+        self.od.move_to_end(key)
+        return self.od[key]
+    def put(self, key, value):
+        if key in self.od: self.od.move_to_end(key)
+        self.od[key] = value
+        if len(self.od) > self.cap: self.od.popitem(last=False)
+```
+
+Interviewers often want the **DLL + hash** explanation even if you code OrderedDict — speak the invariant.
+
+## Teach-back
+
+1. Why doubly, not singly?  
+2. What exactly is evicted and when?  
+3. Draw put-on-full for capacity 2.
+
+**Cross-ref:** DLL pointer skills in `Linked Lists/Linked Lists.md` Pattern 8.
 
 ---
 
