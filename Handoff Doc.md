@@ -80,7 +80,7 @@ Nothing is **Complete** until every prior stage is true.
 |---|---|---|
 | `not-started` | Not begun | N/A |
 | `scoped` | Scope document approved | No |
-| `content-delivered` | Full lesson + retention grill written (≥95% craft). **Not** learner mastery. | Study yes; gate credit no |
+| `content-delivered` | Full lesson + retention grill written. **Not** learner mastery. | Study yes; gate credit no |
 | `taught` | Student has consumed the lesson (self or tutored) | No |
 | `drilled` | Guided + solo practice done (may include chat-guided solves) | No |
 | `retention-passed` | Cumulative retention grill passed for this module + prior material due | No (not yet Complete) |
@@ -434,7 +434,7 @@ Columns below: **Content** = materials exist · **Learner** = evidence status wh
 
 **Status:** `drilled` — **blocked on Module 2 retention + timed verify**
 
-**Materials:** `Hashing/Hash maps&sets.md`, `Hashing/Advanced Hashing.md`
+**Materials:** `Hashing/Hash maps&sets.md` (canonical). `Advanced Hashing.md` archived stub — not required.
 
 **What Was Taught:** Hash internals, collisions, Python dict/set, frequency / prefix-hash patterns, rolling/polynomial hash & Rabin-Karp exposure, interview hash designs.
 
@@ -444,7 +444,7 @@ Columns below: **Content** = materials exist · **Learner** = evidence status wh
 
 **Status:** `drilled` — **blocked on Module 2 retention + timed verify**
 
-**Materials:** `Recursion/Recursion.md`, `Recursion/Advanced Recursion.md`
+**Materials:** `Recursion/Recursion.md` (canonical). `Advanced Recursion.md` archived stub — not required.
 
 **What Was Taught:** Base/recursive/combine, call stack & space, recursion trees, recurrence setup, memoization/tabulation intro, backtracking & D&C exposure.
 
@@ -492,7 +492,7 @@ Columns below: **Content** = materials exist · **Learner** = evidence status wh
 | **Master Theorem only in Module 3** | One source of truth | 2026-07-09 |
 | **Timed practice from Module 3; mocks from Module 4** | Pressure skills cannot wait for a final gauntlet | 2026-07-09 |
 | **Scoreboard + Retention Ledger files** | Spaced repetition and metrics must be engineered | 2026-07-09 |
-| **Content craft floor ≥95%** | Raise lesson/retention quality bar above prior 85% maintain | 2026-07-09 |
+| **Honest product bar (no fake %)** | Lesson contract + keys split + spine/bank honesty; no percentile craft claims | 2026-07-11 |
 | **Phase A bulk content delivery** | Finish all M3–M11 lessons + retention (+ M2 grill) without learner gating | 2026-07-09 |
 | **`content-delivered` ≠ `complete`** | Honest split: materials ready vs learner evidence | 2026-07-09 |
 | **Keep retention answer keys** | Self-grade + tutor sessions; keys are a feature, not a leak to delete | 2026-07-09 |
@@ -541,7 +541,7 @@ Program operating target after this redesign:
 | Plan quality (as a career system) | **98%** | Indefinite pace + evidence gates |
 | Teaching process integrity (gates, sequencing, honesty) | **98%** | Status enum; PREVIEW rules; MT home = M3 |
 | Measurement & accountability | **98%** | Scoreboard + ledger |
-| Content craft (lessons + retention keys) | **≥95%** | Phase A materials delivered 2026-07-09 |
+| Content craft claims | **Removed** | Do not use  slogans; judge via contracts + gates |
 
 Targets are operating standards for how we run the program — not a promise of interview outcomes.
 

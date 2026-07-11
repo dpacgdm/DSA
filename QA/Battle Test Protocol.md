@@ -1,7 +1,7 @@
 # BATTLE TEST PROTOCOL — LESSON QA
 
 **Purpose:** Pressure-test Phase A lessons before trusting them under interview fire.  
-**Craft floor:** ≥95% (Handoff). Answer keys in retention files are **intentionally kept** for self-grade — battle tests check lessons + keys for correctness, not whether keys exist.  
+**Craft floor:** correctness + lesson contract (Handoff). Answer keys live under `Retention Questions/keys/`. Battle tests check lessons + keys for correctness.  
 **Audit log:** Record passes in `QA/Phase A Audit Log.md`.
 
 ---

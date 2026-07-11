@@ -613,7 +613,7 @@ if x < 0: x += MOD
 
 ---
 
-**Final status:** String Algorithms — `content-delivered` (≥95% craft).
+**Final status:** String Algorithms — `content-delivered`.
 
 ---
 
@@ -679,4 +679,4 @@ All must agree — use as self-test harness.
 
 LPS build · KMP match · Z-array · rolling hash · anagram/palindrome bridge · trie cross-ref.
 
-**Final status:** String Algorithms — `content-delivered` (≥95% craft).
+**Final status:** String Algorithms — `content-delivered`.

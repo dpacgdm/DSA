@@ -1,16 +1,22 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-07-11",
+  "honesty": "Bank covers a minority of spine rows. LC-required rows must be scoreboard-logged before module timed-verified. Optional/exposure rows have gate_required=false.",
   "total": 218,
   "in_bank": 97,
+  "gate_required_total": 205,
+  "gate_required_in_bank": 97,
   "problems": [
     {
       "name": "Two Sum",
       "why": "Hash complement; O(n) vs nested",
       "diff": "E",
       "lc": "1",
+      "module": 1,
       "in_bank": true,
       "bank_id": "01_two_sum",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -18,8 +24,11 @@
       "why": "Set membership / complexity talk",
       "diff": "E",
       "lc": "217",
+      "module": 1,
       "in_bank": true,
       "bank_id": "02_contains_duplicate",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -27,8 +36,11 @@
       "why": "Frequency maps",
       "diff": "E",
       "lc": "242",
+      "module": 1,
       "in_bank": true,
       "bank_id": "23_valid_anagram",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -36,8 +48,11 @@
       "why": "One-pass running min",
       "diff": "E",
       "lc": "121",
+      "module": 1,
       "in_bank": true,
       "bank_id": "27_best_time_stock",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -45,8 +60,11 @@
       "why": "Linear scan invariant",
       "diff": "M",
       "lc": "53",
+      "module": 1,
       "in_bank": true,
       "bank_id": "28_max_subarray",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -54,8 +72,11 @@
       "why": "Two pointers in-place",
       "diff": "E",
       "lc": "283",
+      "module": 1,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -63,8 +84,11 @@
       "why": "Two pointers maximize",
       "diff": "M",
       "lc": "11",
+      "module": 1,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -72,8 +96,11 @@
       "why": "Sort + two pointers; dedupe",
       "diff": "M",
       "lc": "15",
+      "module": 1,
       "in_bank": true,
       "bank_id": "33_three_sum",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -81,8 +108,11 @@
       "why": "Variable sliding window",
       "diff": "M",
       "lc": "3",
+      "module": 1,
       "in_bank": true,
       "bank_id": "03_longest_substr_no_repeat",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -90,8 +120,11 @@
       "why": "Fixed window",
       "diff": "E",
       "lc": "\u2014",
+      "module": 1,
       "in_bank": true,
       "bank_id": "04_max_sum_subarray_k",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -99,8 +132,11 @@
       "why": "Window shrink for target",
       "diff": "M",
       "lc": "209",
+      "module": 1,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -108,8 +144,11 @@
       "why": "Prefix/suffix products",
       "diff": "M",
       "lc": "238",
+      "module": 1,
       "in_bank": true,
       "bank_id": "24_product_except_self",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -117,8 +156,11 @@
       "why": "Index mapping / reverse trick",
       "diff": "M",
       "lc": "189",
+      "module": 1,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -126,8 +168,11 @@
       "why": "Vertical scan / edge empty",
       "diff": "E",
       "lc": "14",
+      "module": 1,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -135,8 +180,11 @@
       "why": "Two pointers + filter",
       "diff": "E",
       "lc": "125",
+      "module": 1,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -144,8 +192,11 @@
       "why": "Two pointers from end",
       "diff": "E",
       "lc": "88",
+      "module": 1,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -153,8 +204,11 @@
       "why": "Boyer-Moore or hash",
       "diff": "E",
       "lc": "169",
+      "module": 1,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -162,8 +216,11 @@
       "why": "Explain nested vs hash on Two Sum",
       "diff": "E",
       "lc": "\u2014",
+      "module": 1,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -171,8 +228,11 @@
       "why": "Hash by signature",
       "diff": "M",
       "lc": "49",
+      "module": 2,
       "in_bank": true,
       "bank_id": "30_group_anagrams",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -180,8 +240,11 @@
       "why": "Hash under time",
       "diff": "E",
       "lc": "1",
+      "module": 2,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -189,8 +252,11 @@
       "why": "Set jumps O(n)",
       "diff": "M",
       "lc": "128",
+      "module": 2,
       "in_bank": true,
       "bank_id": "31_longest_consecutive",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -198,8 +264,11 @@
       "why": "Prefix + hash counts",
       "diff": "M",
       "lc": "560",
+      "module": 2,
       "in_bank": true,
       "bank_id": "32_subarray_sum_k",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -207,8 +276,11 @@
       "why": "Meet-in-middle hash",
       "diff": "M",
       "lc": "454",
+      "module": 2,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -216,8 +288,11 @@
       "why": "Collision mental model",
       "diff": "E",
       "lc": "706",
+      "module": 2,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -225,8 +300,11 @@
       "why": "Recursion + memo",
       "diff": "E",
       "lc": "509",
+      "module": 2,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -234,8 +312,11 @@
       "why": "Recurrence \u2192 DP bridge",
       "diff": "E",
       "lc": "70",
+      "module": 2,
       "in_bank": true,
       "bank_id": "16_climb_stairs",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -243,8 +324,11 @@
       "why": "Divide & conquer recursion",
       "diff": "M",
       "lc": "50",
+      "module": 2,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -252,8 +336,11 @@
       "why": "Recursion tree / constraints",
       "diff": "M",
       "lc": "22",
+      "module": 2,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -261,8 +348,11 @@
       "why": "Base + recurse",
       "diff": "E",
       "lc": "344",
+      "module": 2,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -270,8 +360,11 @@
       "why": "Recursion on structure",
       "diff": "E",
       "lc": "21",
+      "module": 2,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -279,8 +372,11 @@
       "why": "Recursion call tree",
       "diff": "M",
       "lc": "46",
+      "module": 2,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -288,8 +384,11 @@
       "why": "Recursion branching",
       "diff": "M",
       "lc": "17",
+      "module": 2,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -297,8 +396,11 @@
       "why": "Hash speed",
       "diff": "E",
       "lc": "242",
+      "module": 2,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -306,8 +408,11 @@
       "why": "XOR / bit as hash cousin",
       "diff": "E",
       "lc": "136",
+      "module": 2,
       "in_bank": true,
       "bank_id": "20_single_number",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -315,8 +420,11 @@
       "why": "Closed-interval template",
       "diff": "E",
       "lc": "704",
+      "module": 3,
       "in_bank": true,
       "bank_id": "05_binary_search",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -324,8 +432,11 @@
       "why": "Lower bound",
       "diff": "E",
       "lc": "35",
+      "module": 3,
       "in_bank": true,
       "bank_id": "06_search_insert",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -333,8 +444,11 @@
       "why": "Monotonic predicate",
       "diff": "E",
       "lc": "278",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -342,8 +456,11 @@
       "why": "BS on answer slope",
       "diff": "M",
       "lc": "162",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -351,8 +468,11 @@
       "why": "BS + pivot logic",
       "diff": "M",
       "lc": "33",
+      "module": 3,
       "in_bank": true,
       "bank_id": "41_search_rotated",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -360,8 +480,11 @@
       "why": "BS variant",
       "diff": "M",
       "lc": "153",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -369,8 +492,11 @@
       "why": "BS on timestamps",
       "diff": "M",
       "lc": "981",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -378,8 +504,11 @@
       "why": "BS on capacity",
       "diff": "M",
       "lc": "875",
+      "module": 3,
       "in_bank": true,
       "bank_id": "42_koko_bananas",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -387,8 +516,11 @@
       "why": "BS on answer",
       "diff": "M",
       "lc": "1011",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -396,8 +528,11 @@
       "why": "Sort + sweep",
       "diff": "M",
       "lc": "56",
+      "module": 3,
       "in_bank": true,
       "bank_id": "07_merge_intervals",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -405,8 +540,11 @@
       "why": "Dutch partition",
       "diff": "M",
       "lc": "75",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -414,8 +552,11 @@
       "why": "Order stats",
       "diff": "M",
       "lc": "215",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -423,8 +564,11 @@
       "why": "Merge step of mergesort",
       "diff": "E",
       "lc": "88",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -432,8 +576,11 @@
       "why": "Linked mergesort",
       "diff": "M",
       "lc": "148",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -441,8 +588,11 @@
       "why": "Merge-sort on prefixes \u2014 **optional / gauntlet only**",
       "diff": "H",
       "lc": "327",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -450,8 +600,11 @@
       "why": "Sort + heap/sweep",
       "diff": "M",
       "lc": "253",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -459,8 +612,11 @@
       "why": "BS on virtual index",
       "diff": "M",
       "lc": "74",
+      "module": 3,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -468,8 +624,11 @@
       "why": "3-pointer mastery",
       "diff": "E",
       "lc": "206",
+      "module": 4,
       "in_bank": true,
       "bank_id": "08_reverse_linked_list",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -477,8 +636,11 @@
       "why": "Slow/fast",
       "diff": "E",
       "lc": "876",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -486,8 +648,11 @@
       "why": "Floyd",
       "diff": "E",
       "lc": "141",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -495,8 +660,11 @@
       "why": "Dummy head",
       "diff": "E",
       "lc": "21",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -504,8 +672,11 @@
       "why": "Two pointers gap",
       "diff": "M",
       "lc": "19",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -513,8 +684,11 @@
       "why": "Digits + carry",
       "diff": "M",
       "lc": "2",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -522,8 +696,11 @@
       "why": "Split + reverse + merge",
       "diff": "M",
       "lc": "143",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -531,8 +708,11 @@
       "why": "Hash + DLL design",
       "diff": "M",
       "lc": "146",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -540,8 +720,11 @@
       "why": "Stack matching",
       "diff": "E",
       "lc": "20",
+      "module": 4,
       "in_bank": true,
       "bank_id": "29_valid_parentheses",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -549,8 +732,11 @@
       "why": "Aux stack invariant",
       "diff": "M",
       "lc": "155",
+      "module": 4,
       "in_bank": true,
       "bank_id": "38_min_stack",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -558,8 +744,11 @@
       "why": "Monotonic stack",
       "diff": "M",
       "lc": "739",
+      "module": 4,
       "in_bank": true,
       "bank_id": "39_daily_temperatures",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -567,8 +756,11 @@
       "why": "Mono stack",
       "diff": "M",
       "lc": "496/503",
+      "module": 4,
       "in_bank": true,
       "bank_id": "09_next_greater_element",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -576,8 +768,11 @@
       "why": "Stack eval",
       "diff": "M",
       "lc": "150",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -585,8 +780,11 @@
       "why": "Amortized O(1)",
       "diff": "E",
       "lc": "232",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -594,8 +792,11 @@
       "why": "API discipline",
       "diff": "E",
       "lc": "225",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -603,8 +804,11 @@
       "why": "Deque mono",
       "diff": "H",
       "lc": "239",
+      "module": 4,
       "in_bank": true,
       "bank_id": "59_sliding_window_max",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -612,8 +816,11 @@
       "why": "Stack parse",
       "diff": "M",
       "lc": "394",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -621,8 +828,11 @@
       "why": "Stack simulation",
       "diff": "M",
       "lc": "735",
+      "module": 4,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -630,8 +840,11 @@
       "why": "Recurrence on tree",
       "diff": "E",
       "lc": "104",
+      "module": 5,
       "in_bank": true,
       "bank_id": "10_max_depth_tree",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -639,8 +852,11 @@
       "why": "Swap recurse",
       "diff": "E",
       "lc": "226",
+      "module": 5,
       "in_bank": true,
       "bank_id": "34_invert_tree",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -648,8 +864,11 @@
       "why": "Structural equality",
       "diff": "E",
       "lc": "100",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -657,8 +876,11 @@
       "why": "Mirror recurse/BFS",
       "diff": "E",
       "lc": "101",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -666,8 +888,11 @@
       "why": "Postorder heights",
       "diff": "M",
       "lc": "543",
+      "module": 5,
       "in_bank": true,
       "bank_id": "35_diameter_tree",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -675,8 +900,11 @@
       "why": "DFS carry",
       "diff": "E",
       "lc": "112",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -684,8 +912,11 @@
       "why": "BFS queue",
       "diff": "M",
       "lc": "102",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -693,8 +924,11 @@
       "why": "Bounds DFS",
       "diff": "M",
       "lc": "98",
+      "module": 5,
       "in_bank": true,
       "bank_id": "36_validate_bst",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -702,8 +936,11 @@
       "why": "Walk by value",
       "diff": "M",
       "lc": "235",
+      "module": 5,
       "in_bank": true,
       "bank_id": "11_lca_bst",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -711,8 +948,11 @@
       "why": "Postorder report",
       "diff": "M",
       "lc": "236",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -720,8 +960,11 @@
       "why": "Inorder count",
       "diff": "M",
       "lc": "230",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -729,8 +972,11 @@
       "why": "Divide indices",
       "diff": "M",
       "lc": "105",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -738,8 +984,11 @@
       "why": "Preorder/BFS protocol",
       "diff": "H",
       "lc": "297",
+      "module": 5,
       "in_bank": true,
       "bank_id": "47_serialize_tree",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -747,8 +996,11 @@
       "why": "Height + flag",
       "diff": "E",
       "lc": "110",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -756,8 +1008,11 @@
       "why": "Parent pointers (if seen)",
       "diff": "M",
       "lc": "1650",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -765,8 +1020,11 @@
       "why": "Controlled inorder",
       "diff": "M",
       "lc": "173",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -774,8 +1032,11 @@
       "why": "BFS last / DFS depth",
       "diff": "M",
       "lc": "199",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -783,8 +1044,11 @@
       "why": "Morris/rethread",
       "diff": "M",
       "lc": "114",
+      "module": 5,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -792,8 +1056,11 @@
       "why": "Tree DP bend",
       "diff": "H",
       "lc": "124",
+      "module": 5,
       "in_bank": true,
       "bank_id": "50_max_path_sum",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -801,8 +1068,11 @@
       "why": "Tree DP rob/skip",
       "diff": "M",
       "lc": "337",
+      "module": 5,
       "in_bank": true,
       "bank_id": "48_house_robber_iii",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -810,8 +1080,11 @@
       "why": "Size-k heap",
       "diff": "E",
       "lc": "703",
+      "module": 6,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -819,8 +1092,11 @@
       "why": "Heap / bucket",
       "diff": "M",
       "lc": "347",
+      "module": 6,
       "in_bank": true,
       "bank_id": "12_top_k_frequent",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -828,8 +1104,11 @@
       "why": "Heap of heads",
       "diff": "H",
       "lc": "23",
+      "module": 6,
       "in_bank": true,
       "bank_id": "61_merge_k_lists",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -837,8 +1116,11 @@
       "why": "Two heaps",
       "diff": "H",
       "lc": "295",
+      "module": 6,
       "in_bank": true,
       "bank_id": "62_median_stream",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -846,8 +1128,11 @@
       "why": "Greedy + heap/count",
       "diff": "M",
       "lc": "621",
+      "module": 6,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -855,8 +1140,11 @@
       "why": "Heap / select",
       "diff": "M",
       "lc": "973",
+      "module": 6,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -864,8 +1152,11 @@
       "why": "Max-heap sim",
       "diff": "E",
       "lc": "1046",
+      "module": 6,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -873,8 +1164,11 @@
       "why": "Min-heap ends",
       "diff": "M",
       "lc": "253",
+      "module": 6,
       "in_bank": true,
       "bank_id": "40_meeting_rooms_ii",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -882,8 +1176,11 @@
       "why": "Prefix pattern",
       "diff": "M",
       "lc": "238",
+      "module": 6,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -891,8 +1188,11 @@
       "why": "Sort sweep under time",
       "diff": "M",
       "lc": "56",
+      "module": 6,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -900,8 +1200,11 @@
       "why": "Edge merge cases",
       "diff": "M",
       "lc": "57",
+      "module": 6,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -909,8 +1212,11 @@
       "why": "Greedy sort end",
       "diff": "M",
       "lc": "435",
+      "module": 6,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -918,8 +1224,11 @@
       "why": "Greedy reach",
       "diff": "M",
       "lc": "55",
+      "module": 6,
       "in_bank": true,
       "bank_id": "55_jump_game",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -927,8 +1236,11 @@
       "why": "Greedy levels",
       "diff": "M",
       "lc": "45",
+      "module": 6,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -936,8 +1248,11 @@
       "why": "Circular greedy",
       "diff": "M",
       "lc": "134",
+      "module": 6,
       "in_bank": true,
       "bank_id": "56_gas_station",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -945,8 +1260,11 @@
       "why": "O(1) design",
       "diff": "M",
       "lc": "380",
+      "module": 6,
       "in_bank": true,
       "bank_id": "22_randomized_set",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -954,8 +1272,11 @@
       "why": "Grid DFS/BFS",
       "diff": "M",
       "lc": "200",
+      "module": 7,
       "in_bank": true,
       "bank_id": "21_num_islands",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -963,8 +1284,11 @@
       "why": "BFS/DFS map",
       "diff": "M",
       "lc": "133",
+      "module": 7,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -972,8 +1296,11 @@
       "why": "Cycle / topo",
       "diff": "M",
       "lc": "207",
+      "module": 7,
       "in_bank": true,
       "bank_id": "13_course_schedule",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -981,8 +1308,11 @@
       "why": "Kahn order",
       "diff": "M",
       "lc": "210",
+      "module": 7,
       "in_bank": true,
       "bank_id": "57_course_schedule_ii",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -990,8 +1320,11 @@
       "why": "Implicit BFS",
       "diff": "H",
       "lc": "127",
+      "module": 7,
       "in_bank": true,
       "bank_id": "14_word_ladder",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -999,8 +1332,11 @@
       "why": "Topo on chars",
       "diff": "H",
       "lc": "269",
+      "module": 7,
       "in_bank": true,
       "bank_id": "66_alien_dictionary",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1008,8 +1344,11 @@
       "why": "Multi-source DFS",
       "diff": "M",
       "lc": "417",
+      "module": 7,
       "in_bank": true,
       "bank_id": "58_pacific_atlantic",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1017,8 +1356,11 @@
       "why": "n-1 edges + connected",
       "diff": "M",
       "lc": "261",
+      "module": 7,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1026,8 +1368,11 @@
       "why": "UF or DFS",
       "diff": "M",
       "lc": "323",
+      "module": 7,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1035,8 +1380,11 @@
       "why": "UF cycle",
       "diff": "M",
       "lc": "684",
+      "module": 7,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1044,8 +1392,11 @@
       "why": "Multi-source BFS",
       "diff": "M",
       "lc": "994",
+      "module": 7,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1053,8 +1404,11 @@
       "why": "Multi-source BFS",
       "diff": "M",
       "lc": "542",
+      "module": 7,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1062,8 +1416,11 @@
       "why": "Border DFS",
       "diff": "M",
       "lc": "130",
+      "module": 7,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1071,8 +1428,11 @@
       "why": "Reachability",
       "diff": "M",
       "lc": "841",
+      "module": 7,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1080,8 +1440,11 @@
       "why": "Grid BFS",
       "diff": "M",
       "lc": "1091",
+      "module": 7,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1089,8 +1452,11 @@
       "why": "UF + strings",
       "diff": "M",
       "lc": "721",
+      "module": 7,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1098,8 +1464,11 @@
       "why": "2-color BFS/DFS",
       "diff": "M",
       "lc": "785",
+      "module": 7,
       "in_bank": true,
       "bank_id": "49_bipartite",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1107,8 +1476,11 @@
       "why": "Dijkstra",
       "diff": "M",
       "lc": "743",
+      "module": 8,
       "in_bank": true,
       "bank_id": "15_network_delay",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1116,8 +1488,11 @@
       "why": "Deque 0/1 weights",
       "diff": "M",
       "lc": "\u2014",
+      "module": 8,
       "in_bank": true,
       "bank_id": "25_zero_one_bfs",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1125,8 +1500,11 @@
       "why": "Bounded BF/DP (awareness)",
       "diff": "M",
       "lc": "787",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1134,8 +1512,11 @@
       "why": "BS + BFS or Dijkstra",
       "diff": "M",
       "lc": "1631",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1143,8 +1524,11 @@
       "why": "MST (Prim/Kruskal)",
       "diff": "M",
       "lc": "1584",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1152,8 +1536,11 @@
       "why": "Tarjan bridges \u2014 **exposure only, not gate**",
       "diff": "H",
       "lc": "1192",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1161,8 +1548,11 @@
       "why": "1D DP base",
       "diff": "E",
       "lc": "70",
+      "module": 8,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1170,8 +1560,11 @@
       "why": "Choose/skip DP",
       "diff": "M",
       "lc": "198",
+      "module": 8,
       "in_bank": true,
       "bank_id": "37_house_robber",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1179,8 +1572,11 @@
       "why": "Circular casework",
       "diff": "M",
       "lc": "213",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1188,8 +1584,11 @@
       "why": "Unbounded knapsack",
       "diff": "M",
       "lc": "322",
+      "module": 8,
       "in_bank": true,
       "bank_id": "17_coin_change",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1197,8 +1596,11 @@
       "why": "Combo count loops",
       "diff": "M",
       "lc": "518",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1206,8 +1608,11 @@
       "why": "DP / patience",
       "diff": "M",
       "lc": "300",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1215,8 +1620,11 @@
       "why": "Prefix DP",
       "diff": "M",
       "lc": "139",
+      "module": 8,
       "in_bank": true,
       "bank_id": "43_word_break",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1224,8 +1632,11 @@
       "why": "Grid DP",
       "diff": "M",
       "lc": "62",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1233,8 +1644,11 @@
       "why": "Grid DP",
       "diff": "M",
       "lc": "64",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1242,8 +1656,11 @@
       "why": "String DP",
       "diff": "M",
       "lc": "91",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1251,8 +1668,11 @@
       "why": "0/1 knapsack",
       "diff": "M",
       "lc": "416",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1260,8 +1680,11 @@
       "why": "+/- knapsack",
       "diff": "M",
       "lc": "494",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1269,8 +1692,11 @@
       "why": "2D DP",
       "diff": "M",
       "lc": "221",
+      "module": 8,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1278,8 +1704,11 @@
       "why": "2-string DP",
       "diff": "M",
       "lc": "1143",
+      "module": 9,
       "in_bank": true,
       "bank_id": "45_lcs",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1287,8 +1716,11 @@
       "why": "Classic DP",
       "diff": "M",
       "lc": "72",
+      "module": 9,
       "in_bank": true,
       "bank_id": "46_edit_distance",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1296,8 +1728,11 @@
       "why": "Count DP",
       "diff": "H",
       "lc": "115",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1305,8 +1740,11 @@
       "why": "Interval DP (select)",
       "diff": "H",
       "lc": "312",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1314,8 +1752,11 @@
       "why": "Backtrack power set",
       "diff": "M",
       "lc": "78",
+      "module": 9,
       "in_bank": true,
       "bank_id": "18_subsets",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1323,8 +1764,11 @@
       "why": "Dedupe backtrack",
       "diff": "M",
       "lc": "90",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1332,8 +1776,11 @@
       "why": "Unlimited choose",
       "diff": "M",
       "lc": "39",
+      "module": 9,
       "in_bank": true,
       "bank_id": "44_combination_sum",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1341,8 +1788,11 @@
       "why": "Dedupe + limit",
       "diff": "M",
       "lc": "40",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1350,8 +1800,11 @@
       "why": "Used[] backtrack",
       "diff": "M",
       "lc": "46",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1359,8 +1812,11 @@
       "why": "DFS + check",
       "diff": "M",
       "lc": "131",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1368,8 +1824,11 @@
       "why": "Board DFS backtrack",
       "diff": "M",
       "lc": "79",
+      "module": 9,
       "in_bank": true,
       "bank_id": "60_trie_prefix",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1377,8 +1836,11 @@
       "why": "Constraint backtrack",
       "diff": "H",
       "lc": "51",
+      "module": 9,
       "in_bank": true,
       "bank_id": "64_nqueens_count",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1386,8 +1848,11 @@
       "why": "Reach invariant",
       "diff": "M",
       "lc": "55",
+      "module": 9,
       "in_bank": true,
       "bank_id": "55_jump_game",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1395,8 +1860,11 @@
       "why": "Tank reset greedy",
       "diff": "M",
       "lc": "134",
+      "module": 9,
       "in_bank": true,
       "bank_id": "56_gas_station",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1404,8 +1872,11 @@
       "why": "Greedy last index",
       "diff": "M",
       "lc": "763",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1413,8 +1884,11 @@
       "why": "End-sort greedy",
       "diff": "M",
       "lc": "435",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1422,8 +1896,11 @@
       "why": "BFS/backtrack hard",
       "diff": "H",
       "lc": "301",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1431,8 +1908,11 @@
       "why": "DP hard (optional)",
       "diff": "H",
       "lc": "10",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1440,8 +1920,11 @@
       "why": "tight + lead_zero",
       "diff": "M",
       "lc": "\u2014",
+      "module": 9,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1449,8 +1932,11 @@
       "why": "dp[mask] n\u226412\u201320",
       "diff": "M",
       "lc": "\u2014",
+      "module": 9,
       "in_bank": true,
       "bank_id": "54_bitmask_assign",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1458,8 +1944,11 @@
       "why": "Prefix tree API",
       "diff": "M",
       "lc": "208",
+      "module": 10,
       "in_bank": true,
       "bank_id": "19_implement_trie",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1467,8 +1956,11 @@
       "why": "Trie + DFS `.`",
       "diff": "M",
       "lc": "211",
+      "module": 10,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1476,8 +1968,11 @@
       "why": "Trie + board prune",
       "diff": "H",
       "lc": "212",
+      "module": 10,
       "in_bank": true,
       "bank_id": "65_word_search_ii",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1485,8 +1980,11 @@
       "why": "Bit trie (select)",
       "diff": "M",
       "lc": "421",
+      "module": 10,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1494,8 +1992,11 @@
       "why": "Mono stack revisit",
       "diff": "M",
       "lc": "503",
+      "module": 10,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1503,8 +2004,11 @@
       "why": "Mono stack",
       "diff": "H",
       "lc": "84",
+      "module": 10,
       "in_bank": true,
       "bank_id": "63_largest_rectangle",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1512,8 +2016,11 @@
       "why": "Mono deque",
       "diff": "H",
       "lc": "239",
+      "module": 10,
       "in_bank": true,
       "bank_id": "59_sliding_window_max",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1521,8 +2028,11 @@
       "why": "Mono stack contrib",
       "diff": "M",
       "lc": "907",
+      "module": 10,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1530,8 +2040,11 @@
       "why": "Prefix (seg preview)",
       "diff": "E",
       "lc": "303",
+      "module": 10,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1539,8 +2052,11 @@
       "why": "Fenwick/Seg exposure",
       "diff": "M",
       "lc": "307",
+      "module": 10,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1548,8 +2064,11 @@
       "why": "Merge/BIT exposure",
       "diff": "H",
       "lc": "315",
+      "module": 10,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1557,8 +2076,11 @@
       "why": "Exposure only",
       "diff": "H",
       "lc": "\u2014",
+      "module": 10,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1566,8 +2088,11 @@
       "why": "Bits",
       "diff": "E",
       "lc": "136",
+      "module": 10,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1575,8 +2100,11 @@
       "why": "Bit ops",
       "diff": "E",
       "lc": "191",
+      "module": 10,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1584,8 +2112,11 @@
       "why": "Bit add (optional)",
       "diff": "M",
       "lc": "371",
+      "module": 10,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1593,8 +2124,11 @@
       "why": "Design under pressure",
       "diff": "M",
       "lc": "146",
+      "module": 11,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1602,8 +2136,11 @@
       "why": "Design O(1)",
       "diff": "M",
       "lc": "380",
+      "module": 11,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1611,8 +2148,11 @@
       "why": "Graph BFS transfer",
       "diff": "H",
       "lc": "127",
+      "module": 11,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1620,8 +2160,11 @@
       "why": "DP transfer",
       "diff": "M",
       "lc": "322",
+      "module": 11,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1629,8 +2172,11 @@
       "why": "Topo transfer",
       "diff": "M",
       "lc": "207",
+      "module": 11,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1638,8 +2184,11 @@
       "why": "Sort sweep transfer",
       "diff": "M",
       "lc": "56",
+      "module": 11,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1647,8 +2196,11 @@
       "why": "Tree transfer",
       "diff": "M",
       "lc": "235/236",
+      "module": 11,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1656,8 +2208,11 @@
       "why": "Heap transfer",
       "diff": "M",
       "lc": "347",
+      "module": 11,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1665,8 +2220,11 @@
       "why": "Grid graph transfer",
       "diff": "M",
       "lc": "200",
+      "module": 11,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1674,8 +2232,11 @@
       "why": "Backtrack speed",
       "diff": "M",
       "lc": "78",
+      "module": 11,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1683,8 +2244,11 @@
       "why": "Dijkstra transfer",
       "diff": "M",
       "lc": "743",
+      "module": 11,
       "in_bank": true,
       "bank_id": null,
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1692,8 +2256,11 @@
       "why": "Two ptr / stack",
       "diff": "H",
       "lc": "42",
+      "module": 11,
       "in_bank": true,
       "bank_id": "67_trapping_rain",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1701,8 +2268,11 @@
       "why": "Protocol design",
       "diff": "H",
       "lc": "297",
+      "module": 11,
       "in_bank": true,
       "bank_id": "47_serialize_tree",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1710,8 +2280,11 @@
       "why": "Two heaps",
       "diff": "H",
       "lc": "295",
+      "module": 11,
       "in_bank": true,
       "bank_id": "62_median_stream",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1719,8 +2292,11 @@
       "why": "Sort + sweep core",
       "diff": "M",
       "lc": "56",
+      "module": 0,
       "in_bank": true,
       "bank_id": "07_merge_intervals",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1728,8 +2304,11 @@
       "why": "Edge splice",
       "diff": "M",
       "lc": "57",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1737,8 +2316,11 @@
       "why": "Sweep / heap",
       "diff": "M",
       "lc": "253",
+      "module": 0,
       "in_bank": true,
       "bank_id": "40_meeting_rooms_ii",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1746,8 +2328,11 @@
       "why": "Greedy end-sort",
       "diff": "M",
       "lc": "435",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1755,8 +2340,11 @@
       "why": "XOR identity",
       "diff": "E",
       "lc": "136",
+      "module": 0,
       "in_bank": true,
       "bank_id": "20_single_number",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1764,8 +2352,11 @@
       "why": "`n & (n-1)`",
       "diff": "E",
       "lc": "191",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1773,8 +2364,11 @@
       "why": "DP on bits",
       "diff": "E",
       "lc": "338",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1782,8 +2376,11 @@
       "why": "Mask enumeration",
       "diff": "M",
       "lc": "78",
+      "module": 0,
       "in_bank": true,
       "bank_id": "18_subsets",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1791,8 +2388,11 @@
       "why": "KMP or rolling hash",
       "diff": "M",
       "lc": "28",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1800,8 +2400,11 @@
       "why": "Prefix / KMP border",
       "diff": "E",
       "lc": "459",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1809,8 +2412,11 @@
       "why": "Prefix function",
       "diff": "H",
       "lc": "1392",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": false,
       "status": "not-started"
     },
     {
@@ -1818,8 +2424,11 @@
       "why": "Rolling hash / binary search",
       "diff": "M",
       "lc": "1044",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1827,8 +2436,11 @@
       "why": "Freq bridge",
       "diff": "E",
       "lc": "242",
+      "module": 0,
       "in_bank": true,
       "bank_id": "23_valid_anagram",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1836,8 +2448,11 @@
       "why": "Fast pow",
       "diff": "M",
       "lc": "50",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1845,8 +2460,11 @@
       "why": "Integer root / BS",
       "diff": "E",
       "lc": "69",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1854,8 +2472,11 @@
       "why": "Euclidean + overflow care",
       "diff": "E",
       "lc": "\u2014",
+      "module": 0,
       "in_bank": true,
       "bank_id": "51_gcd_of_strings",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1863,8 +2484,11 @@
       "why": "Sieve mental model",
       "diff": "M",
       "lc": "204",
+      "module": 0,
       "in_bank": true,
       "bank_id": "52_count_primes",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1872,8 +2496,11 @@
       "why": "Mod arithmetic",
       "diff": "M",
       "lc": "372",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1881,8 +2508,11 @@
       "why": "Grid graph",
       "diff": "M",
       "lc": "200",
+      "module": 0,
       "in_bank": true,
       "bank_id": "21_num_islands",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1890,8 +2520,11 @@
       "why": "Layer sim",
       "diff": "M",
       "lc": "54",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1899,8 +2532,11 @@
       "why": "In-place markers",
       "diff": "M",
       "lc": "73",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1908,8 +2544,11 @@
       "why": "Transpose + reverse",
       "diff": "M",
       "lc": "48",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1917,8 +2556,11 @@
       "why": "Staircase search",
       "diff": "M",
       "lc": "240",
+      "module": 0,
       "in_bank": true,
       "bank_id": "53_search_matrix_ii",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1926,8 +2568,11 @@
       "why": "Multi-source BFS",
       "diff": "M",
       "lc": "286",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1935,8 +2580,11 @@
       "why": "Hash + list",
       "diff": "M",
       "lc": "380",
+      "module": 0,
       "in_bank": true,
       "bank_id": "22_randomized_set",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1944,8 +2592,11 @@
       "why": "Aux stack",
       "diff": "M",
       "lc": "155",
+      "module": 0,
       "in_bank": true,
       "bank_id": "38_min_stack",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1953,8 +2604,11 @@
       "why": "Hash + BS",
       "diff": "M",
       "lc": "981",
+      "module": 0,
       "in_bank": false,
       "bank_id": null,
+      "source": "lc-required",
+      "gate_required": true,
       "status": "not-started"
     },
     {
@@ -1962,8 +2616,11 @@
       "why": "Design + DLL/hash (full in Design Part 15)",
       "diff": "M",
       "lc": "146",
+      "module": 0,
       "in_bank": true,
       "bank_id": "26_lru_cache",
+      "source": "bank",
+      "gate_required": true,
       "status": "not-started"
     }
   ]

@@ -58,10 +58,22 @@ FAANG-style coding interview curriculum: frameworks first, evidence gates, space
 - **Serialize** — Trees Part 9 (preorder + BFS protocols)  
 - Bitwise / Matrix — **canonical modules**, not Arrays bolt-ons
 - **Digit DP + Bitmask DP** — `Dynamic Programming/DP II.md`
-- Giants deflated — Hashing / Recursion / Advanced Hashing exemplars capped  
+- Giants deflated — Hashing / Recursion exemplars capped; **Advanced Hashing / Advanced Recursion archived stubs**  
 
 ---
 
 ## Language
 
 Phase A is **Python**. Phase B (CP) / Phase C (System Design) are deferred tracks in the Handoff.
+
+---
+
+## Spine / bank honesty (gate rule)
+
+Local bank covers **~45%** of spine rows. That is **not** full coverage.
+
+- `timed-verified` for a module requires clearing that module's **gate spine** (see `Practice Spines/Phase A MVP Spines.md` + `Metrics/spine_tracker.json`).
+- Rows with `in_bank: true` → prefer `problem-bank/`.
+- Rows with `in_bank: false` → **LC-required**; must be logged on the scoreboard before claiming the module timed gate.
+- Run `python tools/spine_status.py --gate` before declaring a module `timed-verified`.
+

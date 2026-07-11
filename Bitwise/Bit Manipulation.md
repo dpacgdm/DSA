@@ -674,7 +674,7 @@ A: Two's complement `-n = ~n+1` clears bits after lowest 1 and flips below; AND 
 
 ---
 
-**Final status:** Bit Manipulation — `content-delivered` (≥95% craft).
+**Final status:** Bit Manipulation — `content-delivered`.
 
 ---
 
@@ -762,4 +762,4 @@ Used in SOS DP / subset DP transitions (advanced).
 
 Operators · masks · XOR family · `n&(n-1)` · subsets · when not bits.
 
-**Final status:** Bit Manipulation — `content-delivered` (≥95% craft).
+**Final status:** Bit Manipulation — `content-delivered`.

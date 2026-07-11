@@ -794,7 +794,7 @@ next→20 → []
 
 ---
 
-**Final status:** Design Data Structures — `content-delivered` (≥95% craft).
+**Final status:** Design Data Structures — `content-delivered`.
 
 ---
 
@@ -850,4 +850,4 @@ Outer/inner indices; skip empty inners in `hasNext`.
 
 API-first · invariants · MinStack · RandomizedSet · TimeMap · FreqStack · iterators · feed merge.
 
-**Final status:** Design Data Structures — `content-delivered` (≥95% craft).
+**Final status:** Design Data Structures — `content-delivered`.

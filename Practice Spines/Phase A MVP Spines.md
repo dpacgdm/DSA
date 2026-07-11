@@ -1,6 +1,11 @@
 # Phase A — MVP Problem Spines
 
-Ruthless minimum viable sets for timed / blind practice. **Not** a completionist list.
+> **SPINE / BANK HONESTY:** Local `problem-bank/` does **not** cover every row.
+> - `Y` + bank id → local red/green available.
+> - `—` under Bank → **LC-required** (or notebook). Still counts for gates **only if** logged blind on the scoreboard.
+> - Do **not** mark a module `timed-verified` until every **gate** row for that module is `timed-passed` or `bank-passed` in `Metrics/spine_tracker.json`.
+> - Optional / gauntlet / exposure rows are **not** gate blockers (see `gate_required` in tracker JSON).
+> - Check: `python tools/spine_status.py --gate`
 
 **Legend**
 
@@ -10,7 +15,7 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | LC | LeetCode id when standard; `—` if classic variant / bank-only |
 | Bank | `Y` = present under `problem-bank/problems/`; else study on LC / notebook |
 
-**How to use:** For each module, clear the spine before declaring `timed-verified`. Prefer bank problems for local red/green loops; use LC for UI timing.
+**How to use:** For each module, clear **gate_required** spine rows before declaring `timed-verified` (`python tools/spine_status.py --gate --module N`). Prefer bank for red/green; LC-required rows must still be logged blind. Optional/exposure rows do not block.
 
 ---
 

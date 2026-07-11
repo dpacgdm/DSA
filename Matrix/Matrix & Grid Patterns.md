@@ -667,7 +667,7 @@ target 20: walk off → False
 
 ---
 
-**Final status:** Matrix & Grid Patterns — `content-delivered` (≥95% craft).
+**Final status:** Matrix & Grid Patterns — `content-delivered`.
 
 ---
 
@@ -728,4 +728,4 @@ path counts/sums right-down → DP/nCr
 
 DIRS4 · spiral · zeros · rotate · search · islands · multi-source · grid DP.
 
-**Final status:** Matrix & Grid Patterns — `content-delivered` (≥95% craft).
+**Final status:** Matrix & Grid Patterns — `content-delivered`.

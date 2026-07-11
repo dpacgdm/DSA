@@ -25,6 +25,9 @@ Pick one primary block per week once Module 3+ is in play. Add a second block on
 
 ### 60-minute module verify (gate toward `timed-verified`)
 
+> **SPINE / BANK HONESTY:** Before flipping a module to `timed-verified`, run `python tools/spine_status.py --gate --module N`. Every `gate_required` row must be `bank-passed` or `timed-passed` in `Metrics/spine_tracker.json`. LC-only rows count only when logged blind on the scoreboard — bank absence is not a free pass and bank presence is not automatic credit.
+
+
 | Segment | Minutes | What |
 |---|---|---|
 | Setup | 2 | Blind; module-appropriate mix only (earned patterns) |

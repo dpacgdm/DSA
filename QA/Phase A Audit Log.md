@@ -41,7 +41,7 @@
 **Checked:**
 - Cases 1/2/3 CLRS-style comparison of `log_b a` vs `c` — **correct**
 - Extended case 2 and failure modes — **correct**
-- §3L item 2 contained draft self-talk: `Θ(n³ log n)? Wait c=3…` / `Actually f=n³…` — **noise / unprofessional for ≥95% craft floor**; answer itself was right (Case 2 → Θ(n³ log n))
+- §3L item 2 contained draft self-talk: `Θ(n³ log n)? Wait c=3…` / `Actually f=n³…` — **noise / unprofessional for craft floor**; answer itself was right (Case 2 → Θ(n³ log n))
 
 **Result:** **FIX NEEDED**  
 **Fix applied:** Cleaned §3L item 2 to a single clean Case 2 line + parenthetical (removed "Wait" / "Actually" draft phrasing).
@@ -121,7 +121,7 @@
 | Ledger | Seeded M3–M11 + coverage subskills |
 | Entry | Root `README.md` + unlabeled timed stubs |
 
-**Follow-ups:** Continue deflating Hashing/Recursion in-lesson banks; expand bank toward full spine; full line audit still not claimed as ≥95% craft.
+**Follow-ups:** Continue deflating Hashing/Recursion in-lesson banks; expand bank toward full spine; full line audit still not claimed as craft bar.
 
 
 ---
@@ -142,3 +142,12 @@
 ### Bank expansion close
 
 Problem-bank **66/66** green; spine local coverage ~44%.
+
+
+---
+
+## 2026-07-11 — only-3 fixes
+
+1. **Advanced Hashing / Advanced Recursion** → archived stubs (canonical: Hash maps&sets + Recursion).
+2. **Spine/bank honesty gate** → tracker v2 (`source`, `gate_required`, statuses); `spine_status.py --gate`; timed protocol + README rules.
+3. **Stripped ≥95% craft slogans** repo-wide.

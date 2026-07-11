@@ -1,7 +1,8 @@
 # PHASE A — CURRICULUM INDEX (CONTENT DELIVERED)
 
 **Delivered:** 2026-07-09  
-**Updated:** 2026-07-11 — overall 9.5 pass: giant deflate, bank expand, digit/bitmask DP, honesty fixes  
+**Updated:** 2026-07-11 — kill Advanced* dupes; honest spine/bank gate; strip fake craft-% claims  
+
 **Mode:** Teacher-side complete. Learner gates (timed / retention pass / mocks) remain for when practice resumes.  
 **Content craft target:** 9.5 overall product bar (lesson contract enforced; keys separated; bank expanding)  
 **Answer keys:** Live in `Retention Questions/keys/` only. Questions files are blind. Tutor may open both.
@@ -25,9 +26,9 @@ This index is the map. Study in module order.
 | Material | Path |
 |---|---|
 | Lesson | `Hashing/Hash maps&sets.md` |
-| Lesson | `Hashing/Advanced Hashing.md` (deepening; patterns already in Hash maps&sets) |
 | Lesson | `Recursion/Recursion.md` |
-| Lesson | `Recursion/Advanced Recursion.md` |
+| Archived | `Hashing/Advanced Hashing.md` — stub; do **not** study |
+| Archived | `Recursion/Advanced Recursion.md` — stub; do **not** study |
 | Drill | `Retention Questions/Week 2 Drilling Set.md` (PREVIEW: #7, #11, #12) |
 | Retention | `Retention Questions/Module 2 Retention.md` |
 

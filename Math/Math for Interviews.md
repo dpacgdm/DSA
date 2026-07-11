@@ -576,7 +576,7 @@ C(0..5):
 
 ---
 
-**Final status:** Math for Interviews — `content-delivered` (≥95% craft).
+**Final status:** Math for Interviews — `content-delivered`.
 
 ---
 
@@ -631,4 +631,4 @@ Keeps exact integers if division is exact at each step (true for binomial).
 
 gcd/lcm · mod · fast pow · nCr · sieve · orientation · overflow hygiene.
 
-**Final status:** Math for Interviews — `content-delivered` (≥95% craft).
+**Final status:** Math for Interviews — `content-delivered`.

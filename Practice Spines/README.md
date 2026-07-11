@@ -12,3 +12,8 @@ Until unlabeled per-module files exist, pull from retention grills (hide keys) o
 Local executable practice: `problem-bank/` (`py -3 run_all.py`).
 
 Unlabeled timed mixes (no pattern titles): `Practice/Unlabeled Timed Sets/`.
+
+## Gate rule
+
+`python tools/spine_status.py --gate` must show the module **READY** before `timed-verified`.
+LC-required rows (`Bank = —`) are real work — log them. Optional/exposure rows do not block.

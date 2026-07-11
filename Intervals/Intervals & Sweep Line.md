@@ -1035,7 +1035,7 @@ Before submitting interval code:
 
 ---
 
-**Final status:** Intervals & Sweep Line — `content-delivered` (≥95% craft).
+**Final status:** Intervals & Sweep Line — `content-delivered`.
 
 ---
 
@@ -1125,4 +1125,4 @@ Intersections need **both** lists sorted disjoint; advance the one that ends fir
 
 Overlap predicate · merge vs end-greedy · sweep tie-break · diff≡sweep · free=merge→gaps.
 
-**Final status:** Intervals & Sweep Line — `content-delivered` (≥95% craft).
+**Final status:** Intervals & Sweep Line — `content-delivered`.
