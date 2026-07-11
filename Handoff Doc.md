@@ -7,7 +7,7 @@
 - **Last Updated:** 2026-07-11 — Pedagogy/coverage 9.5 pass (dedup, keys split, 0-1 BFS, tree DP, LRU, README)
 - **Status:** Active
 - **Governing principle:** No calendar deadline. Advance only on evidence. Comfort and session length are the student's choice; mastery gates are not optional.
-- **Content craft floor:** ≥95% (lessons + retention answer keys). See `Phase A Curriculum Index.md`.
+- **Product bar:** Overall 9.5 learning-material score (lesson contract + coverage + practice wiring). See Index + README.
 - **Answer keys:** Moved to `Retention Questions/keys/` for blind self-grade; tutor sessions may open both.
 - **Learner loop:** Temporarily removed for bulk delivery. Content is `content-delivered`. Learner statuses (`retention-passed` / `timed-verified` / `complete`) still require practice evidence when the loop resumes.
 
@@ -352,7 +352,7 @@ Columns below: **Content** = materials exist · **Learner** = evidence status wh
 ### Operating system (gaps closed 2026-07-09 — except answer-key removal, intentionally kept)
 | Piece | Path | Status |
 |---|---|---|
-| Executable problem bank | `problem-bank/` (26 problems) | live — `python problem-bank/run_all.py` |
+| Executable problem bank | `problem-bank/` (66 problems) | live — `python problem-bank/run_all.py` |
 | Retention keys | `Retention Questions/keys/` | separated for blind grade |
 | Root README | `README.md` | Day-1 entry |
 | Debugging pedagogy | `Debugging/Debugging Diagnosis.md` | delivered |

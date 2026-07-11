@@ -1,0 +1,1970 @@
+{
+  "version": 1,
+  "updated": "2026-07-11",
+  "total": 218,
+  "in_bank": 97,
+  "problems": [
+    {
+      "name": "Two Sum",
+      "why": "Hash complement; O(n) vs nested",
+      "diff": "E",
+      "lc": "1",
+      "in_bank": true,
+      "bank_id": "01_two_sum",
+      "status": "not-started"
+    },
+    {
+      "name": "Contains Duplicate",
+      "why": "Set membership / complexity talk",
+      "diff": "E",
+      "lc": "217",
+      "in_bank": true,
+      "bank_id": "02_contains_duplicate",
+      "status": "not-started"
+    },
+    {
+      "name": "Valid Anagram",
+      "why": "Frequency maps",
+      "diff": "E",
+      "lc": "242",
+      "in_bank": true,
+      "bank_id": "23_valid_anagram",
+      "status": "not-started"
+    },
+    {
+      "name": "Best Time to Buy/Sell Stock",
+      "why": "One-pass running min",
+      "diff": "E",
+      "lc": "121",
+      "in_bank": true,
+      "bank_id": "27_best_time_stock",
+      "status": "not-started"
+    },
+    {
+      "name": "Maximum Subarray (Kadane)",
+      "why": "Linear scan invariant",
+      "diff": "M",
+      "lc": "53",
+      "in_bank": true,
+      "bank_id": "28_max_subarray",
+      "status": "not-started"
+    },
+    {
+      "name": "Move Zeroes",
+      "why": "Two pointers in-place",
+      "diff": "E",
+      "lc": "283",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Container With Most Water",
+      "why": "Two pointers maximize",
+      "diff": "M",
+      "lc": "11",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "3Sum",
+      "why": "Sort + two pointers; dedupe",
+      "diff": "M",
+      "lc": "15",
+      "in_bank": true,
+      "bank_id": "33_three_sum",
+      "status": "not-started"
+    },
+    {
+      "name": "Longest Substring No Repeat",
+      "why": "Variable sliding window",
+      "diff": "M",
+      "lc": "3",
+      "in_bank": true,
+      "bank_id": "03_longest_substr_no_repeat",
+      "status": "not-started"
+    },
+    {
+      "name": "Max Sum Subarray Size K",
+      "why": "Fixed window",
+      "diff": "E",
+      "lc": "\u2014",
+      "in_bank": true,
+      "bank_id": "04_max_sum_subarray_k",
+      "status": "not-started"
+    },
+    {
+      "name": "Minimum Size Subarray Sum",
+      "why": "Window shrink for target",
+      "diff": "M",
+      "lc": "209",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Product Except Self",
+      "why": "Prefix/suffix products",
+      "diff": "M",
+      "lc": "238",
+      "in_bank": true,
+      "bank_id": "24_product_except_self",
+      "status": "not-started"
+    },
+    {
+      "name": "Rotate Array",
+      "why": "Index mapping / reverse trick",
+      "diff": "M",
+      "lc": "189",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Longest Common Prefix",
+      "why": "Vertical scan / edge empty",
+      "diff": "E",
+      "lc": "14",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Valid Palindrome",
+      "why": "Two pointers + filter",
+      "diff": "E",
+      "lc": "125",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Merge Sorted Array",
+      "why": "Two pointers from end",
+      "diff": "E",
+      "lc": "88",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Majority Element",
+      "why": "Boyer-Moore or hash",
+      "diff": "E",
+      "lc": "169",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Big-O teach-back (custom)",
+      "why": "Explain nested vs hash on Two Sum",
+      "diff": "E",
+      "lc": "\u2014",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Group Anagrams",
+      "why": "Hash by signature",
+      "diff": "M",
+      "lc": "49",
+      "in_bank": true,
+      "bank_id": "30_group_anagrams",
+      "status": "not-started"
+    },
+    {
+      "name": "Two Sum (revisit timed)",
+      "why": "Hash under time",
+      "diff": "E",
+      "lc": "1",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Longest Consecutive Sequence",
+      "why": "Set jumps O(n)",
+      "diff": "M",
+      "lc": "128",
+      "in_bank": true,
+      "bank_id": "31_longest_consecutive",
+      "status": "not-started"
+    },
+    {
+      "name": "Subarray Sum Equals K",
+      "why": "Prefix + hash counts",
+      "diff": "M",
+      "lc": "560",
+      "in_bank": true,
+      "bank_id": "32_subarray_sum_k",
+      "status": "not-started"
+    },
+    {
+      "name": "4Sum II",
+      "why": "Meet-in-middle hash",
+      "diff": "M",
+      "lc": "454",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Design HashMap (lite)",
+      "why": "Collision mental model",
+      "diff": "E",
+      "lc": "706",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Fibonacci (memo)",
+      "why": "Recursion + memo",
+      "diff": "E",
+      "lc": "509",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Climb Stairs",
+      "why": "Recurrence \u2192 DP bridge",
+      "diff": "E",
+      "lc": "70",
+      "in_bank": true,
+      "bank_id": "16_climb_stairs",
+      "status": "not-started"
+    },
+    {
+      "name": "Pow(x, n)",
+      "why": "Divide & conquer recursion",
+      "diff": "M",
+      "lc": "50",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Generate Parentheses",
+      "why": "Recursion tree / constraints",
+      "diff": "M",
+      "lc": "22",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Reverse String (recur)",
+      "why": "Base + recurse",
+      "diff": "E",
+      "lc": "344",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Merge Two Lists (recur)",
+      "why": "Recursion on structure",
+      "diff": "E",
+      "lc": "21",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Sort / permute warm-up",
+      "why": "Recursion call tree",
+      "diff": "M",
+      "lc": "46",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Letter Combinations Phone",
+      "why": "Recursion branching",
+      "diff": "M",
+      "lc": "17",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Valid Anagram (timed)",
+      "why": "Hash speed",
+      "diff": "E",
+      "lc": "242",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Single Number",
+      "why": "XOR / bit as hash cousin",
+      "diff": "E",
+      "lc": "136",
+      "in_bank": true,
+      "bank_id": "20_single_number",
+      "status": "not-started"
+    },
+    {
+      "name": "Binary Search",
+      "why": "Closed-interval template",
+      "diff": "E",
+      "lc": "704",
+      "in_bank": true,
+      "bank_id": "05_binary_search",
+      "status": "not-started"
+    },
+    {
+      "name": "Search Insert Position",
+      "why": "Lower bound",
+      "diff": "E",
+      "lc": "35",
+      "in_bank": true,
+      "bank_id": "06_search_insert",
+      "status": "not-started"
+    },
+    {
+      "name": "First Bad Version",
+      "why": "Monotonic predicate",
+      "diff": "E",
+      "lc": "278",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Find Peak Element",
+      "why": "BS on answer slope",
+      "diff": "M",
+      "lc": "162",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Search Rotated Sorted Array",
+      "why": "BS + pivot logic",
+      "diff": "M",
+      "lc": "33",
+      "in_bank": true,
+      "bank_id": "41_search_rotated",
+      "status": "not-started"
+    },
+    {
+      "name": "Find Min Rotated",
+      "why": "BS variant",
+      "diff": "M",
+      "lc": "153",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Time-Based Key-Value",
+      "why": "BS on timestamps",
+      "diff": "M",
+      "lc": "981",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Koko Eating Bananas",
+      "why": "BS on capacity",
+      "diff": "M",
+      "lc": "875",
+      "in_bank": true,
+      "bank_id": "42_koko_bananas",
+      "status": "not-started"
+    },
+    {
+      "name": "Capacity To Ship Packages",
+      "why": "BS on answer",
+      "diff": "M",
+      "lc": "1011",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Merge Intervals",
+      "why": "Sort + sweep",
+      "diff": "M",
+      "lc": "56",
+      "in_bank": true,
+      "bank_id": "07_merge_intervals",
+      "status": "not-started"
+    },
+    {
+      "name": "Sort Colors",
+      "why": "Dutch partition",
+      "diff": "M",
+      "lc": "75",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Kth Largest (sort/heap)",
+      "why": "Order stats",
+      "diff": "M",
+      "lc": "215",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Merge Sorted Arrays",
+      "why": "Merge step of mergesort",
+      "diff": "E",
+      "lc": "88",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Sort List (merge sort)",
+      "why": "Linked mergesort",
+      "diff": "M",
+      "lc": "148",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Count of Range Sum",
+      "why": "Merge-sort on prefixes \u2014 **optional / gauntlet only**",
+      "diff": "H",
+      "lc": "327",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Meeting Rooms II",
+      "why": "Sort + heap/sweep",
+      "diff": "M",
+      "lc": "253",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Search 2D Matrix",
+      "why": "BS on virtual index",
+      "diff": "M",
+      "lc": "74",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Reverse Linked List",
+      "why": "3-pointer mastery",
+      "diff": "E",
+      "lc": "206",
+      "in_bank": true,
+      "bank_id": "08_reverse_linked_list",
+      "status": "not-started"
+    },
+    {
+      "name": "Middle of Linked List",
+      "why": "Slow/fast",
+      "diff": "E",
+      "lc": "876",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Linked List Cycle",
+      "why": "Floyd",
+      "diff": "E",
+      "lc": "141",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Merge Two Sorted Lists",
+      "why": "Dummy head",
+      "diff": "E",
+      "lc": "21",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Remove Nth From End",
+      "why": "Two pointers gap",
+      "diff": "M",
+      "lc": "19",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Add Two Numbers",
+      "why": "Digits + carry",
+      "diff": "M",
+      "lc": "2",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Reorder List",
+      "why": "Split + reverse + merge",
+      "diff": "M",
+      "lc": "143",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "LRU Cache",
+      "why": "Hash + DLL design",
+      "diff": "M",
+      "lc": "146",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Valid Parentheses",
+      "why": "Stack matching",
+      "diff": "E",
+      "lc": "20",
+      "in_bank": true,
+      "bank_id": "29_valid_parentheses",
+      "status": "not-started"
+    },
+    {
+      "name": "Min Stack",
+      "why": "Aux stack invariant",
+      "diff": "M",
+      "lc": "155",
+      "in_bank": true,
+      "bank_id": "38_min_stack",
+      "status": "not-started"
+    },
+    {
+      "name": "Daily Temperatures",
+      "why": "Monotonic stack",
+      "diff": "M",
+      "lc": "739",
+      "in_bank": true,
+      "bank_id": "39_daily_temperatures",
+      "status": "not-started"
+    },
+    {
+      "name": "Next Greater Element",
+      "why": "Mono stack",
+      "diff": "M",
+      "lc": "496/503",
+      "in_bank": true,
+      "bank_id": "09_next_greater_element",
+      "status": "not-started"
+    },
+    {
+      "name": "Evaluate RPN",
+      "why": "Stack eval",
+      "diff": "M",
+      "lc": "150",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Implement Queue using Stacks",
+      "why": "Amortized O(1)",
+      "diff": "E",
+      "lc": "232",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Implement Stack using Queues",
+      "why": "API discipline",
+      "diff": "E",
+      "lc": "225",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Sliding Window Maximum",
+      "why": "Deque mono",
+      "diff": "H",
+      "lc": "239",
+      "in_bank": true,
+      "bank_id": "59_sliding_window_max",
+      "status": "not-started"
+    },
+    {
+      "name": "Decode String",
+      "why": "Stack parse",
+      "diff": "M",
+      "lc": "394",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Asteroid Collision",
+      "why": "Stack simulation",
+      "diff": "M",
+      "lc": "735",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Max Depth",
+      "why": "Recurrence on tree",
+      "diff": "E",
+      "lc": "104",
+      "in_bank": true,
+      "bank_id": "10_max_depth_tree",
+      "status": "not-started"
+    },
+    {
+      "name": "Invert Binary Tree",
+      "why": "Swap recurse",
+      "diff": "E",
+      "lc": "226",
+      "in_bank": true,
+      "bank_id": "34_invert_tree",
+      "status": "not-started"
+    },
+    {
+      "name": "Same Tree",
+      "why": "Structural equality",
+      "diff": "E",
+      "lc": "100",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Symmetric Tree",
+      "why": "Mirror recurse/BFS",
+      "diff": "E",
+      "lc": "101",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Diameter of Binary Tree",
+      "why": "Postorder heights",
+      "diff": "M",
+      "lc": "543",
+      "in_bank": true,
+      "bank_id": "35_diameter_tree",
+      "status": "not-started"
+    },
+    {
+      "name": "Path Sum",
+      "why": "DFS carry",
+      "diff": "E",
+      "lc": "112",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Binary Tree Level Order",
+      "why": "BFS queue",
+      "diff": "M",
+      "lc": "102",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Validate BST",
+      "why": "Bounds DFS",
+      "diff": "M",
+      "lc": "98",
+      "in_bank": true,
+      "bank_id": "36_validate_bst",
+      "status": "not-started"
+    },
+    {
+      "name": "LCA of BST",
+      "why": "Walk by value",
+      "diff": "M",
+      "lc": "235",
+      "in_bank": true,
+      "bank_id": "11_lca_bst",
+      "status": "not-started"
+    },
+    {
+      "name": "LCA of Binary Tree",
+      "why": "Postorder report",
+      "diff": "M",
+      "lc": "236",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Kth Smallest BST",
+      "why": "Inorder count",
+      "diff": "M",
+      "lc": "230",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Construct from Pre+In",
+      "why": "Divide indices",
+      "diff": "M",
+      "lc": "105",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Serialize/Deserialize",
+      "why": "Preorder/BFS protocol",
+      "diff": "H",
+      "lc": "297",
+      "in_bank": true,
+      "bank_id": "47_serialize_tree",
+      "status": "not-started"
+    },
+    {
+      "name": "Balanced Binary Tree",
+      "why": "Height + flag",
+      "diff": "E",
+      "lc": "110",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Lowest Common Ancestor III*",
+      "why": "Parent pointers (if seen)",
+      "diff": "M",
+      "lc": "1650",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "BST Iterator",
+      "why": "Controlled inorder",
+      "diff": "M",
+      "lc": "173",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Right Side View",
+      "why": "BFS last / DFS depth",
+      "diff": "M",
+      "lc": "199",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Flatten to Linked List",
+      "why": "Morris/rethread",
+      "diff": "M",
+      "lc": "114",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Binary Tree Max Path Sum",
+      "why": "Tree DP bend",
+      "diff": "H",
+      "lc": "124",
+      "in_bank": true,
+      "bank_id": "50_max_path_sum",
+      "status": "not-started"
+    },
+    {
+      "name": "House Robber III",
+      "why": "Tree DP rob/skip",
+      "diff": "M",
+      "lc": "337",
+      "in_bank": true,
+      "bank_id": "48_house_robber_iii",
+      "status": "not-started"
+    },
+    {
+      "name": "Kth Largest in Stream",
+      "why": "Size-k heap",
+      "diff": "E",
+      "lc": "703",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Top K Frequent",
+      "why": "Heap / bucket",
+      "diff": "M",
+      "lc": "347",
+      "in_bank": true,
+      "bank_id": "12_top_k_frequent",
+      "status": "not-started"
+    },
+    {
+      "name": "Merge K Sorted Lists",
+      "why": "Heap of heads",
+      "diff": "H",
+      "lc": "23",
+      "in_bank": true,
+      "bank_id": "61_merge_k_lists",
+      "status": "not-started"
+    },
+    {
+      "name": "Find Median from Data Stream",
+      "why": "Two heaps",
+      "diff": "H",
+      "lc": "295",
+      "in_bank": true,
+      "bank_id": "62_median_stream",
+      "status": "not-started"
+    },
+    {
+      "name": "Task Scheduler",
+      "why": "Greedy + heap/count",
+      "diff": "M",
+      "lc": "621",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "K Closest Points",
+      "why": "Heap / select",
+      "diff": "M",
+      "lc": "973",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Last Stone Weight",
+      "why": "Max-heap sim",
+      "diff": "E",
+      "lc": "1046",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Meeting Rooms II",
+      "why": "Min-heap ends",
+      "diff": "M",
+      "lc": "253",
+      "in_bank": true,
+      "bank_id": "40_meeting_rooms_ii",
+      "status": "not-started"
+    },
+    {
+      "name": "Product Except Self",
+      "why": "Prefix pattern",
+      "diff": "M",
+      "lc": "238",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Merge Intervals (revisit)",
+      "why": "Sort sweep under time",
+      "diff": "M",
+      "lc": "56",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Insert Interval",
+      "why": "Edge merge cases",
+      "diff": "M",
+      "lc": "57",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Non-overlapping Intervals",
+      "why": "Greedy sort end",
+      "diff": "M",
+      "lc": "435",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Jump Game",
+      "why": "Greedy reach",
+      "diff": "M",
+      "lc": "55",
+      "in_bank": true,
+      "bank_id": "55_jump_game",
+      "status": "not-started"
+    },
+    {
+      "name": "Jump Game II",
+      "why": "Greedy levels",
+      "diff": "M",
+      "lc": "45",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Gas Station",
+      "why": "Circular greedy",
+      "diff": "M",
+      "lc": "134",
+      "in_bank": true,
+      "bank_id": "56_gas_station",
+      "status": "not-started"
+    },
+    {
+      "name": "Randomized Set",
+      "why": "O(1) design",
+      "diff": "M",
+      "lc": "380",
+      "in_bank": true,
+      "bank_id": "22_randomized_set",
+      "status": "not-started"
+    },
+    {
+      "name": "Number of Islands",
+      "why": "Grid DFS/BFS",
+      "diff": "M",
+      "lc": "200",
+      "in_bank": true,
+      "bank_id": "21_num_islands",
+      "status": "not-started"
+    },
+    {
+      "name": "Clone Graph",
+      "why": "BFS/DFS map",
+      "diff": "M",
+      "lc": "133",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Course Schedule",
+      "why": "Cycle / topo",
+      "diff": "M",
+      "lc": "207",
+      "in_bank": true,
+      "bank_id": "13_course_schedule",
+      "status": "not-started"
+    },
+    {
+      "name": "Course Schedule II",
+      "why": "Kahn order",
+      "diff": "M",
+      "lc": "210",
+      "in_bank": true,
+      "bank_id": "57_course_schedule_ii",
+      "status": "not-started"
+    },
+    {
+      "name": "Word Ladder",
+      "why": "Implicit BFS",
+      "diff": "H",
+      "lc": "127",
+      "in_bank": true,
+      "bank_id": "14_word_ladder",
+      "status": "not-started"
+    },
+    {
+      "name": "Alien Dictionary",
+      "why": "Topo on chars",
+      "diff": "H",
+      "lc": "269",
+      "in_bank": true,
+      "bank_id": "66_alien_dictionary",
+      "status": "not-started"
+    },
+    {
+      "name": "Pacific Atlantic Water Flow",
+      "why": "Multi-source DFS",
+      "diff": "M",
+      "lc": "417",
+      "in_bank": true,
+      "bank_id": "58_pacific_atlantic",
+      "status": "not-started"
+    },
+    {
+      "name": "Graph Valid Tree",
+      "why": "n-1 edges + connected",
+      "diff": "M",
+      "lc": "261",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Number of Connected Components",
+      "why": "UF or DFS",
+      "diff": "M",
+      "lc": "323",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Redundant Connection",
+      "why": "UF cycle",
+      "diff": "M",
+      "lc": "684",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Rotting Oranges",
+      "why": "Multi-source BFS",
+      "diff": "M",
+      "lc": "994",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "01 Matrix",
+      "why": "Multi-source BFS",
+      "diff": "M",
+      "lc": "542",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Surrounded Regions",
+      "why": "Border DFS",
+      "diff": "M",
+      "lc": "130",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Keys and Rooms",
+      "why": "Reachability",
+      "diff": "M",
+      "lc": "841",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Shortest Path Binary Matrix",
+      "why": "Grid BFS",
+      "diff": "M",
+      "lc": "1091",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Accounts Merge",
+      "why": "UF + strings",
+      "diff": "M",
+      "lc": "721",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Is Graph Bipartite?",
+      "why": "2-color BFS/DFS",
+      "diff": "M",
+      "lc": "785",
+      "in_bank": true,
+      "bank_id": "49_bipartite",
+      "status": "not-started"
+    },
+    {
+      "name": "Network Delay Time",
+      "why": "Dijkstra",
+      "diff": "M",
+      "lc": "743",
+      "in_bank": true,
+      "bank_id": "15_network_delay",
+      "status": "not-started"
+    },
+    {
+      "name": "0-1 BFS shortest path",
+      "why": "Deque 0/1 weights",
+      "diff": "M",
+      "lc": "\u2014",
+      "in_bank": true,
+      "bank_id": "25_zero_one_bfs",
+      "status": "not-started"
+    },
+    {
+      "name": "Cheapest Flights K Stops",
+      "why": "Bounded BF/DP (awareness)",
+      "diff": "M",
+      "lc": "787",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Path With Minimum Effort",
+      "why": "BS + BFS or Dijkstra",
+      "diff": "M",
+      "lc": "1631",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Min Cost to Connect All Points",
+      "why": "MST (Prim/Kruskal)",
+      "diff": "M",
+      "lc": "1584",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Critical Connections",
+      "why": "Tarjan bridges \u2014 **exposure only, not gate**",
+      "diff": "H",
+      "lc": "1192",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Climbing Stairs",
+      "why": "1D DP base",
+      "diff": "E",
+      "lc": "70",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "House Robber",
+      "why": "Choose/skip DP",
+      "diff": "M",
+      "lc": "198",
+      "in_bank": true,
+      "bank_id": "37_house_robber",
+      "status": "not-started"
+    },
+    {
+      "name": "House Robber II",
+      "why": "Circular casework",
+      "diff": "M",
+      "lc": "213",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Coin Change",
+      "why": "Unbounded knapsack",
+      "diff": "M",
+      "lc": "322",
+      "in_bank": true,
+      "bank_id": "17_coin_change",
+      "status": "not-started"
+    },
+    {
+      "name": "Coin Change II",
+      "why": "Combo count loops",
+      "diff": "M",
+      "lc": "518",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Longest Increasing Subsequence",
+      "why": "DP / patience",
+      "diff": "M",
+      "lc": "300",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Word Break",
+      "why": "Prefix DP",
+      "diff": "M",
+      "lc": "139",
+      "in_bank": true,
+      "bank_id": "43_word_break",
+      "status": "not-started"
+    },
+    {
+      "name": "Unique Paths",
+      "why": "Grid DP",
+      "diff": "M",
+      "lc": "62",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Min Path Sum",
+      "why": "Grid DP",
+      "diff": "M",
+      "lc": "64",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Decode Ways",
+      "why": "String DP",
+      "diff": "M",
+      "lc": "91",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Partition Equal Subset Sum",
+      "why": "0/1 knapsack",
+      "diff": "M",
+      "lc": "416",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Target Sum",
+      "why": "+/- knapsack",
+      "diff": "M",
+      "lc": "494",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Maximal Square",
+      "why": "2D DP",
+      "diff": "M",
+      "lc": "221",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Longest Common Subsequence",
+      "why": "2-string DP",
+      "diff": "M",
+      "lc": "1143",
+      "in_bank": true,
+      "bank_id": "45_lcs",
+      "status": "not-started"
+    },
+    {
+      "name": "Edit Distance",
+      "why": "Classic DP",
+      "diff": "M",
+      "lc": "72",
+      "in_bank": true,
+      "bank_id": "46_edit_distance",
+      "status": "not-started"
+    },
+    {
+      "name": "Distinct Subsequences",
+      "why": "Count DP",
+      "diff": "H",
+      "lc": "115",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Burst Balloons",
+      "why": "Interval DP (select)",
+      "diff": "H",
+      "lc": "312",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Subsets",
+      "why": "Backtrack power set",
+      "diff": "M",
+      "lc": "78",
+      "in_bank": true,
+      "bank_id": "18_subsets",
+      "status": "not-started"
+    },
+    {
+      "name": "Subsets II",
+      "why": "Dedupe backtrack",
+      "diff": "M",
+      "lc": "90",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Combination Sum",
+      "why": "Unlimited choose",
+      "diff": "M",
+      "lc": "39",
+      "in_bank": true,
+      "bank_id": "44_combination_sum",
+      "status": "not-started"
+    },
+    {
+      "name": "Combination Sum II",
+      "why": "Dedupe + limit",
+      "diff": "M",
+      "lc": "40",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Permutations",
+      "why": "Used[] backtrack",
+      "diff": "M",
+      "lc": "46",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Palindrome Partitioning",
+      "why": "DFS + check",
+      "diff": "M",
+      "lc": "131",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Word Search",
+      "why": "Board DFS backtrack",
+      "diff": "M",
+      "lc": "79",
+      "in_bank": true,
+      "bank_id": "60_trie_prefix",
+      "status": "not-started"
+    },
+    {
+      "name": "N-Queens",
+      "why": "Constraint backtrack",
+      "diff": "H",
+      "lc": "51",
+      "in_bank": true,
+      "bank_id": "64_nqueens_count",
+      "status": "not-started"
+    },
+    {
+      "name": "Jump Game (greedy)",
+      "why": "Reach invariant",
+      "diff": "M",
+      "lc": "55",
+      "in_bank": true,
+      "bank_id": "55_jump_game",
+      "status": "not-started"
+    },
+    {
+      "name": "Gas Station",
+      "why": "Tank reset greedy",
+      "diff": "M",
+      "lc": "134",
+      "in_bank": true,
+      "bank_id": "56_gas_station",
+      "status": "not-started"
+    },
+    {
+      "name": "Partition Labels",
+      "why": "Greedy last index",
+      "diff": "M",
+      "lc": "763",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Non-overlapping Intervals",
+      "why": "End-sort greedy",
+      "diff": "M",
+      "lc": "435",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Remove Invalid Parentheses",
+      "why": "BFS/backtrack hard",
+      "diff": "H",
+      "lc": "301",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Regular Expression Matching",
+      "why": "DP hard (optional)",
+      "diff": "H",
+      "lc": "10",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Digit DP count \u2264 N",
+      "why": "tight + lead_zero",
+      "diff": "M",
+      "lc": "\u2014",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Bitmask assignment",
+      "why": "dp[mask] n\u226412\u201320",
+      "diff": "M",
+      "lc": "\u2014",
+      "in_bank": true,
+      "bank_id": "54_bitmask_assign",
+      "status": "not-started"
+    },
+    {
+      "name": "Implement Trie",
+      "why": "Prefix tree API",
+      "diff": "M",
+      "lc": "208",
+      "in_bank": true,
+      "bank_id": "19_implement_trie",
+      "status": "not-started"
+    },
+    {
+      "name": "Design Add/Search Words",
+      "why": "Trie + DFS `.`",
+      "diff": "M",
+      "lc": "211",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Word Search II",
+      "why": "Trie + board prune",
+      "diff": "H",
+      "lc": "212",
+      "in_bank": true,
+      "bank_id": "65_word_search_ii",
+      "status": "not-started"
+    },
+    {
+      "name": "Maximum XOR Two Numbers",
+      "why": "Bit trie (select)",
+      "diff": "M",
+      "lc": "421",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Next Greater Element",
+      "why": "Mono stack revisit",
+      "diff": "M",
+      "lc": "503",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Largest Rectangle Histogram",
+      "why": "Mono stack",
+      "diff": "H",
+      "lc": "84",
+      "in_bank": true,
+      "bank_id": "63_largest_rectangle",
+      "status": "not-started"
+    },
+    {
+      "name": "Sliding Window Maximum",
+      "why": "Mono deque",
+      "diff": "H",
+      "lc": "239",
+      "in_bank": true,
+      "bank_id": "59_sliding_window_max",
+      "status": "not-started"
+    },
+    {
+      "name": "Sum of Subarray Minimums",
+      "why": "Mono stack contrib",
+      "diff": "M",
+      "lc": "907",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Range Sum Query Immutable",
+      "why": "Prefix (seg preview)",
+      "diff": "E",
+      "lc": "303",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Range Sum Query Mutable",
+      "why": "Fenwick/Seg exposure",
+      "diff": "M",
+      "lc": "307",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Count of Smaller After Self",
+      "why": "Merge/BIT exposure",
+      "diff": "H",
+      "lc": "315",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Online Majority / seg lite",
+      "why": "Exposure only",
+      "diff": "H",
+      "lc": "\u2014",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Single Number",
+      "why": "Bits",
+      "diff": "E",
+      "lc": "136",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Number of 1 Bits",
+      "why": "Bit ops",
+      "diff": "E",
+      "lc": "191",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Sum of Two Integers",
+      "why": "Bit add (optional)",
+      "diff": "M",
+      "lc": "371",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "LRU Cache",
+      "why": "Design under pressure",
+      "diff": "M",
+      "lc": "146",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Randomized Set",
+      "why": "Design O(1)",
+      "diff": "M",
+      "lc": "380",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Word Ladder",
+      "why": "Graph BFS transfer",
+      "diff": "H",
+      "lc": "127",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Coin Change",
+      "why": "DP transfer",
+      "diff": "M",
+      "lc": "322",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Course Schedule",
+      "why": "Topo transfer",
+      "diff": "M",
+      "lc": "207",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Merge Intervals",
+      "why": "Sort sweep transfer",
+      "diff": "M",
+      "lc": "56",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "LCA (BST or BT)",
+      "why": "Tree transfer",
+      "diff": "M",
+      "lc": "235/236",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Top K Frequent",
+      "why": "Heap transfer",
+      "diff": "M",
+      "lc": "347",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Number of Islands",
+      "why": "Grid graph transfer",
+      "diff": "M",
+      "lc": "200",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Subsets + timed",
+      "why": "Backtrack speed",
+      "diff": "M",
+      "lc": "78",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Network Delay",
+      "why": "Dijkstra transfer",
+      "diff": "M",
+      "lc": "743",
+      "in_bank": true,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Trapping Rain Water",
+      "why": "Two ptr / stack",
+      "diff": "H",
+      "lc": "42",
+      "in_bank": true,
+      "bank_id": "67_trapping_rain",
+      "status": "not-started"
+    },
+    {
+      "name": "Serialize Tree",
+      "why": "Protocol design",
+      "diff": "H",
+      "lc": "297",
+      "in_bank": true,
+      "bank_id": "47_serialize_tree",
+      "status": "not-started"
+    },
+    {
+      "name": "Find Median Stream",
+      "why": "Two heaps",
+      "diff": "H",
+      "lc": "295",
+      "in_bank": true,
+      "bank_id": "62_median_stream",
+      "status": "not-started"
+    },
+    {
+      "name": "Merge Intervals",
+      "why": "Sort + sweep core",
+      "diff": "M",
+      "lc": "56",
+      "in_bank": true,
+      "bank_id": "07_merge_intervals",
+      "status": "not-started"
+    },
+    {
+      "name": "Insert Interval",
+      "why": "Edge splice",
+      "diff": "M",
+      "lc": "57",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Meeting Rooms II",
+      "why": "Sweep / heap",
+      "diff": "M",
+      "lc": "253",
+      "in_bank": true,
+      "bank_id": "40_meeting_rooms_ii",
+      "status": "not-started"
+    },
+    {
+      "name": "Non-overlapping Intervals",
+      "why": "Greedy end-sort",
+      "diff": "M",
+      "lc": "435",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Single Number",
+      "why": "XOR identity",
+      "diff": "E",
+      "lc": "136",
+      "in_bank": true,
+      "bank_id": "20_single_number",
+      "status": "not-started"
+    },
+    {
+      "name": "Number of 1 Bits",
+      "why": "`n & (n-1)`",
+      "diff": "E",
+      "lc": "191",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Counting Bits",
+      "why": "DP on bits",
+      "diff": "E",
+      "lc": "338",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Subsets (bit mask)",
+      "why": "Mask enumeration",
+      "diff": "M",
+      "lc": "78",
+      "in_bank": true,
+      "bank_id": "18_subsets",
+      "status": "not-started"
+    },
+    {
+      "name": "Implement strStr / needle",
+      "why": "KMP or rolling hash",
+      "diff": "M",
+      "lc": "28",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Repeated Substring Pattern",
+      "why": "Prefix / KMP border",
+      "diff": "E",
+      "lc": "459",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Longest Happy Prefix",
+      "why": "Prefix function",
+      "diff": "H",
+      "lc": "1392",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Find Duplicate Substring",
+      "why": "Rolling hash / binary search",
+      "diff": "M",
+      "lc": "1044",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Valid Anagram",
+      "why": "Freq bridge",
+      "diff": "E",
+      "lc": "242",
+      "in_bank": true,
+      "bank_id": "23_valid_anagram",
+      "status": "not-started"
+    },
+    {
+      "name": "Pow(x, n)",
+      "why": "Fast pow",
+      "diff": "M",
+      "lc": "50",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Sqrt(x)",
+      "why": "Integer root / BS",
+      "diff": "E",
+      "lc": "69",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "GCD / LCM pair ops",
+      "why": "Euclidean + overflow care",
+      "diff": "E",
+      "lc": "\u2014",
+      "in_bank": true,
+      "bank_id": "51_gcd_of_strings",
+      "status": "not-started"
+    },
+    {
+      "name": "Count Primes",
+      "why": "Sieve mental model",
+      "diff": "M",
+      "lc": "204",
+      "in_bank": true,
+      "bank_id": "52_count_primes",
+      "status": "not-started"
+    },
+    {
+      "name": "Super Pow / mod exponent",
+      "why": "Mod arithmetic",
+      "diff": "M",
+      "lc": "372",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Number of Islands",
+      "why": "Grid graph",
+      "diff": "M",
+      "lc": "200",
+      "in_bank": true,
+      "bank_id": "21_num_islands",
+      "status": "not-started"
+    },
+    {
+      "name": "Spiral Matrix",
+      "why": "Layer sim",
+      "diff": "M",
+      "lc": "54",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Set Matrix Zeroes",
+      "why": "In-place markers",
+      "diff": "M",
+      "lc": "73",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Rotate Image",
+      "why": "Transpose + reverse",
+      "diff": "M",
+      "lc": "48",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Search a 2D Matrix II",
+      "why": "Staircase search",
+      "diff": "M",
+      "lc": "240",
+      "in_bank": true,
+      "bank_id": "53_search_matrix_ii",
+      "status": "not-started"
+    },
+    {
+      "name": "Walls and Gates",
+      "why": "Multi-source BFS",
+      "diff": "M",
+      "lc": "286",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "Insert Delete GetRandom O(1)",
+      "why": "Hash + list",
+      "diff": "M",
+      "lc": "380",
+      "in_bank": true,
+      "bank_id": "22_randomized_set",
+      "status": "not-started"
+    },
+    {
+      "name": "Min Stack",
+      "why": "Aux stack",
+      "diff": "M",
+      "lc": "155",
+      "in_bank": true,
+      "bank_id": "38_min_stack",
+      "status": "not-started"
+    },
+    {
+      "name": "Time Based Key-Value",
+      "why": "Hash + BS",
+      "diff": "M",
+      "lc": "981",
+      "in_bank": false,
+      "bank_id": null,
+      "status": "not-started"
+    },
+    {
+      "name": "LRU Cache",
+      "why": "Design + DLL/hash (full in Design Part 15)",
+      "diff": "M",
+      "lc": "146",
+      "in_bank": true,
+      "bank_id": "26_lru_cache",
+      "status": "not-started"
+    }
+  ]
+}

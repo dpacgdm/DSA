@@ -76,3 +76,9 @@ Rolling G3/G4/G5/G7 fields are recomputed on every write. G1/G2 remain manual in
 | `Metrics/Retention Ledger.md` | Human ledger mirror |
 | `Handoff Doc.md` | Gates G1–G7 |
 | `Gauntlet/Phase A Gauntlet.md` | Mocks + mixed sets |
+
+## Spine coverage
+
+```bash
+python tools/spine_status.py
+```

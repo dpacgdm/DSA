@@ -8,6 +8,9 @@
 
 ---
 
+> **Lesson contract:** Framework + ≤3 traced exemplars in-lesson. Drill via Retention (`keys/` separated) + Practice Spine + problem-bank. Teach-back before retention.
+
+
 # PART 1: WHY MATRICES ARE A HUB
 
 A grid is an **implicit graph**: each cell is a node; edges go to 4 (or 8) neighbors. Almost every "matrix" interview problem is one of:

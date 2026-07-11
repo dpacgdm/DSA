@@ -2,10 +2,10 @@
 
 **Duration:** 60 min · **Blind**
 
-1. LC 295 — Find Median from Data Stream  
-2. LC 785 — Is Graph Bipartite?  
-3. LC 743 — Network Delay Time  
-4. Custom or bank `25_zero_one_bfs` — 0-1 weights shortest path  
-5. LC 322 — Coin Change  
+1. Bank `39_daily_temperatures` (or LC 739)
+2. Bank `49_bipartite` (or LC 785)
+3. Bank `15_network_delay` (or LC 743)
+4. Bank `25_zero_one_bfs`
+5. Bank `17_coin_change` / `37_house_robber`
 
-**After:** Scoreboard row · error tags · ledger.
+**After:** scoreboard · ledger

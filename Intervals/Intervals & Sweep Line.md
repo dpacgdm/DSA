@@ -8,6 +8,9 @@
 
 ---
 
+> **Lesson contract:** Framework + ≤3 traced exemplars in-lesson. Drill via Retention (`keys/` separated) + Practice Spine + problem-bank. Teach-back before retention.
+
+
 # PART 1: WHY INTERVALS EXIST
 
 ## The Problem Intervals Solve

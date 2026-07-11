@@ -21,11 +21,11 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | Two Sum | Hash complement; O(n) vs nested | E | 1 | Y `01_two_sum` |
 | Contains Duplicate | Set membership / complexity talk | E | 217 | Y `02_contains_duplicate` |
 | Valid Anagram | Frequency maps | E | 242 | Y `23_valid_anagram` |
-| Best Time to Buy/Sell Stock | One-pass running min | E | 121 | — |
-| Maximum Subarray (Kadane) | Linear scan invariant | M | 53 | — |
+| Best Time to Buy/Sell Stock | One-pass running min | E | 121 | Y `27_best_time_stock` |
+| Maximum Subarray (Kadane) | Linear scan invariant | M | 53 | Y `28_max_subarray` |
 | Move Zeroes | Two pointers in-place | E | 283 | — |
 | Container With Most Water | Two pointers maximize | M | 11 | — |
-| 3Sum | Sort + two pointers; dedupe | M | 15 | — |
+| 3Sum | Sort + two pointers; dedupe | M | 15 | Y `33_three_sum` |
 | Longest Substring No Repeat | Variable sliding window | M | 3 | Y `03_longest_substr_no_repeat` |
 | Max Sum Subarray Size K | Fixed window | E | — | Y `04_max_sum_subarray_k` |
 | Minimum Size Subarray Sum | Window shrink for target | M | 209 | — |
@@ -43,10 +43,10 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 
 | Problem | Why it earns M2 | Diff | LC | Bank |
 |---|---|---|---|---|
-| Group Anagrams | Hash by signature | M | 49 | — |
+| Group Anagrams | Hash by signature | M | 49 | Y `30_group_anagrams` |
 | Two Sum (revisit timed) | Hash under time | E | 1 | Y |
-| Longest Consecutive Sequence | Set jumps O(n) | M | 128 | — |
-| Subarray Sum Equals K | Prefix + hash counts | M | 560 | — |
+| Longest Consecutive Sequence | Set jumps O(n) | M | 128 | Y `31_longest_consecutive` |
+| Subarray Sum Equals K | Prefix + hash counts | M | 560 | Y `32_subarray_sum_k` |
 | 4Sum II | Meet-in-middle hash | M | 454 | — |
 | Design HashMap (lite) | Collision mental model | E | 706 | — |
 | Fibonacci (memo) | Recursion + memo | E | 509 | — |
@@ -70,10 +70,10 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | Search Insert Position | Lower bound | E | 35 | Y `06_search_insert` |
 | First Bad Version | Monotonic predicate | E | 278 | — |
 | Find Peak Element | BS on answer slope | M | 162 | — |
-| Search Rotated Sorted Array | BS + pivot logic | M | 33 | — |
+| Search Rotated Sorted Array | BS + pivot logic | M | 33 | Y `41_search_rotated` |
 | Find Min Rotated | BS variant | M | 153 | — |
 | Time-Based Key-Value | BS on timestamps | M | 981 | — |
-| Koko Eating Bananas | BS on capacity | M | 875 | — |
+| Koko Eating Bananas | BS on capacity | M | 875 | Y `42_koko_bananas` |
 | Capacity To Ship Packages | BS on answer | M | 1011 | — |
 | Merge Intervals | Sort + sweep | M | 56 | Y `07_merge_intervals` |
 | Sort Colors | Dutch partition | M | 75 | — |
@@ -99,14 +99,14 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | Add Two Numbers | Digits + carry | M | 2 | — |
 | Reorder List | Split + reverse + merge | M | 143 | — |
 | LRU Cache | Hash + DLL design | M | 146 | — |
-| Valid Parentheses | Stack matching | E | 20 | — |
-| Min Stack | Aux stack invariant | M | 155 | — |
-| Daily Temperatures | Monotonic stack | M | 739 | — |
+| Valid Parentheses | Stack matching | E | 20 | Y `29_valid_parentheses` |
+| Min Stack | Aux stack invariant | M | 155 | Y `38_min_stack` |
+| Daily Temperatures | Monotonic stack | M | 739 | Y `39_daily_temperatures` |
 | Next Greater Element | Mono stack | M | 496/503 | Y `09_next_greater_element` |
 | Evaluate RPN | Stack eval | M | 150 | — |
 | Implement Queue using Stacks | Amortized O(1) | E | 232 | — |
 | Implement Stack using Queues | API discipline | E | 225 | — |
-| Sliding Window Maximum | Deque mono | H | 239 | — |
+| Sliding Window Maximum | Deque mono | H | 239 | Y `59_sliding_window_max` |
 | Decode String | Stack parse | M | 394 | — |
 | Asteroid Collision | Stack simulation | M | 735 | — |
 
@@ -117,25 +117,25 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | Problem | Why it earns M5 | Diff | LC | Bank |
 |---|---|---|---|---|
 | Max Depth | Recurrence on tree | E | 104 | Y `10_max_depth_tree` |
-| Invert Binary Tree | Swap recurse | E | 226 | — |
+| Invert Binary Tree | Swap recurse | E | 226 | Y `34_invert_tree` |
 | Same Tree | Structural equality | E | 100 | — |
 | Symmetric Tree | Mirror recurse/BFS | E | 101 | — |
-| Diameter of Binary Tree | Postorder heights | M | 543 | — |
+| Diameter of Binary Tree | Postorder heights | M | 543 | Y `35_diameter_tree` |
 | Path Sum | DFS carry | E | 112 | — |
 | Binary Tree Level Order | BFS queue | M | 102 | — |
-| Validate BST | Bounds DFS | M | 98 | — |
+| Validate BST | Bounds DFS | M | 98 | Y `36_validate_bst` |
 | LCA of BST | Walk by value | M | 235 | Y `11_lca_bst` |
 | LCA of Binary Tree | Postorder report | M | 236 | — |
 | Kth Smallest BST | Inorder count | M | 230 | — |
 | Construct from Pre+In | Divide indices | M | 105 | — |
-| Serialize/Deserialize | BFS protocol | H | 297 | — |
+| Serialize/Deserialize | Preorder/BFS protocol | H | 297 | Y `47_serialize_tree` |
 | Balanced Binary Tree | Height + flag | E | 110 | — |
 | Lowest Common Ancestor III* | Parent pointers (if seen) | M | 1650 | — |
 | BST Iterator | Controlled inorder | M | 173 | — |
 | Right Side View | BFS last / DFS depth | M | 199 | — |
 | Flatten to Linked List | Morris/rethread | M | 114 | — |
-| Binary Tree Max Path Sum | Tree DP bend | H | 124 | — |
-| House Robber III | Tree DP rob/skip | M | 337 | — |
+| Binary Tree Max Path Sum | Tree DP bend | H | 124 | Y `50_max_path_sum` |
+| House Robber III | Tree DP rob/skip | M | 337 | Y `48_house_robber_iii` |
 
 ---
 
@@ -145,19 +145,19 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 |---|---|---|---|---|
 | Kth Largest in Stream | Size-k heap | E | 703 | — |
 | Top K Frequent | Heap / bucket | M | 347 | Y `12_top_k_frequent` |
-| Merge K Sorted Lists | Heap of heads | H | 23 | — |
-| Find Median from Data Stream | Two heaps | H | 295 | — |
+| Merge K Sorted Lists | Heap of heads | H | 23 | Y `61_merge_k_lists` |
+| Find Median from Data Stream | Two heaps | H | 295 | Y `62_median_stream` |
 | Task Scheduler | Greedy + heap/count | M | 621 | — |
 | K Closest Points | Heap / select | M | 973 | — |
 | Last Stone Weight | Max-heap sim | E | 1046 | — |
-| Meeting Rooms II | Min-heap ends | M | 253 | — |
+| Meeting Rooms II | Min-heap ends | M | 253 | Y `40_meeting_rooms_ii` |
 | Product Except Self | Prefix pattern | M | 238 | Y |
 | Merge Intervals (revisit) | Sort sweep under time | M | 56 | Y |
 | Insert Interval | Edge merge cases | M | 57 | — |
 | Non-overlapping Intervals | Greedy sort end | M | 435 | — |
-| Jump Game | Greedy reach | M | 55 | — |
+| Jump Game | Greedy reach | M | 55 | Y `55_jump_game` |
 | Jump Game II | Greedy levels | M | 45 | — |
-| Gas Station | Circular greedy | M | 134 | — |
+| Gas Station | Circular greedy | M | 134 | Y `56_gas_station` |
 | Randomized Set | O(1) design | M | 380 | Y `22_randomized_set` |
 
 ---
@@ -169,10 +169,10 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | Number of Islands | Grid DFS/BFS | M | 200 | Y `21_num_islands` |
 | Clone Graph | BFS/DFS map | M | 133 | — |
 | Course Schedule | Cycle / topo | M | 207 | Y `13_course_schedule` |
-| Course Schedule II | Kahn order | M | 210 | — |
+| Course Schedule II | Kahn order | M | 210 | Y `57_course_schedule_ii` |
 | Word Ladder | Implicit BFS | H | 127 | Y `14_word_ladder` |
-| Alien Dictionary | Topo on chars | H | 269 | — |
-| Pacific Atlantic Water Flow | Multi-source DFS | M | 417 | — |
+| Alien Dictionary | Topo on chars | H | 269 | Y `66_alien_dictionary` |
+| Pacific Atlantic Water Flow | Multi-source DFS | M | 417 | Y `58_pacific_atlantic` |
 | Graph Valid Tree | n-1 edges + connected | M | 261 | — |
 | Number of Connected Components | UF or DFS | M | 323 | — |
 | Redundant Connection | UF cycle | M | 684 | — |
@@ -182,7 +182,7 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | Keys and Rooms | Reachability | M | 841 | — |
 | Shortest Path Binary Matrix | Grid BFS | M | 1091 | — |
 | Accounts Merge | UF + strings | M | 721 | — |
-| Is Graph Bipartite? | 2-color BFS/DFS | M | 785 | — |
+| Is Graph Bipartite? | 2-color BFS/DFS | M | 785 | Y `49_bipartite` |
 
 ---
 
@@ -197,12 +197,12 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 | Min Cost to Connect All Points | MST (Prim/Kruskal) | M | 1584 | — |
 | Critical Connections | Tarjan bridges — **exposure only, not gate** | H | 1192 | — |
 | Climbing Stairs | 1D DP base | E | 70 | Y |
-| House Robber | Choose/skip DP | M | 198 | — |
+| House Robber | Choose/skip DP | M | 198 | Y `37_house_robber` |
 | House Robber II | Circular casework | M | 213 | — |
 | Coin Change | Unbounded knapsack | M | 322 | Y `17_coin_change` |
 | Coin Change II | Combo count loops | M | 518 | — |
 | Longest Increasing Subsequence | DP / patience | M | 300 | — |
-| Word Break | Prefix DP | M | 139 | — |
+| Word Break | Prefix DP | M | 139 | Y `43_word_break` |
 | Unique Paths | Grid DP | M | 62 | — |
 | Min Path Sum | Grid DP | M | 64 | — |
 | Decode Ways | String DP | M | 91 | — |
@@ -216,24 +216,26 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 
 | Problem | Why it earns M9 | Diff | LC | Bank |
 |---|---|---|---|---|
-| Longest Common Subsequence | 2-string DP | M | 1143 | — |
-| Edit Distance | Classic DP | M | 72 | — |
+| Longest Common Subsequence | 2-string DP | M | 1143 | Y `45_lcs` |
+| Edit Distance | Classic DP | M | 72 | Y `46_edit_distance` |
 | Distinct Subsequences | Count DP | H | 115 | — |
 | Burst Balloons | Interval DP (select) | H | 312 | — |
 | Subsets | Backtrack power set | M | 78 | Y `18_subsets` |
 | Subsets II | Dedupe backtrack | M | 90 | — |
-| Combination Sum | Unlimited choose | M | 39 | — |
+| Combination Sum | Unlimited choose | M | 39 | Y `44_combination_sum` |
 | Combination Sum II | Dedupe + limit | M | 40 | — |
 | Permutations | Used[] backtrack | M | 46 | — |
 | Palindrome Partitioning | DFS + check | M | 131 | — |
-| Word Search | Board DFS backtrack | M | 79 | — |
-| N-Queens | Constraint backtrack | H | 51 | — |
-| Jump Game (greedy) | Reach invariant | M | 55 | — |
-| Gas Station | Tank reset greedy | M | 134 | — |
+| Word Search | Board DFS backtrack | M | 79 | Y `60_trie_prefix` |
+| N-Queens | Constraint backtrack | H | 51 | Y `64_nqueens_count` |
+| Jump Game (greedy) | Reach invariant | M | 55 | Y `55_jump_game` |
+| Gas Station | Tank reset greedy | M | 134 | Y `56_gas_station` |
 | Partition Labels | Greedy last index | M | 763 | — |
 | Non-overlapping Intervals | End-sort greedy | M | 435 | — |
 | Remove Invalid Parentheses | BFS/backtrack hard | H | 301 | — |
 | Regular Expression Matching | DP hard (optional) | H | 10 | — |
+| Digit DP count ≤ N | tight + lead_zero | M | — | — |
+| Bitmask assignment | dp[mask] n≤12–20 | M | — | Y `54_bitmask_assign` |
 
 ---
 
@@ -243,11 +245,11 @@ Ruthless minimum viable sets for timed / blind practice. **Not** a completionist
 |---|---|---|---|---|
 | Implement Trie | Prefix tree API | M | 208 | Y `19_implement_trie` |
 | Design Add/Search Words | Trie + DFS `.` | M | 211 | — |
-| Word Search II | Trie + board prune | H | 212 | — |
+| Word Search II | Trie + board prune | H | 212 | Y `65_word_search_ii` |
 | Maximum XOR Two Numbers | Bit trie (select) | M | 421 | — |
 | Next Greater Element | Mono stack revisit | M | 503 | Y |
-| Largest Rectangle Histogram | Mono stack | H | 84 | — |
-| Sliding Window Maximum | Mono deque | H | 239 | — |
+| Largest Rectangle Histogram | Mono stack | H | 84 | Y `63_largest_rectangle` |
+| Sliding Window Maximum | Mono deque | H | 239 | Y `59_sliding_window_max` |
 | Sum of Subarray Minimums | Mono stack contrib | M | 907 | — |
 | Range Sum Query Immutable | Prefix (seg preview) | E | 303 | — |
 | Range Sum Query Mutable | Fenwick/Seg exposure | M | 307 | — |
@@ -276,9 +278,9 @@ Mixed patterns; no new theory. Prefer timed blocks from `Gauntlet/Phase A Gauntl
 | Number of Islands | Grid graph transfer | M | 200 | Y |
 | Subsets + timed | Backtrack speed | M | 78 | Y |
 | Network Delay | Dijkstra transfer | M | 743 | Y |
-| Trapping Rain Water | Two ptr / stack | H | 42 | — |
-| Serialize Tree | Protocol design | H | 297 | — |
-| Find Median Stream | Two heaps | H | 295 | — |
+| Trapping Rain Water | Two ptr / stack | H | 42 | Y `67_trapping_rain` |
+| Serialize Tree | Protocol design | H | 297 | Y `47_serialize_tree` |
+| Find Median Stream | Two heaps | H | 295 | Y `62_median_stream` |
 | Mini-mock set (custom) | Rubric G5 | — | — | Gauntlet |
 
 ---
@@ -292,7 +294,7 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 |---|---|---|---|---|
 | Merge Intervals | Sort + sweep core | M | 56 | Y `07_merge_intervals` |
 | Insert Interval | Edge splice | M | 57 | — |
-| Meeting Rooms II | Sweep / heap | M | 253 | — |
+| Meeting Rooms II | Sweep / heap | M | 253 | Y `40_meeting_rooms_ii` |
 | Non-overlapping Intervals | Greedy end-sort | M | 435 | — |
 
 ### Bit Manipulation (4)
@@ -317,8 +319,8 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 |---|---|---|---|---|
 | Pow(x, n) | Fast pow | M | 50 | — |
 | Sqrt(x) | Integer root / BS | E | 69 | — |
-| GCD / LCM pair ops | Euclidean + overflow care | E | — | — |
-| Count Primes | Sieve mental model | M | 204 | — |
+| GCD / LCM pair ops | Euclidean + overflow care | E | — | Y `51_gcd_of_strings` |
+| Count Primes | Sieve mental model | M | 204 | Y `52_count_primes` |
 | Super Pow / mod exponent | Mod arithmetic | M | 372 | — |
 
 ### Matrix & Grid (6)
@@ -328,14 +330,14 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 | Spiral Matrix | Layer sim | M | 54 | — |
 | Set Matrix Zeroes | In-place markers | M | 73 | — |
 | Rotate Image | Transpose + reverse | M | 48 | — |
-| Search a 2D Matrix II | Staircase search | M | 240 | — |
+| Search a 2D Matrix II | Staircase search | M | 240 | Y `53_search_matrix_ii` |
 | Walls and Gates | Multi-source BFS | M | 286 | — |
 
 ### Design Data Structures (4)
 | Problem | Why | Diff | LC | Bank |
 |---|---|---|---|---|
 | Insert Delete GetRandom O(1) | Hash + list | M | 380 | Y `22_randomized_set` |
-| Min Stack | Aux stack | M | 155 | — |
+| Min Stack | Aux stack | M | 155 | Y `38_min_stack` |
 | Time Based Key-Value | Hash + BS | M | 981 | — |
 | LRU Cache | Design + DLL/hash (full in Design Part 15) | M | 146 | Y `26_lru_cache` |
 
@@ -358,6 +360,6 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 | M11 | 15 |
 | Coverage modules | 27 |
 | **Total spine rows** | **~217** |
-| **In problem-bank** | **26 unique packages** (many spines point at the same bank ids) |
+| **In problem-bank** | **67 unique packages** |
 
-Bank ids: `01`–`26` under `problem-bank/problems/`. Run: `py -3 problem-bank/run_all.py`.
+Bank ids: `01`–`67` under `problem-bank/problems/`. Run: `py -3 problem-bank/run_all.py`.

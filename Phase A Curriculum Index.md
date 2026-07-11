@@ -1,10 +1,10 @@
 # PHASE A — CURRICULUM INDEX (CONTENT DELIVERED)
 
 **Delivered:** 2026-07-09  
-**Updated:** 2026-07-11 — pedagogy 9.5 pass: dedup, keys split, 0-1 BFS / tree DP / LRU, README  
+**Updated:** 2026-07-11 — overall 9.5 pass: giant deflate, bank expand, digit/bitmask DP, honesty fixes  
 **Mode:** Teacher-side complete. Learner gates (timed / retention pass / mocks) remain for when practice resumes.  
-**Content craft target:** ≥95% (editorial pass in progress; dual Arrays retired; keys separated)  
-**Answer keys:** Retention files **intentionally keep** full answer keys for self-grade / tutor sessions (not removed).
+**Content craft target:** 9.5 overall product bar (lesson contract enforced; keys separated; bank expanding)  
+**Answer keys:** Live in `Retention Questions/keys/` only. Questions files are blind. Tutor may open both.
 
 This index is the map. Study in module order.
 
@@ -25,7 +25,7 @@ This index is the map. Study in module order.
 | Material | Path |
 |---|---|
 | Lesson | `Hashing/Hash maps&sets.md` |
-| Lesson | `Hashing/Advanced Hashing.md` |
+| Lesson | `Hashing/Advanced Hashing.md` (deepening; patterns already in Hash maps&sets) |
 | Lesson | `Recursion/Recursion.md` |
 | Lesson | `Recursion/Advanced Recursion.md` |
 | Drill | `Retention Questions/Week 2 Drilling Set.md` (PREVIEW: #7, #11, #12) |
@@ -38,7 +38,7 @@ This index is the map. Study in module order.
 | Lesson | `Searching & Sorting/Binary Search.md` |
 | Lesson | `Searching & Sorting/Sorting.md` (**Master Theorem home**) |
 | Retention | `Retention Questions/Module 3 Retention.md` |
-| Re-credit | Count of Range Sum (earned in Sorting + M3 retention) |
+| Optional | Count of Range Sum — **gauntlet/optional only** (not Module 3 gate) |
 
 ## Module 4 — Linked Lists + Stacks & Queues
 

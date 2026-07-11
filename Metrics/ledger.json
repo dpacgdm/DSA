@@ -612,6 +612,28 @@
       "next_due": "2026-07-11",
       "fail_count": 0,
       "notes": "seeded 2026-07-11 pedagogy pass \u2014 not yet practiced"
+    },
+    {
+      "id": "m9-digit-dp",
+      "subskill": "Digit DP tight/lead template",
+      "module": 9,
+      "module_name": "DP II + BT + Greedy",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded overall-9.5 pass"
+    },
+    {
+      "id": "m9-bitmask-dp",
+      "subskill": "Bitmask DP assignment/TSP-shape",
+      "module": 9,
+      "module_name": "DP II + BT + Greedy",
+      "heat": "weak",
+      "last_pass": null,
+      "next_due": "2026-07-11",
+      "fail_count": 0,
+      "notes": "seeded overall-9.5 pass"
     }
   ],
   "seed_modules": {

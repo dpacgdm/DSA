@@ -7,6 +7,9 @@
 
 ---
 
+> **Lesson contract:** Framework + ≤3 traced exemplars in-lesson. Drill via Retention (`keys/` separated) + Practice Spine + problem-bank. Teach-back before retention.
+
+
 # SCOPE DOCUMENT
 
 ## In Scope (this lesson)

@@ -63,7 +63,7 @@ Or write a thin pytest wrapper that imports `harness.run_problem`.
    - and/or `TESTS = [callable(sol_module), ...]` that assert
 3. Run `python run_all.py <slug>`.
 
-## Coverage map (26 problems)
+## Coverage map (67 problems)
 
 | ID | Slug | Pattern |
 |---|---|---|
@@ -93,4 +93,45 @@ Or write a thin pytest wrapper that imports `harness.run_problem`.
 | 24 | product_except_self | Prefix products |
 | 25 | zero_one_bfs | 0-1 BFS |
 | 26 | lru_cache | Design LRU |
+
+| 27 | best_time_stock | Arrays |
+| 28 | max_subarray | Kadane |
+| 29 | valid_parentheses | Stack |
+| 30 | group_anagrams | Hash |
+| 31 | longest_consecutive | Hash set |
+| 32 | subarray_sum_k | Prefix hash |
+| 33 | three_sum | Two pointers |
+| 34 | invert_tree | Tree |
+| 35 | diameter_tree | Tree |
+| 36 | validate_bst | BST |
+| 37 | house_robber | DP |
+| 38 | min_stack | Design |
+| 39 | daily_temperatures | Mono stack |
+| 40 | meeting_rooms_ii | Heap/sweep |
+| 41 | search_rotated | Binary search |
+| 42 | koko_bananas | BS on answer |
+| 43 | word_break | DP |
+| 44 | combination_sum | Backtrack |
+| 45 | lcs | DP |
+| 46 | edit_distance | DP |
+| 47 | serialize_tree | Tree protocol |
+| 48 | house_robber_iii | Tree DP |
+| 49 | bipartite | Graph |
+| 50 | max_path_sum | Tree DP |
+| 51 | gcd_of_strings | Math gcd |
+| 52 | count_primes | Sieve |
+| 53 | search_matrix_ii | Matrix |
+| 54 | bitmask_assign | Bitmask DP |
+| 55 | jump_game | Greedy |
+| 56 | gas_station | Greedy |
+| 57 | course_schedule_ii | Topo |
+| 58 | pacific_atlantic | Multi-source |
+| 59 | sliding_window_max | Mono deque |
+| 60 | trie_prefix | Word search board |
+| 61 | merge_k_lists | Heap |
+| 62 | median_stream | Two heaps |
+| 63 | largest_rectangle | Mono stack |
+| 64 | nqueens_count | Backtrack |
+| 65 | word_search_ii | Trie+board |
+| 66 | alien_dictionary | Topo chars |
 

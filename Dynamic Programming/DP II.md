@@ -7,6 +7,9 @@
 
 ---
 
+> **Lesson contract:** Framework + ≤3 traced exemplars in-lesson. Drill via Retention (`keys/` separated) + Practice Spine + problem-bank. Teach-back before retention.
+
+
 # PART 0: HOW THIS DIFFERS FROM DP I
 
 Module 8 taught the **machinery**:
@@ -1264,3 +1267,104 @@ SCS:         n+m-LCS; reconstruct by walking table
 ```
 
 **Mastery bar for this file:** Explain any row of the decision guide, write LCS + 0/1 knapsack + min path sum from scratch, trace edit distance on a 4×4 table without notes, and state fill order for dungeon vs unique paths cold.
+
+
+---
+
+# PART — DIGIT DP (MUST-KNOW TEMPLATE)
+
+**When:** Count / aggregate over numbers in `[0, N]` (then range via `f(R)-f(L-1)`) with digit constraints.
+
+## Five lines
+
+```
+STATE:  dfs(pos, tight, lead_zero, extra...)
+BASE:   pos == len(digits) → valid complete number
+TRANS:  try digit 0..up; update tight/lead; recurse
+MEMO:   (pos, tight, lead_zero, extra)
+ANSWER: dfs(0, True, True) on digits of N
+```
+
+## Worked: count integers `≤ N` whose digits contain **no** `4`
+
+```python
+def count_no_four(n: int) -> int:
+    if n < 0:
+        return 0
+    digits = list(map(int, str(n)))
+    memo = {}
+
+    def dfs(pos: int, tight: bool, lead: bool) -> int:
+        if pos == len(digits):
+            return 1
+        key = (pos, tight, lead)
+        if key in memo:
+            return memo[key]
+        up = digits[pos] if tight else 9
+        total = 0
+        for d in range(up + 1):
+            if not lead and d == 4:
+                continue  # started number cannot use 4
+            # leading zeros: still "lead", digit 4 as leading zero doesn't start the number
+            nlead = lead and d == 0
+            if not nlead and d == 4:
+                continue
+            ntight = tight and (d == up)
+            total += dfs(pos + 1, ntight, nlead)
+        memo[key] = total
+        return total
+
+    return dfs(0, True, True)
+```
+
+Range `[L, R]` → `count_no_four(R) - count_no_four(L - 1)`.
+
+**Interview line:** "Digit DP on the decimal representation with `tight` and `lead_zero`; memoize."
+
+## Teach-back
+
+1. What does `tight` prevent?  
+2. Why keep `lead_zero` instead of treating leading zeros as digit 0 forever?  
+3. How do you reduce `[L,R]` to one function?
+
+---
+
+# PART — BITMASK DP (ONE WORKED PATTERN)
+
+**When:** `n ≤ 20`; state is a subset; transitions add one element.
+
+```
+dp[mask] = best / ways for subset mask
+for i not in mask: consider mask | (1<<i)
+```
+
+## Worked: assign `n` jobs to `n` workers (min cost)
+
+`cost[i][j]` = cost of worker `i` doing job `j`. Stage = `mask.bit_count()` = next worker.
+
+```python
+def min_cost(cost: list[list[int]]) -> int:
+    n = len(cost)
+    N = 1 << n
+    INF = 10**18
+    dp = [INF] * N
+    dp[0] = 0
+    for mask in range(N):
+        i = mask.bit_count()
+        if i >= n:
+            continue
+        for j in range(n):
+            if mask & (1 << j):
+                continue
+            nxt = mask | (1 << j)
+            dp[nxt] = min(dp[nxt], dp[mask] + cost[i][j])
+    return dp[N - 1]
+```
+
+**TSP-shaped** needs `dp[mask][i]` (last city). **Assignment** above does not.
+
+**Refuse** raw `2^n` if n>20 unless meet-in-middle.
+
+## Teach-back
+
+When is stage=`popcount` valid? When must you store the last index too?

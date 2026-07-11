@@ -8,6 +8,10 @@
 
 ---
 
+> **Lesson contract:** Framework + ≤3 traced exemplars in-lesson. Drill via Retention (`keys/` separated) + Practice Spine + problem-bank. Teach-back before retention.
+> **Volume note:** Prefer Parts 1–core frameworks; treat late drill/oral checklists as **optional appendix**. Spine + Retention are the gate path.
+
+
 # PART 1: WHY STRING ALGORITHMS EXIST
 
 ## The Problem They Solve

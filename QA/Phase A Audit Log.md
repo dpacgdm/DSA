@@ -122,3 +122,23 @@
 | Entry | Root `README.md` + unlabeled timed stubs |
 
 **Follow-ups:** Continue deflating Hashing/Recursion in-lesson banks; expand bank toward full spine; full line audit still not claimed as ≥95% craft.
+
+
+---
+
+## 2026-07-11 — overall 9.5 hardening
+
+| Change | Result |
+|---|---|
+| Hashing / Recursion / Advanced Hashing | Exemplar banks capped (3084→1846, 2507→1578, 1898→1117) |
+| Arrays&Strings | Body removed — stub only |
+| Index honesty | Keys path corrected; Range Sum optional; craft bar restated |
+| Digit DP + Bitmask DP | Added to DP II + bank `54` |
+| Lesson contracts | Applied across core + coverage lessons |
+| Problem bank | **54/54 green** (~228 cases); spine Y markers raised |
+| Spine tracker | `Metrics/spine_tracker.json` + MD mirror |
+
+
+### Bank expansion close
+
+Problem-bank **66/66** green; spine local coverage ~44%.
