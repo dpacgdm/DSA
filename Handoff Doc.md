@@ -355,6 +355,7 @@ Columns below: **Content** = materials exist · **Learner** = evidence status wh
 | Executable problem bank | `problem-bank/` (66 problems) | live — `python problem-bank/run_all.py` |
 | Retention keys | `Retention Questions/keys/` | separated for blind grade |
 | Root README | `README.md` | Day-1 entry |
+| TTL / rate limiter coding | `Design/TTL Cache & Rate Limiter.md` | Chill Interview gap close |
 | Debugging pedagogy | `Debugging/Debugging Diagnosis.md` | delivered |
 | Interview templates | `Templates/Interview Templates.md` + `python_templates.py` | delivered |
 | MVP spines | `Practice Spines/Phase A MVP Spines.md` | delivered |

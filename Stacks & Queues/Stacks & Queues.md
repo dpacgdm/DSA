@@ -1556,3 +1556,37 @@ class MyStack:
 ---
 
 *End of Stacks & Queues — Complete Lesson*
+
+---
+
+# PART — SIMPLIFY PATH / IMPLEMENT `cd` (LC 71)
+
+Unix absolute path → canonical path. Stack of directories.
+
+## Rules
+
+| Token | Action |
+|---|---|
+| `""` or `"."` | skip |
+| `".."` | pop if stack non-empty |
+| else | push directory name |
+
+```python
+def simplify_path(path: str) -> str:
+    stack = []
+    for tok in path.split('/'):
+        if tok == '' or tok == '.':
+            continue
+        if tok == '..':
+            if stack:
+                stack.pop()
+        else:
+            stack.append(tok)
+    return '/' + '/'.join(stack)
+```
+
+**Interview:** Confirm absolute vs relative; Windows paths out of scope unless asked.
+
+## Teach-back
+
+Why `split('/')` and not char-by-char? What does `/a//b/../c/` become?

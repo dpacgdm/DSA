@@ -1126,3 +1126,44 @@ Intersections need **both** lists sorted disjoint; advance the one that ends fir
 Overlap predicate · merge vs end-greedy · sweep tie-break · diff≡sweep · free=merge→gaps.
 
 **Final status:** Intervals & Sweep Line — `content-delivered`.
+
+---
+
+# PART — INTERVAL INTERSECTION (LC 986)
+
+**Problem:** Two sorted lists of disjoint intervals. Return their intersections.
+
+## Framework
+
+Two pointers `i, j` on `A` and `B`:
+
+```
+lo = max(A[i].start, B[j].start)
+hi = min(A[i].end, B[j].end)
+if lo <= hi: emit [lo, hi]   # use < if half-open — ASK
+advance the interval that ends first
+```
+
+```python
+def interval_intersection(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        lo = max(a[i][0], b[j][0])
+        hi = min(a[i][1], b[j][1])
+        if lo <= hi:
+            out.append([lo, hi])
+        if a[i][1] < b[j][1]:
+            i += 1
+        else:
+            j += 1
+    return out
+```
+
+**Complexity:** O(m+n) time, O(1) extra besides output.
+
+**Vs merge:** Merge unions overlapping in one list; intersection walks two lists.
+
+## Teach-back
+
+When do you advance `i` vs `j`? What changes for half-open `[start, end)`?

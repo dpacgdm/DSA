@@ -1,7 +1,7 @@
 # PHASE A — CURRICULUM INDEX (CONTENT DELIVERED)
 
 **Delivered:** 2026-07-09  
-**Updated:** 2026-07-11 — kill Advanced* dupes; honest spine/bank gate; strip fake craft-% claims  
+**Updated:** 2026-07-26 — Chill Interview gaps: TTL cache, rate limiter, simplify path, interval intersection, LIP  
 
 **Mode:** Teacher-side complete. Learner gates (timed / retention pass / mocks) remain for when practice resumes.  
 **Content craft target:** 9.5 overall product bar (lesson contract enforced; keys separated; bank expanding)  
@@ -121,6 +121,7 @@ Schedule after Module 3–6 foundations (or interleaved). Full lessons + shared 
 | Math for Interviews | `Math/Math for Interviews.md` |
 | Matrix & Grid Patterns | `Matrix/Matrix & Grid Patterns.md` |
 | Design Data Structures | `Design/Design Data Structures.md` (**full LRU** Part 15) |
+| TTL Cache & Rate Limiter | `Design/TTL Cache & Rate Limiter.md` (Netflix/Meta product coding) |
 | Retention (all six) | `Retention Questions/Coverage Gaps Retention.md` |
 
 ## Practice, tools, QA

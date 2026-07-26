@@ -586,6 +586,8 @@ Interviewers often want the **DLL + hash** explanation even if you code OrderedD
 
 **Cross-ref:** DLL pointer skills in `Linked Lists/Linked Lists.md` Pattern 8.
 
+**Netflix/Meta follow-ups:** TTL / expiring / weighted cache + rate limiter coding → `Design/TTL Cache & Rate Limiter.md`.
+
 ---
 
 # PART 16: LFU INTUITION (BRIDGE FROM ALL O(1))

@@ -729,3 +729,47 @@ path counts/sums right-down → DP/nCr
 DIRS4 · spiral · zeros · rotate · search · islands · multi-source · grid DP.
 
 **Final status:** Matrix & Grid Patterns — `content-delivered`.
+
+---
+
+# PART — LONGEST INCREASING PATH IN MATRIX (LC 329)
+
+Grid DFS + memo. From each cell, longest strictly increasing path (4-dir).
+
+## Framework
+
+```
+dfs(r,c) = 1 + max(dfs(nr,nc) for neighbors with grid[nr][nc] > grid[r][c], else 0)
+memo[(r,c)] = that value
+answer = max dfs over all cells
+```
+
+This is **graph DP on DAG** of cell→larger-neighbor edges (acyclic because values strictly increase).
+
+```python
+def longest_increasing_path(matrix):
+    if not matrix or not matrix[0]:
+        return 0
+    R, C = len(matrix), len(matrix[0])
+    memo = {}
+
+    def dfs(r, c):
+        if (r, c) in memo:
+            return memo[(r, c)]
+        best = 1
+        for nr, nc in ((r+1,c),(r-1,c),(r,c+1),(r,c-1)):
+            if 0 <= nr < R and 0 <= nc < C and matrix[nr][nc] > matrix[r][c]:
+                best = max(best, 1 + dfs(nr, nc))
+        memo[(r, c)] = best
+        return best
+
+    return max(dfs(r, c) for r in range(R) for c in range(C))
+```
+
+**Complexity:** O(R·C) time/space — each cell computed once.
+
+**Trap:** Without memo → exponential. Without strict `>` → cycles / infinite recursion.
+
+## Teach-back
+
+Why is the graph a DAG? Where does memo key live?

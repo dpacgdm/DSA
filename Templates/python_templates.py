@@ -611,3 +611,62 @@ def tree_rob(root: Optional[TreeNode]) -> int:
         return rob, skip
 
     return max(dfs(root))
+
+
+
+# =============================================================================
+# Simplify Path (LC 71)
+# =============================================================================
+def simplify_path(path: str) -> str:
+    stack: list[str] = []
+    for tok in path.split("/"):
+        if tok == "" or tok == ".":
+            continue
+        if tok == "..":
+            if stack:
+                stack.pop()
+        else:
+            stack.append(tok)
+    return "/" + "/".join(stack)
+
+
+# =============================================================================
+# Interval intersection (LC 986)
+# =============================================================================
+def interval_intersection(
+    first: list[list[int]], second: list[list[int]]
+) -> list[list[int]]:
+    i = j = 0
+    out: list[list[int]] = []
+    while i < len(first) and j < len(second):
+        lo = max(first[i][0], second[j][0])
+        hi = min(first[i][1], second[j][1])
+        if lo <= hi:
+            out.append([lo, hi])
+        if first[i][1] < second[j][1]:
+            i += 1
+        else:
+            j += 1
+    return out
+
+
+# =============================================================================
+# Longest Increasing Path in matrix (LC 329)
+# =============================================================================
+def longest_increasing_path(matrix: list[list[int]]) -> int:
+    if not matrix or not matrix[0]:
+        return 0
+    R, C = len(matrix), len(matrix[0])
+    memo: dict[tuple[int, int], int] = {}
+
+    def dfs(r: int, c: int) -> int:
+        if (r, c) in memo:
+            return memo[(r, c)]
+        best = 1
+        for nr, nc in ((r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)):
+            if 0 <= nr < R and 0 <= nc < C and matrix[nr][nc] > matrix[r][c]:
+                best = max(best, 1 + dfs(nr, nc))
+        memo[(r, c)] = best
+        return best
+
+    return max(dfs(r, c) for r in range(R) for c in range(C))

@@ -105,6 +105,7 @@
 | Reorder List | Split + reverse + merge | M | 143 | — |
 | LRU Cache | Hash + DLL design | M | 146 | — |
 | Valid Parentheses | Stack matching | E | 20 | Y `29_valid_parentheses` |
+| Simplify Path | Stack dirs / `cd` | M | 71 | Y `70_simplify_path` |
 | Min Stack | Aux stack invariant | M | 155 | Y `38_min_stack` |
 | Daily Temperatures | Monotonic stack | M | 739 | Y `39_daily_temperatures` |
 | Next Greater Element | Mono stack | M | 496/503 | Y `09_next_greater_element` |
@@ -301,6 +302,7 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 | Insert Interval | Edge splice | M | 57 | — |
 | Meeting Rooms II | Sweep / heap | M | 253 | Y `40_meeting_rooms_ii` |
 | Non-overlapping Intervals | Greedy end-sort | M | 435 | — |
+| Interval List Intersections | Two-pointer intersect | M | 986 | Y `71_interval_intersection` |
 
 ### Bit Manipulation (4)
 | Problem | Why | Diff | LC | Bank |
@@ -337,6 +339,7 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 | Rotate Image | Transpose + reverse | M | 48 | — |
 | Search a 2D Matrix II | Staircase search | M | 240 | Y `53_search_matrix_ii` |
 | Walls and Gates | Multi-source BFS | M | 286 | — |
+| Longest Increasing Path | Grid DFS + memo | H | 329 | Y `72_longest_increasing_path` |
 
 ### Design Data Structures (4)
 | Problem | Why | Diff | LC | Bank |
@@ -345,8 +348,25 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 | Min Stack | Aux stack | M | 155 | Y `38_min_stack` |
 | Time Based Key-Value | Hash + BS | M | 981 | — |
 | LRU Cache | Design + DLL/hash (full in Design Part 15) | M | 146 | Y `26_lru_cache` |
+| TTL / expiring cache | Lazy TTL + capacity | M | — | Y `68_ttl_cache` |
+| Sliding rate limiter | Rolling window log | M | — | Y `69_rate_limiter` |
 
 ---
+
+## Chill Interview gap close (Meta/Netflix coding)
+
+Short path for product-ish coding seen in Chill Interview dumps — not a replacement for core spines.
+
+| Problem | Why | Diff | LC | Bank |
+|---|---|---|---|---|
+| TTL / expiring cache | Netflix-style cache | M | — | Y `68_ttl_cache` |
+| Sliding rate limiter | Allow N / window | M | — | Y `69_rate_limiter` |
+| Simplify Path | Meta `cd` / path stack | M | 71 | Y `70_simplify_path` |
+| Interval Intersections | Two-list intersect | M | 986 | Y `71_interval_intersection` |
+| Longest Increasing Path | Grid DP/DFS memo | H | 329 | Y `72_longest_increasing_path` |
+| LRU (baseline) | Always warm | M | 146 | Y `26_lru_cache` |
+
+Lesson hub: `Design/TTL Cache & Rate Limiter.md` · Intervals intersection part · Stacks simplify-path part · Matrix LIP part.
 
 ## Counts
 
@@ -365,6 +385,6 @@ Full lessons live under `Intervals/`, `Bitwise/`, `Strings/`, `Math/`, `Matrix/`
 | M11 | 15 |
 | Coverage modules | 27 |
 | **Total spine rows** | **~217** |
-| **In problem-bank** | **67 unique packages** |
+| **In problem-bank** | **72 unique packages** |
 
-Bank ids: `01`–`67` under `problem-bank/problems/`. Run: `py -3 problem-bank/run_all.py`.
+Bank ids: `01`–`72` under `problem-bank/problems/`. Run: `py -3 problem-bank/run_all.py`.
