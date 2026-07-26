@@ -766,6 +766,30 @@ def longest_increasing_path(matrix):
     return max(dfs(r, c) for r in range(R) for c in range(C))
 ```
 
+### Worked trace
+
+```
+matrix = [
+  [9, 9, 4],
+  [6, 6, 8],
+  [2, 1, 1],
+]
+```
+
+Compute bottom-up by dependency (or memo as you go). Strictly increasing neighbors only.
+
+Example cell `(2,1)=1`:
+- right `(2,2)=1` not greater
+- up `(1,1)=6` greater → path continues from 6
+- left `(2,0)=2` greater → path continues from 2
+
+From `(2,0)=2` → up `(1,0)=6` → up `(0,0)=9` → stop. Length from 2: `1+1+1=3` (2→6→9).  
+From `(1,1)=6` → right `(1,2)=8` → stop, or up 9. Best arm length 2 (6→8 or 6→9).  
+So `dfs(2,1) = 1 + max(dfs(2,0), dfs(1,1), ...) = 1 + max(3, 2, ...) = 4`  
+One longest path in the grid: `1 → 2 → 6 → 9` (length **4**).
+
+**Memo:** each cell’s answer stored once → total O(R·C) edges examined.
+
 **Complexity:** O(R·C) time/space — each cell computed once.
 
 **Trap:** Without memo → exponential. Without strict `>` → cycles / infinite recursion.

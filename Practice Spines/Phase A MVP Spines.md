@@ -360,6 +360,8 @@ Short path for product-ish coding seen in Chill Interview dumps — not a replac
 | Problem | Why | Diff | LC | Bank |
 |---|---|---|---|---|
 | TTL / expiring cache | Netflix-style cache | M | — | Y `68_ttl_cache` |
+| TTL + LRU cache | Combined policies | M | — | Y `73_ttl_lru_cache` |
+| Locked TTL cache | Thread-safe wrapper | M | — | Y `74_locked_ttl_cache` |
 | Sliding rate limiter | Allow N / window | M | — | Y `69_rate_limiter` |
 | Simplify Path | Meta `cd` / path stack | M | 71 | Y `70_simplify_path` |
 | Interval Intersections | Two-list intersect | M | 986 | Y `71_interval_intersection` |
@@ -385,6 +387,6 @@ Lesson hub: `Design/TTL Cache & Rate Limiter.md` · Intervals intersection part 
 | M11 | 15 |
 | Coverage modules | 27 |
 | **Total spine rows** | **~217** |
-| **In problem-bank** | **72 unique packages** |
+| **In problem-bank** | **74 unique packages** |
 
-Bank ids: `01`–`72` under `problem-bank/problems/`. Run: `py -3 problem-bank/run_all.py`.
+Bank ids: `01`–`74` under `problem-bank/problems/`. Run: `py -3 problem-bank/run_all.py`.

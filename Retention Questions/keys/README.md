@@ -13,3 +13,5 @@
 | `Coverage Gaps Retention.md` | `Coverage Gaps Retention.keys.md` |
 
 Grade, then update `Metrics/ledger.json` via honesty tags.
+
+| `Chill Interview Gaps Retention.md` | `Chill Interview Gaps Retention.keys.md` |

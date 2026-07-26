@@ -16,7 +16,7 @@ FAANG-style coding interview curriculum: frameworks first, evidence gates, space
 4. Teach-back prompts at end of lesson → [`Retention Questions/Week 1.md`](Retention%20Questions/Week%201.md) **blind**  
 5. Grade with [`Retention Questions/keys/`](Retention%20Questions/keys/)  
 6. Drill [`Practice Spines/Phase A MVP Spines.md`](Practice%20Spines/Phase%20A%20MVP%20Spines.md) § Module 1  
-7. Local red/green: `python problem-bank/run_all.py` (72 problems) · progress: `Metrics/Spine Tracker.md`  
+7. Local red/green: `python problem-bank/run_all.py` (74 problems) · progress: `Metrics/Spine Tracker.md`  
 8. Log timed work: `python tools/scoreboard_update.py` · spaced plan: `python tools/spaced_drill.py --write`
 
 ---

@@ -1585,6 +1585,24 @@ def simplify_path(path: str) -> str:
     return '/' + '/'.join(stack)
 ```
 
+### Worked trace — `/a//b/../c/`
+
+`split('/')` → `['', 'a', '', 'b', '..', 'c', '']`
+
+| Token | Action | Stack |
+|---|---|---|
+| `""` | skip | [] |
+| `a` | push | [a] |
+| `""` | skip | [a] |
+| `b` | push | [a, b] |
+| `..` | pop | [a] |
+| `c` | push | [a, c] |
+| `""` | skip | [a, c] |
+
+Result: `'/' + 'a/c'` → `/a/c`.
+
+Second trace — `/../`: tokens `['', '..', '']` → `..` on empty stack is no-op → `/`.
+
 **Interview:** Confirm absolute vs relative; Windows paths out of scope unless asked.
 
 ## Teach-back

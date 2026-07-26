@@ -1160,6 +1160,21 @@ def interval_intersection(a, b):
     return out
 ```
 
+### Worked trace
+
+`A = [[0,2],[5,10],[13,23],[24,25]]`  
+`B = [[1,5],[8,12],[15,24],[25,26]]`
+
+| i,j | A[i] | B[j] | lo,hi | Emit? | Advance |
+|---|---|---|---|---|---|
+| 0,0 | [0,2] | [1,5] | 1,2 | yes [1,2] | A ends first → i++ |
+| 1,0 | [5,10] | [1,5] | 5,5 | yes [5,5] | B ends first → j++ |
+| 1,1 | [5,10] | [8,12] | 8,10 | yes [8,10] | A ends first → i++ |
+| 2,1 | [13,23] | [8,12] | 13,12 | no | B ends first → j++ |
+| 2,2 | [13,23] | [15,24] | 15,23 | yes [15,23] | A ends first → i++ |
+| 3,2 | [24,25] | [15,24] | 24,24 | yes [24,24] | B ends first → j++ |
+| 3,3 | [24,25] | [25,26] | 25,25 | yes [25,25] | A ends first → i++ done |
+
 **Complexity:** O(m+n) time, O(1) extra besides output.
 
 **Vs merge:** Merge unions overlapping in one list; intersection walks two lists.

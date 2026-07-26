@@ -122,6 +122,7 @@ Schedule after Module 3–6 foundations (or interleaved). Full lessons + shared 
 | Matrix & Grid Patterns | `Matrix/Matrix & Grid Patterns.md` |
 | Design Data Structures | `Design/Design Data Structures.md` (**full LRU** Part 15) |
 | TTL Cache & Rate Limiter | `Design/TTL Cache & Rate Limiter.md` (Netflix/Meta product coding) |
+| Retention (gaps) | `Retention Questions/Chill Interview Gaps Retention.md` |
 | Retention (all six) | `Retention Questions/Coverage Gaps Retention.md` |
 
 ## Practice, tools, QA
